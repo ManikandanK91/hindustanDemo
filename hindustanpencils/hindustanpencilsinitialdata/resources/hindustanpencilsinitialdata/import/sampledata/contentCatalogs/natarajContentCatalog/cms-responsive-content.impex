@@ -198,13 +198,13 @@ INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active;c
 #
 ###### Homepage Start ######
 INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active;cmsComponents(&componentRef)
-;;Section1Slot-Homepage;Section1 Slot for ApparelUKHomepage;true;ApparelUKHomepageSplashBannerComponent,ApparelUKHomepageSaveBannerComponent
-;;Section2ASlot-Homepage;Section2A Slot for ApparelUKHomepage;true;ApparelUKHomepageWomenStreetBannerComponent,ApparelUKHomepageMenStreetBannerComponent
-;;Section2BSlot-Homepage;Section2B Slot for ApparelUKHomepage;true;ApparelUKHomepageStreetYouthBannerComponent,ApparelUKHomepageBrandsBannerComponent
+;;Section1Slot-Homepage;Section1 Slot for ApparelUKHomepage;true;
+;;Section2ASlot-Homepage;Section2A Slot for ApparelUKHomepage;true;
+;;Section2BSlot-Homepage;Section2B Slot for ApparelUKHomepage;true;
 ;;Section2CSlot-Homepage;Section2C Slot for ApparelUKHomepage;true;
-;;Section3Slot-Homepage;Section3 Slot for ApparelUKHomepage;true;ApparelUKHomepageProductCarouselComponent,NewApparelUKHomepageProductCarouselComponent
-;;Section4Slot-Homepage;Section4 Slot for ApparelUKHomepage;true;ApparelUKHomepageSmDiscountBannerComponent,ApparelUKHomepageShopBannerComponent,ApparelUKHomepageShipmentBannerComponent,ApparelUKHomepageServiceBannerComponent
-;;Section5Slot-Homepage;Section5 Slot for ApparelUKHomepage;true;ApparelUKHomepageFreeDelBannerComponent
+;;Section3Slot-Homepage;Section3 Slot for ApparelUKHomepage;true;
+;;Section4Slot-Homepage;Section4 Slot for ApparelUKHomepage;true;
+;;Section5Slot-Homepage;Section5 Slot for ApparelUKHomepage;true;
 
 INSERT_UPDATE ContentSlotForPage;$contentCV[unique=true];uid[unique=true];position[unique=true];page(uid,$contentCV)[unique=true][default='homepage'];contentSlot(uid,$contentCV)[unique=true];;;
 ;;Section1-Homepage;Section1;;Section1Slot-Homepage;;;

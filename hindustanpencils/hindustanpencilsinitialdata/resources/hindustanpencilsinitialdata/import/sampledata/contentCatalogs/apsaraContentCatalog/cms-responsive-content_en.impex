@@ -36,14 +36,21 @@ $storefrontContextRoot=$config-storefrontContextRoot
 
 # Apparel general data
 # Media
+#INSERT_UPDATE Media;$contentCV[unique=true];code[unique=true];realfilename;@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator];mime[default='image/jpeg'];folder(qualifier)[default='images'];altText
+#;;/images/theme/logo_hybris_responsive.svg;logo_hybris_responsive.svg;$siteResource/images/theme/logo_hybris_responsive.svg;image/svg+xml;;"hybris Accelerator"
+
+# Site Logo Component
+#UPDATE SimpleBannerComponent;$contentCV[unique=true];uid[unique=true];$picture[lang=$lang]
+#;;SiteLogoComponent;/images/theme/logo_hybris_responsive.svg
+
 INSERT_UPDATE Media;$contentCV[unique=true];code[unique=true];realfilename;@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator];mime[default='image/jpeg'];folder(qualifier)[default='images'];altText
-;;/images/theme/logo_hybris_responsive.svg;logo_hybris_responsive.svg;$siteResource/images/theme/logo_hybris_responsive.svg;image/svg+xml;;"hybris Accelerator"
+;;/images/theme/logo-hybris1.png;apsara_logo.png.png;$siteResource/images/theme/apsara_logo.png;image/png;;"Apsara Pencils"
 
 # Site Logo Component
 UPDATE SimpleBannerComponent;$contentCV[unique=true];uid[unique=true];$picture[lang=$lang]
-;;SiteLogoComponent;/images/theme/logo_hybris_responsive.svg
+;;SiteLogoComponent;/images/theme/logo-hybris1.png
 
-# CMS Mini Cart Component
+# CMS Mini Cart Components
 UPDATE MiniCartComponent;$contentCV[unique=true];uid[unique=true];title[lang=de]
 ;;MiniCart;"Ihr Warenkorb"
 

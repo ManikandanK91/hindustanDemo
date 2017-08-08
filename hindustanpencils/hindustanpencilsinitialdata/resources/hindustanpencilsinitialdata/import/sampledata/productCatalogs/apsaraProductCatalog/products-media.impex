@@ -1,0 +1,172 @@
+# -----------------------------------------------------------------------
+# [y] hybris Platform
+#
+# Copyright (c) 2017 SAP SE or an SAP affiliate company.  All rights reserved.
+#
+# This software is the confidential and proprietary information of SAP
+# ("Confidential Information"). You shall not disclose such Confidential
+# Information and shall use it only in accordance with the terms of the
+# license agreement you entered into with SAP.
+# -----------------------------------------------------------------------
+# ImPex for Importing Product Media
+
+# Macros / Replacement Parameter definitions
+$productCatalog=apsaraProductCatalog
+
+$catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog]
+$media=@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator]
+$thumbnail=thumbnail(code, $catalogVersion)
+$picture=picture(code, $catalogVersion)
+$thumbnails=thumbnails(code, $catalogVersion)
+$detail=detail(code, $catalogVersion)
+$normal=normal(code, $catalogVersion)
+$others=others(code, $catalogVersion)
+$data_sheet=data_sheet(code, $catalogVersion)
+$medias=medias(code, $catalogVersion)
+$galleryImages=galleryImages(qualifier, $catalogVersion)
+$siteResource=jar:com.hybris.hindustanpencils.initialdata.constants.HindustanpencilsInitialDataConstants&/hindustanpencilsinitialdata/import/sampledata/productCatalogs/$productCatalog/images
+
+INSERT_UPDATE MediaFolder;qualifier[unique=true];path[unique=true]
+;images;images
+
+# Create Media
+INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];$media;mime[default='image/jpeg'];$catalogVersion;folder(qualifier)
+;1200Wx1200H;/1200Wx1200H/ApsaraPencil1.jpg ;$siteResource/1200Wx1200H/ApsaraPencil1.jpg;;;images
+;1200Wx1200H;/1200Wx1200H/ApsaraPencil2.jpg ;$siteResource/1200Wx1200H/ApsaraPencil2.jpg;;;images
+
+;515Wx515H;/515Wx515H/ApsaraPencil1.jpg;$siteResource/515Wx515H/ApsaraPencil1.jpg;;;images
+;515Wx515H;/515Wx515H/ApsaraPencil2.jpg;$siteResource/515Wx515H/ApsaraPencil2.jpg;;;images
+
+;300Wx300H;/300Wx300H/ApsaraPencil1.jpg;$siteResource/300Wx300H/ApsaraPencil1.jpg;;;images
+;300Wx300H;/300Wx300H/ApsaraPencil2.jpg;$siteResource/300Wx300H/ApsaraPencil2.jpg;;;images
+
+;96Wx96H;/96Wx96H/ApsaraPencil1.jpg;$siteResource/96Wx96H/ApsaraPencil1.jpg;;;images
+;96Wx96H;/96Wx96H/ApsaraPencil2.jpg;$siteResource/96Wx96H/ApsaraPencil2.jpg;;;images
+
+;65Wx65H;/65Wx65H/ApsaraPencil1.jpg;$siteResource/65Wx65H/ApsaraPencil1.jpg;;;images
+;65Wx65H;/65Wx65H/ApsaraPencil2.jpg;$siteResource/65Wx65H/ApsaraPencil2.jpg;;;images
+
+;30Wx30H;/30Wx30H/ApsaraPencil1.jpg;$siteResource/30Wx30H/ApsaraPencil1.jpg;;;images
+;30Wx30H;/30Wx30H/ApsaraPencil2.jpg;$siteResource/30Wx30H/ApsaraPencil2.jpg;;;images
+
+;1200Wx1200H;/1200Wx1200H/ApsaraEraser3.jpg ;$siteResource/1200Wx1200H/ApsaraEraser3.jpg;;;images
+;1200Wx1200H;/1200Wx1200H/ApsaraEraser4.jpg ;$siteResource/1200Wx1200H/ApsaraEraser4.jpg;;;images
+
+;515Wx515H;/515Wx515H/ApsaraEraser3.jpg ;$siteResource/515Wx515H/ApsaraEraser3.jpg;;;images
+;515Wx515H;/515Wx515H/ApsaraEraser4.jpg ;$siteResource/515Wx515H/ApsaraEraser4.jpg;;;images
+
+;300Wx300H;/300Wx300H/ApsaraEraser3.jpg ;$siteResource/300Wx300H/ApsaraEraser3.jpg;;;images
+;300Wx300H;/300Wx300H/ApsaraEraser4.jpg ;$siteResource/300Wx300H/ApsaraEraser4.jpg;;;images
+
+;96Wx96H;/96Wx96H/ApsaraEraser3.jpg ;$siteResource/96Wx96H/ApsaraEraser3.jpg;;;images
+;96Wx96H;/96Wx96H/ApsaraEraser4.jpg ;$siteResource/96Wx96H/ApsaraEraser4.jpg;;;images
+
+;65Wx65H;/65Wx65H/ApsaraEraser3.jpg ;$siteResource/65Wx65H/ApsaraEraser3.jpg;;;images
+;65Wx65H;/65Wx65H/ApsaraEraser4.jpg ;$siteResource/65Wx65H/ApsaraEraser4.jpg;;;images
+
+;30Wx30H;/30Wx30H/ApsaraEraser3.jpg ;$siteResource/30Wx30H/ApsaraEraser3.jpg;;;images
+;30Wx30H;/30Wx30H/ApsaraEraser4.jpg ;$siteResource/30Wx30H/ApsaraEraser4.jpg;;;images
+
+;1200Wx1200H;/1200Wx1200H/ApsaraChalk5.jpg ;$siteResource/1200Wx1200H/ApsaraChalk5.jpg;;;images
+;1200Wx1200H;/1200Wx1200H/ApsaraChalk6.jpg ;$siteResource/1200Wx1200H/ApsaraChalk6.jpg;;;images
+
+;515Wx515H;/515Wx515H/ApsaraChalk5.jpg ;$siteResource/515Wx515H/ApsaraChalk5.jpg;;;images
+;515Wx515H;/515Wx515H/ApsaraChalk6.jpg ;$siteResource/515Wx515H/ApsaraChalk6.jpg;;;images
+
+
+;300Wx300H;/300Wx300H/ApsaraChalk5.jpg ;$siteResource/300Wx300H/ApsaraChalk5.jpg;;;images
+;300Wx300H;/300Wx300H/ApsaraChalk6.jpg ;$siteResource/300Wx300H/ApsaraChalk6.jpg;;;images
+
+
+;96Wx96H;/96Wx96H/ApsaraChalk5.jpg ;$siteResource/96Wx96H/ApsaraChalk5.jpg;;;images
+;96Wx96H;/96Wx96H/ApsaraChalk6.jpg ;$siteResource/96Wx96H/ApsaraChalk6.jpg;;;images
+
+;65Wx65H;/65Wx65H/ApsaraChalk5.jpg ;$siteResource/65Wx65H/ApsaraChalk5.jpg;;;images
+;65Wx65H;/65Wx65H/ApsaraChalk6.jpg ;$siteResource/65Wx65H/ApsaraChalk6.jpg;;;images
+
+;30Wx30H;/30Wx30H/ApsaraChalk5.jpg ;$siteResource/30Wx30H/ApsaraChalk5.jpg;;;images
+;30Wx30H;/30Wx30H/ApsaraChalk6.jpg ;$siteResource/30Wx30H/ApsaraChalk6.jpg;;;images
+
+
+;1200Wx1200H;/1200Wx1200H/ApsaraColoursstick7.jpg ;$siteResource/1200Wx1200H/ApsaraColoursstick7.jpg;;;images
+;1200Wx1200H;/1200Wx1200H/ApsaraColoursstick8.jpg ;$siteResource/1200Wx1200H/ApsaraColoursstick8.jpg;;;images
+
+;515Wx515H;/515Wx515H/ApsaraColoursstick7.jpg ;$siteResource/515Wx515H/ApsaraColoursstick7.jpg;;;images
+;515Wx515H;/515Wx515H/ApsaraColoursstick8.jpg ;$siteResource/515Wx515H/ApsaraColoursstick8.jpg;;;images
+
+;300Wx300H;/300Wx300H/ApsaraColoursstick7.jpg ;$siteResource/300Wx300H/ApsaraColoursstick7.jpg;;;images
+;300Wx300H;/300Wx300H/ApsaraColoursstick8.jpg ;$siteResource/300Wx300H/ApsaraColoursstick8.jpg;;;images
+
+
+;96Wx96H;/96Wx96H/ApsaraColoursstick7.jpg ;$siteResource/96Wx96H/ApsaraColoursstick7.jpg;;;images
+;96Wx96H;/96Wx96H/ApsaraColoursstick8.jpg ;$siteResource/96Wx96H/ApsaraColoursstick8.jpg;;;images
+
+;65Wx65H;/65Wx65H/ApsaraColoursstick7.jpg ;$siteResource/65Wx65H/ApsaraColoursstick7.jpg;;;images
+;65Wx65H;/65Wx65H/ApsaraColoursstick8.jpg ;$siteResource/65Wx65H/ApsaraColoursstick8.jpg;;;images
+
+;30Wx30H;/30Wx30H/ApsaraColoursstick7.jpg ;$siteResource/30Wx30H/ApsaraColoursstick7.jpg;;;images
+;30Wx30H;/30Wx30H/ApsaraColoursstick8.jpg ;$siteResource/30Wx30H/ApsaraColoursstick8.jpg;;;images
+
+
+
+;1200Wx1200H;/1200Wx1200H/ApsaraPaint9.jpg ;$siteResource/1200Wx1200H/ApsaraPaint9.jpg;;;images
+;1200Wx1200H;/1200Wx1200H/ApsaraPaint10.jpg ;$siteResource/1200Wx1200H/ApsaraPaint10.jpg;;;images
+
+;515Wx515H;/515Wx515H/ApsaraPaint9.jpg ;$siteResource/515Wx515H/ApsaraPaint9.jpg;;;images
+;515Wx515H;/515Wx515H/ApsaraPaint10.jpg ;$siteResource/515Wx515H/ApsaraPaint10.jpg;;;images
+
+;300Wx300H;/300Wx300H/ApsaraPaint9.jpg ;$siteResource/300Wx300H/ApsaraPaint9.jpg;;;images
+;300Wx300H;/300Wx300H/ApsaraPaint10.jpg ;$siteResource/300Wx300H/ApsaraPaint10.jpg;;;images
+
+;96Wx96H;/96Wx96H/ApsaraPaint9.jpg ;$siteResource/96Wx96H/ApsaraPaint9.jpg;;;images
+;96Wx96H;/96Wx96H/ApsaraPaint10.jpg ;$siteResource/96Wx96H/ApsaraPaint10.jpg;;;images
+
+;65Wx65H;/65Wx65H/ApsaraPaint9.jpg ;$siteResource/65Wx65H/ApsaraPaint9.jpg;;;images
+;65Wx65H;/65Wx65H/ApsaraPaint10.jpg ;$siteResource/65Wx65H/ApsaraPaint10.jpg;;;images
+
+;30Wx30H;/30Wx30H/ApsaraPaint9.jpg ;$siteResource/30Wx30H/ApsaraPaint9.jpg;;;images
+;30Wx30H;/30Wx30H/ApsaraPaint10.jpg ;$siteResource/30Wx30H/ApsaraPaint10.jpg;;;images
+
+
+# Create Media Containers
+INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$catalogVersion
+#ApsaraPencil
+;ApsaraPencil1_1;/1200Wx1200H/ApsaraPencil1.jpg,/515Wx515H/ApsaraPencil1.jpg,/300Wx300H/ApsaraPencil1.jpg,/96Wx96H/ApsaraPencil1.jpg,/65Wx65H/ApsaraPencil1.jpg,/30Wx30H/ApsaraPencil1.jpg
+;ApsaraPencil2_1;/1200Wx1200H/ApsaraPencil2.jpg,/515Wx515H/ApsaraPencil2.jpg,/300Wx300H/ApsaraPencil2.jpg,/96Wx96H/ApsaraPencil2.jpg,/65Wx65H/ApsaraPencil2.jpg,/30Wx30H/ApsaraPencil2.jpg
+
+#ApsaraEraser
+;ApsaraEraser3_1;/1200Wx1200H/ApsaraEraser3.jpg,/515Wx515H/ApsaraEraser3.jpg,/300Wx300H/ApsaraEraser3.jpg,/96Wx96H/ApsaraEraser3.jpg,/65Wx65H/ApsaraEraser3.jpg,/30Wx30H/ApsaraEraser3.jpg
+;ApsaraEraser4_1;/1200Wx1200H/ApsaraEraser4.jpg,/515Wx515H/ApsaraEraser4.jpg,/300Wx300H/ApsaraEraser4.jpg,/96Wx96H/ApsaraEraser4.jpg,/65Wx65H/ApsaraEraser4.jpg,/30Wx30H/ApsaraEraser4.jpg
+
+#ApsaraChalk
+;ApsaraChalk5_1;/1200Wx1200H/ApsaraChalk5.jpg,/515Wx515H/ApsaraChalk5.jpg,/300Wx300H/ApsaraChalk5.jpg,/96Wx96H/ApsaraChalk5.jpg,/65Wx65H/ApsaraChalk5.jpg,/30Wx30H/ApsaraChalk5.jpg
+;ApsaraChalk6_1;/1200Wx1200H/ApsaraChalk6.jpg,/515Wx515H/ApsaraChalk6.jpg,/300Wx300H/ApsaraChalk6.jpg,/96Wx96H/ApsaraChalk6.jpg,/65Wx65H/ApsaraChalk6.jpg,/30Wx30H/ApsaraChalk6.jpg
+
+#ApsaraColourstick
+;ApsaraColourstick7_1;/1200Wx1200H/ApsaraColoursstick7.jpg,/515Wx515H/ApsaraColoursstick7.jpg,/300Wx300H/ApsaraColoursstick7.jpg,/96Wx96H/ApsaraColoursstick7.jpg,/65Wx65H/ApsaraColoursstick7.jpg,/30Wx30H/ApsaraColoursstick7.jpg
+;ApsaraColourstick8_1;/1200Wx1200H/ApsaraColoursstick8.jpg,/515Wx515H/ApsaraColoursstick8.jpg,/300Wx300H/ApsaraColoursstick8.jpg,/96Wx96H/ApsaraColoursstick8.jpg,/65Wx65H/ApsaraColoursstick8.jpg,/30Wx30H/ApsaraColoursstick8.jpg
+
+#ApsaraPaint
+;ApsaraPaint9_1;/1200Wx1200H/ApsaraPaint9.jpg,/515Wx515H/ApsaraPaint9.jpg,/300Wx300H/ApsaraPaint9.jpg,/96Wx96H/ApsaraPaint9.jpg,/65Wx65H/ApsaraPaint9.jpg,/30Wx30H/ApsaraPaint9.jpg
+;ApsaraPaint10_1;/1200Wx1200H/ApsaraPaint10.jpg,/515Wx515H/ApsaraPaint10.jpg,/300Wx300H/ApsaraPaint10.jpg,/96Wx96H/ApsaraPaint10.jpg,/65Wx65H/ApsaraPaint10.jpg,/30Wx30H/ApsaraPaint10.jpg
+
+# Update Products with Media and Media Containers
+
+UPDATE Product  ;code[unique=true];$picture;$thumbnail;$others;$normal;$thumbnails;$galleryImages;$catalogVersion
+;ApsaraPencil1;/300Wx300H/ApsaraPencil1.jpg;/96Wx96H/ApsaraPencil1.jpg;/515Wx515H/ApsaraPencil1.jpg,/300Wx300H/ApsaraPencil1.jpg,/96Wx96H/ApsaraPencil1.jpg,/65Wx65H/ApsaraPencil1.jpg,/30Wx30H/ApsaraPencil1.jpg;/300Wx300H/ApsaraPencil1.jpg;/96Wx96H/ApsaraPencil1.jpg;ApsaraPencil1_1;
+;ApsaraPencil2;/300Wx300H/ApsaraPencil2.jpg;/96Wx96H/ApsaraPencil2.jpg;/515Wx515H/ApsaraPencil2.jpg,/300Wx300H/ApsaraPencil2.jpg,/96Wx96H/ApsaraPencil2.jpg,/65Wx65H/ApsaraPencil2.jpg,/30Wx30H/ApsaraPencil2.jpg;/300Wx300H/ApsaraPencil2.jpg;/96Wx96H/ApsaraPencil2.jpg;ApsaraPencil2_1;
+
+
+;ApsaraEraser3;/300Wx300H/ApsaraEraser3.jpg;/96Wx96H/ApsaraEraser3.jpg;/515Wx515H/ApsaraEraser3.jpg,/300Wx300H/ApsaraEraser3.jpg,/96Wx96H/ApsaraEraser3.jpg,/65Wx65H/ApsaraEraser3.jpg,/30Wx30H/ApsaraEraser3.jpg;/300Wx300H/ApsaraEraser3.jpg;/96Wx96H/ApsaraEraser3.jpg;ApsaraEraser3_1;
+;ApsaraEraser4;/300Wx300H/ApsaraEraser4.jpg;/96Wx96H/ApsaraEraser4.jpg;/515Wx515H/ApsaraEraser4.jpg,/300Wx300H/ApsaraEraser4.jpg,/96Wx96H/ApsaraEraser4.jpg,/65Wx65H/ApsaraEraser4.jpg,/30Wx30H/ApsaraEraser4.jpg;/300Wx300H/ApsaraEraser4.jpg;/96Wx96H/ApsaraEraser4.jpg;ApsaraEraser4_1;
+
+;ApsaraChalk5;/300Wx300H/ApsaraChalk5.jpg;/96Wx96H/ApsaraChalk5.jpg;/515Wx515H/ApsaraChalk5.jpg,/300Wx300H/ApsaraChalk5.jpg,/96Wx96H/ApsaraChalk5.jpg,/65Wx65H/ApsaraChalk5.jpg,/30Wx30H/ApsaraChalk5.jpg;/300Wx300H/ApsaraChalk5.jpg;/96Wx96H/ApsaraChalk5.jpg;ApsaraChalk5_1;
+;ApsaraChalk6;/300Wx300H/ApsaraChalk6.jpg;/96Wx96H/ApsaraChalk6.jpg;/515Wx515H/ApsaraChalk6.jpg,/300Wx300H/ApsaraChalk6.jpg,/96Wx96H/ApsaraChalk6.jpg,/65Wx65H/ApsaraChalk6.jpg,/30Wx30H/ApsaraChalk6.jpg;/300Wx300H/ApsaraChalk6.jpg;/96Wx96H/ApsaraChalk6.jpg;ApsaraChalk6_1;
+
+
+;ApsaraColourstick7;/300Wx300H/ApsaraColoursstick7.jpg;/96Wx96H/ApsaraColoursstick7.jpg;/515Wx515H/ApsaraColoursstick7.jpg,/300Wx300H/ApsaraColoursstick7.jpg,/96Wx96H/ApsaraColoursstick7.jpg,/65Wx65H/ApsaraColoursstick7.jpg,/30Wx30H/ApsaraColoursstick7.jpg;/300Wx300H/ApsaraColoursstick7.jpg;/96Wx96H/ApsaraColoursstick7.jpg;ApsaraColourstick7_1;
+;ApsaraColourstick8;/300Wx300H/ApsaraColoursstick8.jpg;/96Wx96H/ApsaraColoursstick8.jpg;/515Wx515H/ApsaraColoursstick8.jpg,/300Wx300H/ApsaraColoursstick8.jpg,/96Wx96H/ApsaraColoursstick8.jpg,/65Wx65H/ApsaraColoursstick8.jpg,/30Wx30H/ApsaraColoursstick8.jpg;/300Wx300H/ApsaraColoursstick8.jpg;/96Wx96H/ApsaraColoursstick8.jpg;ApsaraColourstick8_1;
+
+
+;ApsaraPaint9;/300Wx300H/ApsaraPaint9.jpg;/96Wx96H/ApsaraPaint9.jpg;/515Wx515H/ApsaraPaint9.jpg,/300Wx300H/ApsaraPaint9.jpg,/96Wx96H/ApsaraPaint9.jpg,/65Wx65H/ApsaraPaint9.jpg,/30Wx30H/ApsaraPaint9.jpg;/300Wx300H/ApsaraPaint9.jpg;/96Wx96H/ApsaraPaint9.jpg;ApsaraPaint9_1;
+;ApsaraPaint10;/300Wx300H/ApsaraPaint10.jpg;/96Wx96H/ApsaraPaint10.jpg;/515Wx515H/ApsaraPaint10.jpg,/300Wx300H/ApsaraPaint10.jpg,/96Wx96H/ApsaraPaint10.jpg,/65Wx65H/ApsaraPaint10.jpg,/30Wx30H/ApsaraPaint10.jpg;/300Wx300H/ApsaraPaint10.jpg;/96Wx96H/ApsaraPaint10.jpg;ApsaraPaint10_1;

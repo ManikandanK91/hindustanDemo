@@ -13,7 +13,7 @@
 #
 
 # Index Type
-$solrIndexedType=natarajProductType
+$solrIndexedType=apsaraProductType
 
 # Language
 $lang=en
@@ -36,7 +36,7 @@ UPDATE SolrIndexedProperty;solrIndexedType(identifier)[unique=true];name[unique=
  ;$solrIndexedType;summary;"Summary"
  ;$solrIndexedType;swatchColors;"Colour"
 
-# Define the available sorts
+# Define the available sorts	
 UPDATE SolrSort;indexedType(identifier)[unique=true];code[unique=true];name[lang=$lang]
  ;$solrIndexedType;name-asc;"Name (ascending)"
  ;$solrIndexedType;name-desc;"Name (descending)"
