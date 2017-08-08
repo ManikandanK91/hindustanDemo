@@ -14,7 +14,7 @@
 $productCatalog=apsaraProductCatalog
 $contentCatalog=apsaraContentCatalog
 $contentCV=catalogVersion(CatalogVersion.catalog(Catalog.id[default=$contentCatalog]),CatalogVersion.version[default=Staged])[default=$contentCatalog:Staged]
-$defaultLanguage=de
+$defaultLanguage=en
 $storeUid=apsara
 $siteUid=apsara
 $webServiceSiteUid=$siteUidWS
@@ -60,8 +60,8 @@ INSERT_UPDATE SiteTheme;code[unique=true]
 ;black
 
 # CMS Site
-INSERT_UPDATE CMSSite;uid[unique=true];theme(code);channel(code);stores(uid);contentCatalogs(id);defaultCatalog(id);defaultLanguage(isoCode);siteMapConfig(&siteMapConfigId);urlPatterns;active;previewURL;startingPage(uid,$contentCV);urlEncodingAttributes;defaultPromotionGroup(Identifier)[default=apparelDEPromoGrp]
-;$siteUid;black;B2C;$storeUid;$contentCatalog;$productCatalog;$defaultLanguage;$siteUidSiteMapConfig;(?i)^https?://[^/]+(/[^?]*)?\?(.*\&)?(site=$siteUid)(|\&.*)$,(?i)^https?://$siteUid\.[^/]+(|/.*|\?.*)$,(?i)^https?://apsara\.en\.[^/]+(|/.*|\?.*)$;true;$storefrontContextRoot/?site=$siteUid;homepage;language
+INSERT_UPDATE CMSSite;uid[unique=true];theme(code);channel(code);stores(uid);contentCatalogs(id);defaultCatalog(id);defaultLanguage(isoCode);siteMapConfig(&siteMapConfigId);urlPatterns;active;previewURL;startingPage(uid,$contentCV);urlEncodingAttributes;defaultPromotionGroup(Identifier)
+;$siteUid;black;B2C;$storeUid;$contentCatalog;$productCatalog;$defaultLanguage;$siteUidSiteMapConfig;(?i)^https?://[^/]+(/[^?]*)?\?(.*\&)?(site=$siteUid)(|\&.*)$,https?://[^/]+(/[^?]*)?\?(.*\&)(site=$siteUid)(|\&.*)$,(?i)^https?://$siteUid\.[^/]+(|/.*|\?.*)$,(?i)^https?://apsara\.en\.[^/]+(|/.*|\?.*)$;true;$storefrontContextRoot/?site=$siteUid;homepage;language
 
 # Cart Cleanup CronJobs
 INSERT_UPDATE CartRemovalCronJob;code[unique=true];job(code)[default=cartRemovalJob];sites(uid)[default=$siteUid];sessionLanguage(isoCode)[default=en]

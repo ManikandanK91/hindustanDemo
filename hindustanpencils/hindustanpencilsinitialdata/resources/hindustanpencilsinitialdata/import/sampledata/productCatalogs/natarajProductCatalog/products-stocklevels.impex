@@ -49,8 +49,8 @@ UPDATE Product;code[unique=true];$catalogVersion;stockLevels(productCode,warehou
 ;NatarajCutter6;;NatarajCutter6:nat_warehouse_s;nataraj
 ;NatarajColourPencil7;;NatarajColourPencil7:nat_warehouse_s;nataraj
 ;NatarajColourPencil8;;NatarajColourPencil8:nat_warehouse_s;nataraj
-;NatarajBallPen9;NatarajBallPen9:nat_warehouse_s;nataraj
-;NatarajBallPen10;NatarajBallPen10:nat_warehouse_s;nataraj
+;NatarajBallPen9;;NatarajBallPen9:nat_warehouse_s;nataraj
+;NatarajBallPen10;;NatarajBallPen10:nat_warehouse_s;nataraj
 
 
 

@@ -1,4 +1,4 @@
-productCatalog=natarajProductCatalog
+$productCatalog=natarajProductCatalog
 
 $catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog]
 $media=@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator]
