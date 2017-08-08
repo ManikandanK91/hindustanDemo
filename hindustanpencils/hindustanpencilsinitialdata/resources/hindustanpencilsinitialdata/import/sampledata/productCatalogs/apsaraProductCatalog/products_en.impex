@@ -1385,7 +1385,7 @@ UPDATE Product;code[unique=true];$catalogVersion;name[lang=$lang];summary[lang=$
  ;300660327;;Iconic Jacket Women slash stripe black S;;;;S;;
  ;300660329;;Iconic Jacket Women slash stripe black XS;;;;XS;;
  ;300671343;;Tarzo Pants youth red M;;;;M;;
- ;300673824;;Tassara Pants Girls Youth berry XL;;;;XL;;
+ ;300673824;; Pants Girls Youth berry XL;;;;XL;;
  ;300678847;;Limited Jacket deepest black L;;;;L;;
  ;300678848;;Limited Jacket deepest black M;;;;M;;
  ;300678849;;Limited Jacket deepest black S;;;;S;;

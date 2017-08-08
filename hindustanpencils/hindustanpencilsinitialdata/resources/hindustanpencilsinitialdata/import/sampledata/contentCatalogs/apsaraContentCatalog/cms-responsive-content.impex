@@ -188,8 +188,19 @@ INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active;c
 #5. update page to set the preview media
 #
 ###### Homepage Start ######
+INSERT_UPDATE BannerComponent ;$contentCV[unique=true];uid[unique=true]    ;name                 ;&componentRef       ;urlLink
+                #              ;                          ;CarouselCyberBanner ;Carousel Cyber Banner;CarouselCyberBanner ;/Open-Catalogue/Cameras/Digital-Cameras/Digital-Compacts/Cyber-shot-W55/p/676442
+                              ;                       ;CarouselApsaraBanner       ;Carousel Apsara Banner ;CarouselApsaraBanner;
+                              ;                       ;CarouselApsaraBanner2       ;Carousel Apsara Banner 2 ;CarouselApsaraBanner2;
+                              ;                       ;CarouselApsaraBanner3       ;Carousel Apsara Banner 3 ;CarouselApsaraBanner3;
+
+         
+INSERT_UPDATE RotatingImagesComponent;$contentCV[unique=true];uid[unique=true];name;banners(&componentRef);&componentRef
+#;;ElectronicsHomepageCarouselComponent;Electronics Homepage Carousel;CarouselCyberBanner,CarouselCamcorderBanner,CarouselFunBanner;ElectronicsHomepageCarouselComponent
+ ;;ApparelUKHomepageCarouselComponent;Apparel UK Homepage Carousel Component;CarouselApsaraBanner,CarouselApsaraBanner2,CarouselApsaraBanner3;ApparelUKHomepageCarouselComponent
+
 INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active;cmsComponents(&componentRef)
-;;Section1Slot-Homepage;Section1 Slot for ApparelDEHomepage;true;
+;;Section1Slot-Homepage;Section1 Slot for ApparelDEHomepage;true;ApparelUKHomepageCarouselComponent
 ;;Section2ASlot-Homepage;Section2A Slot for ApparelDEHomepage;true;
 ;;Section2BSlot-Homepage;Section2B Slot for ApparelDEHomepage;true;
 ;;Section2CSlot-Homepage;Section2C Slot for ApparelDEHomepage;true;
@@ -889,31 +900,31 @@ INSERT_UPDATE CMSNavigationEntry;uid[unique=true];$contentCV[unique=true];name;n
 ;StreetwearYouthNavNodeEntry;;StreetwearYouth Navigation Node Entry;StreetwearYouthNavNode;YouthLink;
 # links of the above navigation entries
 INSERT_UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];name;url;category(code, $productCV);target(code)[default='sameWindow'];;
-;;AllBrandsLink;All Brands Link;;brands;;;
-;;StreetwearLink;Streetwear;;streetwear;;;
-;;SnowLink;Snow;;snow;;;
-;;AccessoriesLink;Accessories Link;;220000;;;
-;;YouthLink;Youth Link;;270000;;;
+;;AllBrandsLink;All Brands Link;;;;;
+;;StreetwearLink;Streetwear;;;;;
+;;SnowLink;Snow;;;;;
+;;AccessoriesLink;Accessories Link;;;;;
+;;YouthLink;Youth Link;;;;;
 
 ## level 5 -- children of above NavNodes ## (the following order of children is the display order on the site)
 INSERT_UPDATE CMSNavigationNode;uid[unique=true];$contentCV[unique=true];name;parent(uid, $contentCV);&nodeRef;children(uid,$contentCV);links(&linkRef);
 # children of BrandsNavNode 
-;AllBrandsNavNode;;Brand Links;BrandsNavNode;AllBrandsNavNode;667NavNode,686NavNode,69SlamNavNode,adidasOriginalsNavNode,AlMerrickNavNode,AlienWorkshopNavNode,AnalogNavNode,AnonNavNode,ArmadaNavNode,BenchNavNode,BillabongNavNode,BlueTomatoNavNode,BurtonNavNode,CarharttNavNode,DCNavNode,DaineseNavNode,DakineNavNode,DalbelloNavNode,droidNavNode,ElementNavNode,ElmNavNode,F2-FTWONavNode,FemipleasureNavNode,FoursquareNavNode,FoxNavNode,HorsefeathersNavNode,HurleyNavNode,LandingNavNode,NikeNavNode,Nike6.0NavNode,NixonNavNode,OakleyNavNode,OrageNavNode,PYUANavNode,PlayboardNavNode,ProTecNavNode,QuiksilverNavNode,RedNavNode,ReefNavNode,RipCurlNavNode,RoxyNavNode,SessionsNavNode,SpecialBlendNavNode,TokoNavNode,VIVONavNode,VansNavNode,VolcomNavNode,VonZipperNavNode,WLDNavNode,ZimtsternNavNode
+;AllBrandsNavNode;;Brand Links;;AllBrandsNavNode;667NavNode,686NavNode,69SlamNavNode,adidasOriginalsNavNode,AlMerrickNavNode,AlienWorkshopNavNode,AnalogNavNode,AnonNavNode,ArmadaNavNode,BenchNavNode,BillabongNavNode,BlueTomatoNavNode,BurtonNavNode,CarharttNavNode,DCNavNode,DaineseNavNode,DakineNavNode,DalbelloNavNode,droidNavNode,ElementNavNode,ElmNavNode,F2-FTWONavNode,FemipleasureNavNode,FoursquareNavNode,FoxNavNode,HorsefeathersNavNode,HurleyNavNode,LandingNavNode,NikeNavNode,Nike6.0NavNode,NixonNavNode,OakleyNavNode,OrageNavNode,PYUANavNode,PlayboardNavNode,ProTecNavNode,QuiksilverNavNode,RedNavNode,ReefNavNode,RipCurlNavNode,RoxyNavNode,SessionsNavNode,SpecialBlendNavNode,TokoNavNode,VIVONavNode,VansNavNode,VolcomNavNode,VonZipperNavNode,WLDNavNode,ZimtsternNavNode
 # children of StreetwearNavigationNode 
-;StreetwearMenNavNodeMenu;;Streetwear Men Menu;StreetwearNavigationNode;StreetwearMenNavNodeMenu;StreetwearMenBagsNavNode,StreetwearMensBeltsNavNode,StreetwearMenShortsNavNode,StreetwearMenTShirtsNavNode
-;StreetwearWomenNavNodeMenu;;Streetwear Women Menu;StreetwearNavigationNode;StreetwearWomenNavNodeMenu;StreetwearWomenBagsNavNode,StreetwearWomenPantsNavNode,StreetwearWomenTShirtsNavNode,StreetwearWomenTopsNavNode,StreetwearWomenSkirtsNavNode
-;StreetwearYouthNavNodeMenu;;Streetwear Youth Menu;StreetwearNavigationNode;StreetwearYouthNavNodeMenu;StreetwearYouthBoardshortsNavNodeMenu,StreetwearYouthTShirtNavNodeMenu
+;StreetwearMenNavNodeMenu;;Streetwear Men Menu;;StreetwearMenNavNodeMenu;StreetwearMenBagsNavNode,StreetwearMensBeltsNavNode,StreetwearMenShortsNavNode,StreetwearMenTShirtsNavNode
+;StreetwearWomenNavNodeMenu;;Streetwear Women Menu;;StreetwearWomenNavNodeMenu;StreetwearWomenBagsNavNode,StreetwearWomenPantsNavNode,StreetwearWomenTShirtsNavNode,StreetwearWomenTopsNavNode,StreetwearWomenSkirtsNavNode
+;StreetwearYouthNavNodeMenu;;Streetwear Youth Menu;;StreetwearYouthNavNodeMenu;StreetwearYouthBoardshortsNavNodeMenu,StreetwearYouthTShirtNavNodeMenu
 # children of SnowNavigationNode 
-;SnowwearMenNavNodeMenu;;Snowwear Men Menu;SnowNavigationNode;SnowwearMenNavNodeMenu;SnowwearMensJacketsNavNode,SnowwearMenPantsNavNode
-;SnowwearWomenNavNodeMenu;;Snowwear Women Menu;SnowNavigationNode;SnowwearWomenNavNodeMenu;SnowwearWomensJacketsNavNode,SnowwearWomensPantsNavNode
-;SnowwearYouthNavNodeMenu;;Snowwear Youth Menu;SnowNavigationNode;SnowwearYouthNavNodeMenu;SnowwearYouthJacketsNavNode,SnowwearYouthPantsNavNode
-;SnowKitNavNodeMenu;;Snowwear Kit Menu;SnowNavigationNode;SnowKitNavNodeMenu;SnowboardsNavNode,BindingsNavNode,HelmetsNavNode,ToolsNavNode
+;SnowwearMenNavNodeMenu;;Snowwear Men Menu;;SnowwearMenNavNodeMenu;SnowwearMensJacketsNavNode,SnowwearMenPantsNavNode
+;SnowwearWomenNavNodeMenu;;Snowwear Women Menu;;SnowwearWomenNavNodeMenu;SnowwearWomensJacketsNavNode,SnowwearWomensPantsNavNode
+;SnowwearYouthNavNodeMenu;;Snowwear Youth Menu;;SnowwearYouthNavNodeMenu;SnowwearYouthJacketsNavNode,SnowwearYouthPantsNavNode
+;SnowKitNavNodeMenu;;Snowwear Kit Menu;;SnowKitNavNodeMenu;SnowboardsNavNode,BindingsNavNode,HelmetsNavNode,ToolsNavNode
 # children of AccessoriesNavigationNode 
-;AccessoriesMenNavNodeMenu;;Accessories Men Menu;AccessoriesNavigationNode;AccessoriesMenNavNodeMenu;AccessoriesBandanasNavNode,AccessoriesBeaniesNavNode,AccessoriesBeltsNavNode,AccessoriesCapsNavNode,AccessoriesGlovesNavNode,AccessoriesSocksNavNode,AccessoriesWatchesNavNode,BrowseAllAccessoriesNavNode
-;AccessoriesWomenNavNodeMenu;;Accessories Women Menu;AccessoriesNavigationNode;AccessoriesWomenNavNodeMenu;AccessoriesWomenBagsNavNode,AccessoriesWomenBeltsNavNode,AccessoriesWomenWatchesNavNode,BrowseAllAccessoriesWomenNavNode
+;AccessoriesMenNavNodeMenu;;Accessories Men Menu;;AccessoriesMenNavNodeMenu;AccessoriesBandanasNavNode,AccessoriesBeaniesNavNode,AccessoriesBeltsNavNode,AccessoriesCapsNavNode,AccessoriesGlovesNavNode,AccessoriesSocksNavNode,AccessoriesWatchesNavNode,BrowseAllAccessoriesNavNode
+;AccessoriesWomenNavNodeMenu;;Accessories Women Menu;;AccessoriesWomenNavNodeMenu;AccessoriesWomenBagsNavNode,AccessoriesWomenBeltsNavNode,AccessoriesWomenWatchesNavNode,BrowseAllAccessoriesWomenNavNode
 # children of StreetwearYouthNavNode 
-;StreetwearYouthBoardshortsNavNode;;Youth Board Shorts;StreetwearYouthNavNode;StreetwearYouthBoardshortsNavNode;StreetwearYouthBoardshortsBillabongNavNode,StreetwearYouthBoardshorts69SlamNavNode,StreetwearYouthBoardshortsQuiksilverNavNode,StreetwearYouthBoardshortsVolcomNavNode,BrowseAllStreetwearYouthBoardshortsNavNode
-;StreetwearYouthTShirtNavNode;;Youth TShirt;StreetwearYouthNavNode;StreetwearYouthTShirtNavNode;StreetwearYouthTShirtsBillabongNavNode,StreetwearYouthTShirtsBlueTomatoNavNode,StreetwearYouthTShirtsBurtonNavNode,StreetwearYouthTShirtsDCNavNode,StreetwearYouthTShirtsQuiksilverNavNode,BrowseAllStreetwearYouthTShirtsNavNode
+;StreetwearYouthBoardshortsNavNode;;Youth Board Shorts;;StreetwearYouthBoardshortsNavNode;StreetwearYouthBoardshortsBillabongNavNode,StreetwearYouthBoardshorts69SlamNavNode,StreetwearYouthBoardshortsQuiksilverNavNode,StreetwearYouthBoardshortsVolcomNavNode,BrowseAllStreetwearYouthBoardshortsNavNode
+;StreetwearYouthTShirtNavNode;;Youth TShirt;;StreetwearYouthTShirtNavNode;StreetwearYouthTShirtsBillabongNavNode,StreetwearYouthTShirtsBlueTomatoNavNode,StreetwearYouthTShirtsBurtonNavNode,StreetwearYouthTShirtsDCNavNode,StreetwearYouthTShirtsQuiksilverNavNode,BrowseAllStreetwearYouthTShirtsNavNode
 
 ## level 6 -- children of above NavNodes ## (the following order of children is the display order on the site)
 INSERT_UPDATE CMSNavigationNode;uid[unique=true];$contentCV[unique=true];name;&nodeRef;links(&linkRef);
@@ -1388,7 +1399,69 @@ INSERT_UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];name;url
 #;;TShirtsVolcomLink;T-Shirts Volcom Link;/Collections/Surf/T-Shirts/c/tshirts?q=:relevance:brand:Volcom;;;; 
 #;;TShirtsZimtsternLink;T-Shirts Zimtstern Link;/Collections/Surf/T-Shirts/c/tshirts?q=:relevance:brand:Zimtstern;;;
 
+###########apsara starts#######
+$lang=en
+INSERT_UPDATE CMSNavigationNode;uid[unique=true];$contentCV[unique=true];name;parent(uid, $contentCV);children(uid,$contentCV)[mode=append];links(uid, $contentCV);&nodeRef;
+;SiteRootNode;;SiteRootNode;root;;;SiteRootNode;
 
+## level 2 -- Apparel DE Site: child of SiteRootNode ##
+#INSERT_UPDATE CMSNavigationNode;uid[unique=true];$contentCV[unique=true];name;parent(uid, $contentCV);children(uid,$contentCV)[mode=append];links(uid, $contentCV);&nodeRef;
+#;ApparelDENavNode;;Apparel DE Site;SiteRootNode;;;ApparelDENavNode;
+
+###########apsara#######
+##-- level 2. children of SiteRoot --##
+INSERT_UPDATE CMSNavigationNode;uid[unique=true];$contentCV[unique=true];name;parent(uid, $contentCV);links(&componentRef);&nodeRef
+;apsaraNavNode;;apsara Site;SiteRootNode;;apsaraNavNode
+
+##--- level 3. children of apsaraNavNode ---##
+INSERT_UPDATE CMSNavigationNode;uid[unique=true];$contentCV[unique=true];name;parent(uid, $contentCV);links(&componentRef);&nodeRef
+;apsaraCategoryNavNode;;Categories;apsaraNavNode;;apsaraCategoryNavNode
+
+
+#############Apsara navigation bar begin #################
+INSERT_UPDATE CMSNavigationNode;uid[unique=true];$contentCV[unique=true];name;parent(uid, $contentCV);links(&linkRef);&nodeRef
+;ApsaraPencilsNavNode;;Apsara Pencils Category;apsaraCategoryNavNode;;ApsaraPencilsNavNode   
+;ApsaraErasersNavNode;;Apsara Erasers Category;apsaraCategoryNavNode;;ApsaraErasersNavNode    
+;ApsaraChalksNavNode;;Apsara Cutters Category;apsaraCategoryNavNode;;ApsaraChalksNavNode     
+;ApsaraColoursticksNavNode;;Apsara Colour sticks Category;apsaraCategoryNavNode;;ApsaraColoursticksNavNode
+;ApsaraPaintsNavNode;;Apsara Paints Category;apsaraCategoryNavNode;;ApsaraPaintsNavNode  
+
+## links of the above navigation nodes ##
+INSERT_UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];name;url;&linkRef;&componentRef;target(code)[default='sameWindow'];category(code,$productCV)
+;;ApsarajPencilsCategoryLink;Apsara Pencils Category Link;#;ApsarajPencilsCategoryLink;ApsarajPencilsCategoryLink;;ApsaraPencils    
+;;ApsarajErasersCategoryLink;Apsara Erasers Category Link;#;ApsarajErasersCategoryLink;ApsarajErasersCategoryLink;;ApsaraErasers    
+;;ApsaraChalksCategoryLink;Apsara Chalks Category Link;#;ApsaraChalksCategoryLink;ApsaraChalksCategoryLink;;ApsaraChalks    
+;;ApsaraColoursticksCategoryLink;Apsara Colour sticks Category Link;#;ApsaraColoursticksCategoryLink;ApsaraColoursticksCategoryLink;;ApsaraColoursticks
+;;ApsaraPaintsCategoryLink;Apsara Paints Category Link;#;ApsaraPaintsCategoryLink;ApsaraPaintsCategoryLink;;ApsaraPaints  
+
+## entries of the above navigation nodes ##
+INSERT_UPDATE CMSNavigationEntry;uid[unique=true];$contentCV[unique=true];name;navigationNode(&nodeRef);item(CMSLinkComponent.uid,CMSLinkComponent.$contentCV);
+;ApsaraPencilsNavNodeEntry;;Apsara Pencils NavNode Entry;ApsaraPencilsNavNode;ApsarajPencilsCategoryLink                            
+;ApsaraErasersNavNodeEntry;;Apsara Erasers NavNode Entry;ApsaraErasersNavNode;ApsarajErasersCategoryLink                             
+;ApsaraChalksNavNodeEntry;;Apsara Chalks NavNode Entry;ApsaraChalksNavNode;ApsaraChalksCategoryLink                            
+;ApsaraColourPencilsNavNodeEntry;;Apsara Colour sticks NavNode Entry;ApsaraColoursticksNavNode;ApsaraColoursticksCategoryLink
+;ApsaraBallPensNavNodeEntry;;Apsara Paints NavNode Entry;ApsaraPaintsNavNode;ApsaraPaintsCategoryLink   
+
+
+# Apparel Navigation nodes and links
+UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];linkName[lang=de]
+########apsara######
+;;ApsarajPencilsCategoryLink;"Apsara Pencils"
+;;ApsarajErasersCategoryLink;"Apsara Erasers"
+;;ApsaraChalksCategoryLink;"Apsara Chalks"
+;;ApsaraColoursticksCategoryLink;"Apsara Colour sticks"
+;;ApsaraPaintsCategoryLink;"Apsara Paints"
+
+INSERT_UPDATE CategoryNavigationComponent;$contentCV[unique=true];uid[unique=true];name;styleClass;&componentRef;navigationNode(&nodeRef);wrapAfter
+#;;ApparelDECategoryNavComponent;Apparel-DE Category Navigation Component;;ApparelDECategoryNavComponent;ApparelDECategoryNavNode;10
+;;apsaraCategoryNavComponent;Apparel-DE Category Navigation Component;;apsaraCategoryNavComponent;apsaraCategoryNavNode;10
+
+INSERT_UPDATE BreadcrumbComponent;$contentCV[unique=true];uid[unique=true];name;&componentRef
+;;breadcrumbComponent;Breadcrumb CMS Component;breadcrumbComponent
+
+INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];cmsComponents(uid, $contentCV)
+#;;NavigationBarSlot;ApparelDECategoryNavComponent,breadcrumbComponent
+;;NavigationBarSlot;apsaraCategoryNavComponent,breadcrumbComponent
 
 
  

@@ -1,3 +1,4 @@
+
 $productCatalog=natarajProductCatalog
 
 $catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog]
@@ -147,7 +148,7 @@ UPDATE Product  ;code[unique=true];$picture;$thumbnail;$others;$normal;$thumbnai
 ;NatarajBallPen9;/300Wx300H/NatarajBallPen9.jpg;/96Wx96H/NatarajBallPen9.jpg;/515Wx515H/NatarajBallPen9.jpg,/300Wx300H/NatarajBallPen9.jpg,/96Wx96H/NatarajBallPen9.jpg,/65Wx65H/NatarajBallPen9.jpg,/30Wx30H/NatarajBallPen9.jpg;/300Wx300H/NatarajBallPen9.jpg;/96Wx96H/NatarajBallPen9.jpg;NatarajBallPen9_1;
 ;NatarajBallPen10;/300Wx300H/NatarajBallPen10.jpg;/96Wx96H/NatarajBallPen10.jpg;/515Wx515H/NatarajBallPen10.jpg,/300Wx300H/NatarajBallPen10.jpg,/96Wx96H/NatarajBallPen10.jpg,/65Wx65H/NatarajBallPen10.jpg,/30Wx30H/NatarajBallPen10.jpg;/300Wx300H/NatarajBallPen10.jpg;/96Wx96H/NatarajBallPen10.jpg;NatarajBallPen10_1;
 
-productCatalog=natarajProductCatalog
+$productCatalog=natarajProductCatalog
 
 $catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog]
 $media=@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator]
