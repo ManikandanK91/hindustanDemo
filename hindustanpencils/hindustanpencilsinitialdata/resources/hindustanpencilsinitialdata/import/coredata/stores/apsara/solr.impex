@@ -18,7 +18,7 @@ $facetSearchConfigDescription=Apparel DE Solr Index
 $searchIndexNamePrefix=apsara
 $solrIndexedType=apsaraProductType
 $indexBaseSite=apsara
-$indexLanguages=de
+$indexLanguages=en
 $indexCurrencies=EUR
 
 # Import config properties into impex macros
