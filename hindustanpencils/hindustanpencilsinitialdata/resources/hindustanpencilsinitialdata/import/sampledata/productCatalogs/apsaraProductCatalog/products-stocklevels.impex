@@ -16,6 +16,42 @@ $productCatalogName=apsara Product Catalog
 $catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog:Staged]
 $vendor=apsaralo
 
+$productCatalog=apsaraProductCatalog
+$productCatalogName=Apsara Product Catalog
+$vendor=apsara
+
+
+INSERT_UPDATE Vendor;code[unique=true]
+;$vendor
+
+
+INSERT_UPDATE Warehouse;code[unique=true];vendor(code);default[default=true]
+;ap_warehouse_s;apsara;
+
+INSERT_UPDATE StockLevel;available;warehouse(code)[unique=true];inStockStatus(code);maxPreOrder;maxStockLevelHistoryCount;overSelling;preOrder;productCode[unique=true];reserved
+;100;ap_warehouse_s;forceInStock;0;-1;0;0;ApsaraPencil1;0
+;100;ap_warehouse_s;forceInStock;0;-1;0;0;ApsaraPencil2;0
+;100;ap_warehouse_s;forceInStock;0;-1;0;0;ApsaraEraser3;0
+;100;ap_warehouse_s;forceInStock;0;-1;0;0;ApsaraEraser4;0
+;100;ap_warehouse_s;forceInStock;0;-1;0;0;ApsaraChalk5;0
+;100;ap_warehouse_s;forceInStock;0;-1;0;0;ApsaraChalk6;0
+;100;ap_warehouse_s;forceInStock;0;-1;0;0;ApsaraColourstick7;0
+;100;ap_warehouse_s;forceInStock;0;-1;0;0;ApsaraColourstick8;0
+;100;ap_warehouse_s;forceInStock;0;-1;0;0;ApsaraPaint9;0
+;100;ap_warehouse_s;forceInStock;0;-1;0;0;ApsaraPaint10;0
+
+UPDATE Product;code[unique=true];$catalogVersion;stockLevels(productCode,warehouse(code));vendors(code)
+;ApsaraPencil1;;ApsaraPencil1:ap_warehouse_s;apsara
+;ApsaraPencil2;;ApsaraPencil2:ap_warehouse_s;apsara
+;ApsaraEraser3;;ApsaraEraser3:ap_warehouse_s;apsara
+;ApsaraEraser4;;ApsaraEraser4:ap_warehouse_s;apsara
+;ApsaraChalk5;;ApsaraChalk5:ap_warehouse_s;apsara
+;ApsaraChalk6;;ApsaraChalk6:ap_warehouse_s;apsara
+;ApsaraColourstick7;;ApsaraColourstick7:ap_warehouse_s;apsara
+;ApsaraColourstick8;;ApsaraColourstick8:ap_warehouse_s;apsara
+;ApsaraPaint9;;ApsaraPaint9:ap_warehouse_s;apsara
+;ApsaraPaint10;;ApsaraPaint10:ap_warehouse_s;apsara
+
 INSERT_UPDATE Vendor;code[unique=true];name[lang=en]
  ;apsaralo;apsaralo;
 

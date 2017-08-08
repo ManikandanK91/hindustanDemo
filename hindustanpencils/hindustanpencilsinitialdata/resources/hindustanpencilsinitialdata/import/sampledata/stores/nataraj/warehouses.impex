@@ -20,6 +20,7 @@ INSERT_UPDATE BaseStore2WarehouseRel;source(uid)[unique=true];target(code)[uniqu
 ;$storeUid;ap_warehouse_e
 ;$storeUid;ap_warehouse_w
 ;$storeUid;ap_warehouse_n
+;$storeUid;nat_warehouse_s
 
 INSERT_UPDATE PointOfService;name[unique=true];displayName;warehouses(code);address(&addrID);latitude;longitude;geocodeTimestamp[dateformat=dd.MM.yyyy];type(code)[default=WAREHOUSE]
 ;ap_warehouse_s;Warehouse South;ap_warehouse_s;ap_warehouse_s;48,15149;11,61823;29.05.2025
