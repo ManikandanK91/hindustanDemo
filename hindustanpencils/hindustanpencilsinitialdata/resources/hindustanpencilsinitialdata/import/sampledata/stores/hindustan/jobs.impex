@@ -1,0 +1,30 @@
+# -----------------------------------------------------------------------
+# [y] hybris Platform
+#
+# Copyright (c) 2017 SAP SE or an SAP affiliate company.  All rights reserved.
+#
+# This software is the confidential and proprietary information of SAP
+# ("Confidential Information"). You shall not disclose such Confidential
+# Information and shall use it only in accordance with the terms of the
+# license agreement you entered into with SAP.
+# -----------------------------------------------------------------------
+$storeUid=hindustan
+$defaultCurrency=USD
+$defaultLanguage=en
+$googleHost=setthethirdpartyhost
+$googleUserName=setgoogleusername
+$googlePassword=setgooglepassword
+
+
+INSERT_UPDATE ExportDataCronJob;code[unique=true];job(code);baseStore(uid);cmsSite(uid);language(isocode);currency(isocode);user(uid);thirdPartyHost;thirdPartyUsername;thirdPartyPassword;dataGenerationPipeline;sessionLanguage(isocode)
+;googleLocationsHindustan;exportDataJobPerformable;$storeUid;$storeUid;$defaultLanguage;$defaultCurrency;anonymous;$googleHost;$googleUserName;$googlePassword;exportGooglePosPipeline;$defaultLanguage
+;googleProductsHindustan;exportDataJobPerformable;$storeUid;$storeUid;$defaultLanguage;$defaultCurrency;anonymous;$googleHost;$googleUserName;$googlePassword;exportGoogleProductPipeline;$defaultLanguage
+
+INSERT_UPDATE CronJob;code[unique=true];job(code);baseStore(uid);cmsSite(uid);sessionLanguage(isocode);sessionCurrency(isocode);sessionUser(uid);
+;uploadExports;uploadDataJobPerformable;$siteUid;$siteUid;$defaultLanguage;$defaultCurrency;anonymous;
+;quoteToExpireSoonJob;quoteToExpireSoonJobPerformable;;;en;;
+;quoteExpiredJob;quoteExpiredJobPerformable;;;en;;
+
+INSERT_UPDATE Trigger;active;second;minute;hour;day;month;year;cronExpression;cronJob(code)[unique=true];relative
+;true;0;0;0;0;0;0;0 0 6/12 * * ?;quoteToExpireSoonJob;true
+;true;0;0;0;0;0;0;0 0 0 * * ? *;quoteExpiredJob;true

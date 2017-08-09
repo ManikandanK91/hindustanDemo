@@ -118,6 +118,12 @@ public class InitialDataSystemSetup extends AbstractSystemSetup
 		sampleImportData1.setContentCatalogNames(Arrays.asList("nataraj"));
 		sampleImportData1.setStoreNames(Arrays.asList("nataraj"));
 		importData.add(sampleImportData1);
+		
+		final ImportData sampleImportData3 = new ImportData();
+		sampleImportData3.setProductCatalogName("hindustan");
+		sampleImportData3.setContentCatalogNames(Arrays.asList("hindustan"));
+		sampleImportData3.setStoreNames(Arrays.asList("hindustan"));
+		importData.add(sampleImportData3);
 
 		getCoreDataImportService().execute(this, context, importData);
 		getEventService().publishEvent(new CoreDataImportedEvent(context, importData));
