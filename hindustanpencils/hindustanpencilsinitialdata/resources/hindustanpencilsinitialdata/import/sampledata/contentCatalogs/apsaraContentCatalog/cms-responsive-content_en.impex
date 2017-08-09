@@ -532,3 +532,19 @@ UPDATE CMSNavigationNode;$contentCV[unique=true];uid[unique=true];title[lang=en]
 ;;ApsaraChalksNavNode;"Apsara Chalks"
 ;;ApsaraColoursticksNavNode;"Apsara Colour sticks"
 ;;ApsaraPaintsNavNode;"Apsara Paints"
+
+#Rotating Banner
+UPDATE BannerComponent;$contentCV[unique=true];uid[unique=true];headline[lang=$lang];$picture[lang=$lang];content[lang=$lang]
+#;;CarouselCamcorderBanner;New - Ignite your passion for film with the latest HD camcorder...;Elec_468x418_HomeCarouselCamcorder_EN_01.jpg;""
+ ;;CarouselApsaraBanner;New Pencil;ResizedApsaraErasers.jpg;""
+ ;;CarouselApsaraBanner2;New Pencil2;ResizedApsaraScales.jpg;""
+ ;;CarouselApsaraBanner3;New Pencil3;ResizedApsaraPencils.jpg;""
+
+ 
+INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];realfilename;altText;mime[default='image/jpeg'];$contentCV[unique=true];folder(qualifier)[default=images];
+#;widescreen;ResizedApsaraErasers.jpg;$siteResource/images/banners/homepage/responsive/ResizedApsaraErasers.jpg;ResizedApsaraErasers.jpg;"Save Big on Select Streetwear";
+;widescreen;ResizedApsaraErasers.jpg;$siteResource/images/banners/homepage/responsive/ResizedApsaraErasers.jpg;ResizedApsaraErasers.jpg;"Save Big on Select Streetwear";
+;widescreen;ResizedApsaraScales.jpg;$siteResource/images/banners/homepage/responsive/ResizedApsaraScales.jpg;ResizedApsaraScales.jpg;"Save Big on Select Streetwear";
+;widescreen;ResizedApsaraPencils.jpg;$siteResource/images/banners/homepage/responsive/ResizedApsaraPencils.jpg;ResizedApsaraPencils.jpg;"Save Big on Select Streetwear";
+
+

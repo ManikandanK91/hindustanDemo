@@ -20,6 +20,15 @@ $productCV=catalogVersion(catalog(id[default=$productCatalog]),version[default='
 $picture=media(code, $contentCV) ;
 #$siteResource=jar:de.hybris.platform.apparelstore.constants.ApparelstoreConstants&/apparelstore/import/sampledata/contentCatalogs/$contentCatalog
 $siteResource=jar:com.hybris.hindustanpencils.initialdata.constants.HindustanpencilsInitialDataConstants&/hindustanpencilsinitialdata/import/sampledata/contentCatalogs/$contentCatalog
+$picture=media(code, $contentCV)
+$medias=medias(code, $contentCV);
+$mediaContainer=media(qualifier, $contentCV)[lang=$lang];
+#$siteResource=jar:de.hybris.platform.apparelstore.constants.ApparelstoreConstants&/apparelstore/import/sampledata/contentCatalogs/$contentCatalog
+$siteResource=jar:com.hybris.hindustanpencils.initialdata.constants.HindustanpencilsInitialDataConstants&/hindustanpencilsinitialdata/import/sampledata/contentCatalogs/$contentCatalog
+
+$jarResourceCms=jar:com.hybris.hindustanpencils.initialdata.constants.HindustanpencilsInitialDataConstants&/hindustanpencilsinitialdata/import/sampledata/cockpits/cmscockpit
+# Language
+$lang=en
 
 $jarResourceCms=jar:com.hybris.hindustanpencils.initialdata.constants.HindustanpencilsInitialDataConstants&/hindustanpencilsinitialdata/import/sampledata/cockpits/cmscockpit
 # Load the storefront context root config param
@@ -1463,10 +1472,82 @@ INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];cmsComponents
 #;;NavigationBarSlot;ApparelDECategoryNavComponent,breadcrumbComponent
 ;;NavigationBarSlot;apsaraCategoryNavComponent,breadcrumbComponent
 
+###################### Site LOgo
+UPDATE GenericItem[processor=de.hybris.platform.commerceservices.impex.impl.ConfigPropertyImportProcessor];pk[unique=true]
+
+# Load the storefront context root config param
+$storefrontContextRoot=$config-storefrontContextRoot
+
+# Apparel general data
+# Media
+#INSERT_UPDATE Media;$contentCV[unique=true];code[unique=true];realfilename;@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator];mime[default='image/jpeg'];folder(qualifier)[default='images'];altText
+#;;/images/theme/logo_hybris_responsive.svg;logo_hybris_responsive.svg;$siteResource/images/theme/logo_hybris_responsive.svg;image/svg+xml;;"hybris Accelerator"
+
+# Site Logo Component
+#UPDATE SimpleBannerComponent;$contentCV[unique=true];uid[unique=true];$picture[lang=$lang]
+#;;SiteLogoComponent;/images/theme/logo_hybris_responsive.svg
+
+INSERT_UPDATE Media;$contentCV[unique=true];code[unique=true];realfilename;@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator];mime[default='image/jpeg'];folder(qualifier)[default='images'];altText
+;;/images/theme/logo-hybris1.png;apsara_logo.png.png;$siteResource/images/theme/apsara_logo.png;image/png;;"Apsara Pencils"
+
+# Site Logo Component
+UPDATE SimpleBannerComponent;$contentCV[unique=true];uid[unique=true];$picture[lang=$lang]
+;;SiteLogoComponent;/images/theme/logo-hybris1.png
+
+# Apparel Navigation nodes and links
+UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];linkName[lang=en]
+########apsara######
+;;ApsarajPencilsCategoryLink;"Apsara Pencils"
+;;ApsarajErasersCategoryLink;"Apsara Erasers"
+;;ApsaraChalksCategoryLink;"Apsara Chalks"
+;;ApsaraColoursticksCategoryLink;"Apsara Colour sticks"
+;;ApsaraPaintsCategoryLink;"Apsara Paints"
+
+UPDATE CMSNavigationNode;$contentCV[unique=true];uid[unique=true];title[lang=en]
+########apsara######
+;;ApsaraPencilsNavNode;"Apsara Pencils"
+;;ApsaraErasersNavNode;"Apsara Erasers"
+;;ApsaraChalksNavNode;"Apsara Chalks"
+;;ApsaraColoursticksNavNode;"Apsara Colour sticks"
+;;ApsaraPaintsNavNode;"Apsara Paints"
 
  
 
 
+
+################## Banners Apsara
+
+#component for rotating image
+INSERT_UPDATE BannerComponent ;$contentCV[unique=true];uid[unique=true]    ;name                 ;&componentRef       ;urlLink
+                #              ;                          ;CarouselCyberBanner ;Carousel Cyber Banner;CarouselCyberBanner ;/Open-Catalogue/Cameras/Digital-Cameras/Digital-Compacts/Cyber-shot-W55/p/676442
+                              ;                       ;CarouselApsaraBanner       ;Carousel Apsara Banner ;CarouselApsaraBanner;
+                              ;                       ;CarouselApsaraBanner2       ;Carousel Apsara Banner 2 ;CarouselApsaraBanner2;
+                              ;                       ;CarouselApsaraBanner3       ;Carousel Apsara Banner 3 ;CarouselApsaraBanner3;
+
+
+							  
+INSERT_UPDATE RotatingImagesComponent;$contentCV[unique=true];uid[unique=true];name;banners(&componentRef);&componentRef
+#;;ElectronicsHomepageCarouselComponent;Electronics Homepage Carousel;CarouselCyberBanner,CarouselCamcorderBanner,CarouselFunBanner;ElectronicsHomepageCarouselComponent
+ ;;ApparelUKHomepageCarouselComponent;Apparel UK Homepage Carousel Component;CarouselApsaraBanner,CarouselApsaraBanner2,CarouselApsaraBanner3;ApparelUKHomepageCarouselComponent
+
+
+ #Rotating Banner
+UPDATE BannerComponent;$contentCV[unique=true];uid[unique=true];headline[lang=$lang];$picture[lang=$lang];content[lang=$lang]
+#;;CarouselCamcorderBanner;New - Ignite your passion for film with the latest HD camcorder...;Elec_468x418_HomeCarouselCamcorder_EN_01.jpg;""
+ ;;CarouselApsaraBanner;New Pencil;ResizedApsaraErasers.jpg;""
+ ;;CarouselApsaraBanner2;New Pencil2;ResizedApsaraScales.jpg;""
+ ;;CarouselApsaraBanner3;New Pencil3;ResizedApsaraPencils.jpg;""
+
+ 
+INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];realfilename;altText;mime[default='image/jpeg'];$contentCV[unique=true];folder(qualifier)[default=images];
+#;widescreen;ResizedApsaraErasers.jpg;$siteResource/images/banners/homepage/responsive/ResizedApsaraErasers.jpg;ResizedApsaraErasers.jpg;"Save Big on Select Streetwear";
+;widescreen;ResizedApsaraErasers.jpg;$siteResource/images/banners/homepage/responsive/ResizedApsaraErasers.jpg;ResizedApsaraErasers.jpg;"Save Big on Select Streetwear";
+;widescreen;ResizedApsaraScales.jpg;$siteResource/images/banners/homepage/responsive/ResizedApsaraScales.jpg;ResizedApsaraScales.jpg;"Save Big on Select Streetwear";
+;widescreen;ResizedApsaraPencils.jpg;$siteResource/images/banners/homepage/responsive/ResizedApsaraPencils.jpg;ResizedApsaraPencils.jpg;"Save Big on Select Streetwear";
+
+  
+ INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active;cmsComponents(&componentRef)
+;;Section1Slot-Homepage;Section1 Slot for ApparelDEHomepage;true;ApparelUKHomepageCarouselComponent
  
  
 

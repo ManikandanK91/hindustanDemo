@@ -198,7 +198,7 @@ INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active;c
 #
 ###### Homepage Start ######
 INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active;cmsComponents(&componentRef)
-;;Section1Slot-Homepage;Section1 Slot for ApparelUKHomepage;true;
+;;Section1Slot-Homepage;Section1 Slot for ApparelUKHomepage;true;ApparelUKHomepageCarouselComponent
 ;;Section2ASlot-Homepage;Section2A Slot for ApparelUKHomepage;true;
 ;;Section2BSlot-Homepage;Section2B Slot for ApparelUKHomepage;true;
 ;;Section2CSlot-Homepage;Section2C Slot for ApparelUKHomepage;true;
@@ -1670,3 +1670,21 @@ INSERT_UPDATE BreadcrumbComponent;$contentCV[unique=true];uid[unique=true];name;
 INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];cmsComponents(uid, $contentCV)
 #;;NavigationBarSlot;ApparelDECategoryNavComponent,breadcrumbComponent
 ;;NavigationBarSlot;natarajCategoryNavComponent,breadcrumbComponent
+
+
+################ BANNERS
+
+INSERT_UPDATE BannerComponent ;$contentCV[unique=true];uid[unique=true]    ;name                 ;&componentRef       ;urlLink
+                #              ;                          ;CarouselCyberBanner ;Carousel Cyber Banner;CarouselCyberBanner ;/Open-Catalogue/Cameras/Digital-Cameras/Digital-Compacts/Cyber-shot-W55/p/676442
+                              ;                       ;CarouselNatarajBanner       ;Carousel Nataraj Banner ;CarouselNatarajBanner;
+                              ;                       ;CarouselNatarajBanner2       ;Carousel Nataraj Banner 2 ;CarouselNatarajBanner2;
+                              ;                       ;CarouselNatarajBanner3       ;Carousel Nataraj Banner 3 ;CarouselNatarajBanner3;
+
+INSERT_UPDATE RotatingImagesComponent;$contentCV[unique=true];uid[unique=true];name;banners(&componentRef);&componentRef
+#;;ElectronicsHomepageCarouselComponent;Electronics Homepage Carousel;CarouselCyberBanner,CarouselCamcorderBanner,CarouselFunBanner;ElectronicsHomepageCarouselComponent
+ ;;ApparelUKHomepageCarouselComponent;Apparel UK Homepage Carousel Component;CarouselNatarajBanner,CarouselNatarajBanner2,CarouselNatarajBanner3;ApparelUKHomepageCarouselComponent
+
+ 
+ 
+INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active;cmsComponents(&componentRef)
+;;Section1Slot-Homepage;Section1 Slot for ApparelUKHomepage;true;ApparelUKHomepageCarouselComponent
