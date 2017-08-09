@@ -1344,8 +1344,8 @@ INSERT_UPDATE PriceRow;productId[unique=true];unit(code[unique=true,default=piec
 ;300438085;pieces;EUR;69,95;1;1;false
 ;300192012;pieces;GBP;44,51;1;1;false
 ;300192012;pieces;EUR;54,95;1;1;false
-;300673824;pieces;GBP;80,96;1;1;false
-;300673824;pieces;EUR;99,95;1;1;false
+#;300673824;pieces;GBP;80,96;1;1;false
+#;300673824;pieces;EUR;99,95;1;1;false
 ;300438056;pieces;GBP;56,66;1;1;false
 ;300438056;pieces;EUR;69,95;1;1;false
 ;300438055;pieces;GBP;56,66;1;1;false

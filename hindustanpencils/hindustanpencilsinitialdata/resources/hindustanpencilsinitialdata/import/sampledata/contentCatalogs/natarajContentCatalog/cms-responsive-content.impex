@@ -198,7 +198,7 @@ INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active;c
 #
 ###### Homepage Start ######
 INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active;cmsComponents(&componentRef)
-;;Section1Slot-Homepage;Section1 Slot for ApparelUKHomepage;true;
+;;Section1Slot-Homepage;Section1 Slot for ApparelUKHomepage;true;ApparelUKHomepageCarouselComponent
 ;;Section2ASlot-Homepage;Section2A Slot for ApparelUKHomepage;true;
 ;;Section2BSlot-Homepage;Section2B Slot for ApparelUKHomepage;true;
 ;;Section2CSlot-Homepage;Section2C Slot for ApparelUKHomepage;true;
@@ -1612,3 +1612,79 @@ INSERT_UPDATE Media;$contentCV[unique=true];code[unique=true];mime;realfilename;
 #;;TShirtsRoxyLink;T-Shirts Roxy Link;/Collections/Surf/T-Shirts/c/tshirts?q=:relevance:brand:Roxy;;;;
 #;;TShirtsVolcomLink;T-Shirts Volcom Link;/Collections/Surf/T-Shirts/c/tshirts?q=:relevance:brand:Volcom;;;; 
 #;;TShirtsZimtsternLink;T-Shirts Zimtstern Link;/Collections/Surf/T-Shirts/c/tshirts?q=:relevance:brand:Zimtstern;;;
+
+
+INSERT_UPDATE CMSNavigationNode;uid[unique=true];$contentCV[unique=true];name;parent(uid, $contentCV);children(uid,$contentCV)[mode=append];links(uid, $contentCV);&nodeRef;
+;root;;root;;;;root;
+
+## level 1 -- Site Root: child of root ##
+INSERT_UPDATE CMSNavigationNode;uid[unique=true];$contentCV[unique=true];name;parent(uid, $contentCV);children(uid,$contentCV)[mode=append];links(uid, $contentCV);&nodeRef;
+;SiteRootNode;;SiteRootNode;root;;;SiteRootNode;
+
+## level 2 -- Apparel UK Site: child of SiteRootNode ##
+#INSERT_UPDATE CMSNavigationNode;uid[unique=true];$contentCV[unique=true];name;parent(uid, $contentCV);children(uid,$contentCV)[mode=append];links(uid, $contentCV);&nodeRef;
+#;ApparelUKNavNode;;Apparel UK Site;SiteRootNode;;;ApparelUKNavNode;
+
+############nataraj##########
+##-- level 2. children of SiteRoot --##
+INSERT_UPDATE CMSNavigationNode;uid[unique=true];$contentCV[unique=true];name;parent(uid, $contentCV);links(&componentRef);&nodeRef
+;natarajNavNode;;nataraj Site;SiteRootNode;;natarajNavNode
+
+##--- level 3. children of natarajNavNode ---##
+INSERT_UPDATE CMSNavigationNode;uid[unique=true];$contentCV[unique=true];name;parent(uid, $contentCV);links(&componentRef);&nodeRef
+;natarajCategoryNavNode;;Categories;natarajNavNode;;natarajCategoryNavNode
+
+
+#############nataraj navigation bar begin #################
+INSERT_UPDATE CMSNavigationNode;uid[unique=true];$contentCV[unique=true];name;parent(uid, $contentCV);links(&linkRef);&nodeRef
+;NatarajPencilsNavNode;;Nataraj Pencils Category;natarajCategoryNavNode;;NatarajPencilsNavNode   
+;NatarajErasersNavNode;;Nataraj Erasers Category;natarajCategoryNavNode;;NatarajErasersNavNode    
+;NatarajCuttersNavNode;;Nataraj Cutters Category;natarajCategoryNavNode;;NatarajCuttersNavNode     
+;NatarajColourPencilsNavNode;;Nataraj Colour Pencils Category;natarajCategoryNavNode;;NatarajColourPencilsNavNode
+;NatarajBallPensNavNode;;Nataraj Ball Pens Category;natarajCategoryNavNode;;NatarajBallPensNavNode  
+
+## links of the above navigation nodes ##
+INSERT_UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];name;url;&linkRef;&componentRef;target(code)[default='sameWindow'];category(code,$productCV)
+;;NatarajPencilsCategoryLink;Nataraj Pencils Category Link;#;NatarajPencilsCategoryLink;NatarajPencilsCategoryLink;;NatarajPencils    
+;;NatarajErasersCategoryLink;Nataraj Erasers Category Link;#;NatarajErasersCategoryLink;NatarajErasersCategoryLink;;NatarajErasers    
+;;NatarajCuttersCategoryLink;Nataraj Cutters Category Link;#;NatarajCuttersCategoryLink;NatarajCuttersCategoryLink;;NatarajCutters    
+;;NatarajColourPencilsCategoryLink;Nataraj Colour Pencils Category Link;#;NatarajColourPencilsCategoryLink;NatarajColourPencilsCategoryLink;;NatarajColourPencils
+;;NatarajBallPensCategoryLink;Nataraj Ball Pens Category Link;#;NatarajBallPensCategoryLink;NatarajBallPensCategoryLink;;NatarajBallPens  
+
+## entries of the above navigation nodes ##
+INSERT_UPDATE CMSNavigationEntry;uid[unique=true];$contentCV[unique=true];name;navigationNode(&nodeRef);item(CMSLinkComponent.uid,CMSLinkComponent.$contentCV);
+;NatarajPencilsNavNodeEntry;;Nataraj Pencils NavNode Entry;NatarajPencilsNavNode;NatarajPencilsCategoryLink                            
+;NatarajErasersNavNodeEntry;;Nataraj Erasers NavNode Entry;NatarajErasersNavNode;NatarajErasersCategoryLink                             
+;NatarajCuttersNavNodeEntry;;Nataraj Cutters NavNode Entry;NatarajCuttersNavNode;NatarajCuttersCategoryLink                            
+;NatarajColourPencilsNavNodeEntry;;Nataraj Colour Pencils NavNode Entry;NatarajColourPencilsNavNode;NatarajColourPencilsCategoryLink
+;NatarajBallPensNavNodeEntry;;Nataraj Ball Pens NavNode Entry;NatarajBallPensNavNode;NatarajBallPensCategoryLink   
+
+
+INSERT_UPDATE CategoryNavigationComponent;$contentCV[unique=true];uid[unique=true];name;styleClass;&componentRef;navigationNode(&nodeRef);wrapAfter
+#;;ApparelDECategoryNavComponent;Apparel-DE Category Navigation Component;;ApparelDECategoryNavComponent;ApparelDECategoryNavNode;10
+;;natarajCategoryNavComponent;Apparel-DE Category Navigation Component;;natarajCategoryNavComponent;natarajCategoryNavNode;10
+
+INSERT_UPDATE BreadcrumbComponent;$contentCV[unique=true];uid[unique=true];name;&componentRef
+;;breadcrumbComponent;Breadcrumb CMS Component;breadcrumbComponent
+
+INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];cmsComponents(uid, $contentCV)
+#;;NavigationBarSlot;ApparelDECategoryNavComponent,breadcrumbComponent
+;;NavigationBarSlot;natarajCategoryNavComponent,breadcrumbComponent
+
+
+################ BANNERS
+
+INSERT_UPDATE BannerComponent ;$contentCV[unique=true];uid[unique=true]    ;name                 ;&componentRef       ;urlLink
+                #              ;                          ;CarouselCyberBanner ;Carousel Cyber Banner;CarouselCyberBanner ;/Open-Catalogue/Cameras/Digital-Cameras/Digital-Compacts/Cyber-shot-W55/p/676442
+                              ;                       ;CarouselNatarajBanner       ;Carousel Nataraj Banner ;CarouselNatarajBanner;
+                              ;                       ;CarouselNatarajBanner2       ;Carousel Nataraj Banner 2 ;CarouselNatarajBanner2;
+                              ;                       ;CarouselNatarajBanner3       ;Carousel Nataraj Banner 3 ;CarouselNatarajBanner3;
+
+INSERT_UPDATE RotatingImagesComponent;$contentCV[unique=true];uid[unique=true];name;banners(&componentRef);&componentRef
+#;;ElectronicsHomepageCarouselComponent;Electronics Homepage Carousel;CarouselCyberBanner,CarouselCamcorderBanner,CarouselFunBanner;ElectronicsHomepageCarouselComponent
+ ;;ApparelUKHomepageCarouselComponent;Apparel UK Homepage Carousel Component;CarouselNatarajBanner,CarouselNatarajBanner2,CarouselNatarajBanner3;ApparelUKHomepageCarouselComponent
+
+ 
+ 
+INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active;cmsComponents(&componentRef)
+;;Section1Slot-Homepage;Section1 Slot for ApparelUKHomepage;true;ApparelUKHomepageCarouselComponent

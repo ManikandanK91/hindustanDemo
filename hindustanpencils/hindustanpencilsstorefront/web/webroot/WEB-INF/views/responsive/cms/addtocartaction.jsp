@@ -21,7 +21,6 @@
 </c:if>
 <input type="hidden" name="productCodePost" value="${fn:escapeXml(product.code)}"/>
 
-${ showAddToCart}
 <c:if test="${empty showAddToCart ? true : showAddToCart}">
 	<c:set var="buttonType">button</c:set>
 	<c:if test="${product.purchasable and product.stock.stockLevelStatus.code ne 'outOfStock' }">

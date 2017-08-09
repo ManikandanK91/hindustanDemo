@@ -266,7 +266,7 @@ UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];linkName[lang=e
 ;;AccessoriesBeltsLink;"Belts"
 ;;AccessoriesCapsLink;"Caps"
 ;;AccessoriesGlovesLink;"Gloves"
-;;AccessoriesLink;"Accessories"
+;;AccessoriesLink;"Colour Pencils"
 ;;AccessoriesSocksLink;"Socks"
 ;;AccessoriesWatchesLink;"Watches"
 ;;AccessoriesWomenBagsLink;"Bag"
@@ -276,7 +276,7 @@ UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];linkName[lang=e
 ;;AgileCommerceBlogLink;"Agile Commerce Blog"
 ;;AlMerrickLink;"Al Merrick"
 ;;AlienWorkshopLink;"Alien Workshop"
-;;AllBrandsLink;"Brands"
+;;AllBrandsLink;"Pencils"
 ;;AnalogLink;"Analog"
 ;;AnonLink;"Anon"
 ;;ArmadaLink;"Armada"
@@ -327,7 +327,7 @@ UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];linkName[lang=e
 ;;RoxyLink;"Roxy"
 ;;SavedCartsLink;"Saved Carts"
 ;;SessionsLink;"Sessions"
-;;SnowLink;"Snow"
+;;SnowLink;"Cutters"
 ;;SnowboardsLink;"Boards"
 ;;SnowwearMenPantsLink;"Pants"
 ;;SnowwearMensJacketsLink;"Jackets"
@@ -336,7 +336,7 @@ UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];linkName[lang=e
 ;;SnowwearYouthJacketsLink;"Jackets"
 ;;SnowwearYouthPantsLink;"Pants"
 ;;SpecialBlendLink;"Special Blend"
-;;StreetwearLink;"Streetwear"
+;;StreetwearLink;"Erasers"
 ;;StreetwearMenBagsLink;"Bags"
 ;;StreetwearMenShortsLink;"Shorts"
 ;;StreetwearMenTShirtsLink;"T-Shirts"
@@ -511,3 +511,44 @@ UPDATE CMSNavigationNode;$contentCV[unique=true];uid[unique=true];title[lang=en]
 ;;droidNavNode;""
 
 
+
+# Apparel Navigation nodes and links
+UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];linkName[lang=en]
+##########nataraj##########
+;;NatarajPencilsCategoryLink;"Nataraj Pencils"
+;;NatarajErasersCategoryLink;"Nataraj Erasers"
+;;NatarajCuttersCategoryLink;"Nataraj Cutters"
+;;NatarajColourPencilsCategoryLink;"Nataraj Colour Pencils"
+;;NatarajBallPensCategoryLink;"Nataraj Ball Pens"
+
+
+
+UPDATE CMSNavigationNode;$contentCV[unique=true];uid[unique=true];title[lang=en]
+##########nataraj##########
+;;NatarajPencilsNavNode;"Nataraj Pencils"
+;;NatarajErasersNavNode;"Nataraj Erasers"
+;;NatarajCuttersNavNode;"Nataraj Cutters"
+;;NatarajColourPencilsNavNode;"Nataraj Colour Pencils"
+;;NatarajBallPensNavNode;"Nataraj Ball Pens"
+
+
+
+
+
+
+######### BANNERS 
+UPDATE BannerComponent;$contentCV[unique=true];uid[unique=true];headline[lang=$lang];$picture[lang=$lang];content[lang=$lang]
+#;;CarouselCamcorderBanner;New - Ignite your passion for film with the latest HD camcorder...;Elec_468x418_HomeCarouselCamcorder_EN_01.jpg;""
+ ;;CarouselNatarajBanner;New Pencil;resizedNatarajBallPen1.jpg;""
+ ;;CarouselNatarajBanner2;New Pencil2;resizedpencil1.jpg;""
+ ;;CarouselNatarajBanner3;New Pencil3;resizedNatrajErasers.jpg;""
+ 
+ 
+  
+INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];realfilename;altText;mime[default='image/jpeg'];$contentCV[unique=true];folder(qualifier)[default=images];
+#;widescreen;ResizedApsaraErasers.jpg;$siteResource/images/banners/homepage/responsive/ResizedApsaraErasers.jpg;ResizedApsaraErasers.jpg;"Save Big on Select Streetwear";
+;widescreen;resizedNatarajBallPen1.jpg;$siteResource/images/banners/homepage/responsive/resizedNatarajBallPen1.jpg;resizedNatarajBallPen1.jpg;"Save Big on Select Streetwear";
+;widescreen;resizedpencil1.jpg;$siteResource/images/banners/homepage/responsive/resizedpencil1.jpg;resizedpencil1.jpg;"Save Big on Select Streetwear";
+;widescreen;resizedNatrajErasers.jpg;$siteResource/images/banners/homepage/responsive/resizedNatrajErasers.jpg;resizedNatrajErasers.jpg;"Save Big on Select Streetwear";
+
+  
