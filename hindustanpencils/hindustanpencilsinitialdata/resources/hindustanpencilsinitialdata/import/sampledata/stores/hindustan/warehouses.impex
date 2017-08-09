@@ -15,11 +15,22 @@
 
 $storeUid=hindustan
 
+INSERT_UPDATE Warehouse;code[unique=true];name;vendor(code)[default=default];default[default=true]
+;default;Default Warehouse;
+;nat_warehouse_s;nataraj Warehouse;
+;ap_warehouse_s;apsara Warehouse;
+;hind_warehouse_s;hindustan Warehouse;
+;pw_warehouse_s;hindustan Warehouse;
+;pw_warehouse_e;hindustan Warehouse;
+;pw_warehouse_w;hindustan Warehouse;
+;pw_warehouse_n;hindustan Warehouse;
+
 INSERT_UPDATE BaseStore2WarehouseRel;source(uid)[unique=true];target(code)[unique=true]
 ;$storeUid;pw_warehouse_s
 ;$storeUid;pw_warehouse_e
 ;$storeUid;pw_warehouse_w
 ;$storeUid;pw_warehouse_n
+;$storeUid;hind_warehouse_s
 
 INSERT_UPDATE PointOfService;name[unique=true];displayName;warehouses(code);address(&addrID);latitude;longitude;geocodeTimestamp[dateformat=dd.MM.yyyy];type(code)[default=WAREHOUSE]
 ;pw_warehouse_s;Warehouse South;pw_warehouse_s;pw_warehouse_s;29,4235547;-98,4853322;11.12.2012

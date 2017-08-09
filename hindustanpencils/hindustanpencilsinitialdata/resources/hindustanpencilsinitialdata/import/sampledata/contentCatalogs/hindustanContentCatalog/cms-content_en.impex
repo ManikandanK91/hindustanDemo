@@ -16,7 +16,8 @@ $picture=media(code, $contentCV);
 $siteResource=jar:de.hybris.platform.powertoolsstore.constants.PowertoolsStoreConstants&/powertoolsstore/import/sampledata/contentCatalogs/$contentCatalog
 $medias=medias(code, $contentCV);
 $mediaContainer=media(qualifier, $contentCV)[lang=$lang];
-
+$siteResource=jar:com.hybris.hindustanpencils.initialdata.constants.HindustanpencilsInitialDataConstants&/hindustanpencilsinitialdata/import/sampledata/contentCatalogs/$contentCatalog
+	
 
 # Language
 $lang=en

@@ -80,35 +80,35 @@ INSERT_UPDATE Product;code[unique=true];$supercategories;manufacturerName;manufa
 
 # Insert Products
 INSERT_UPDATE Product;code[unique=true];$supercategories;manufacturerName;manufacturerAID;unit(code);ean;variantType(code);$catalogVersion;$approved
-;NatarajPencil1;NatarajPencil;NatarajPencilmanufacturer;;pieces;;;;;
-;NatarajPencil2;NatarajPencil;NatarajPencilmanufacturer;;pieces;;;;;
+;NatarajPencil1;NatarajPencils;NatarajPencilmanufacturer;;pieces;;;;;
+;NatarajPencil2;NatarajPencils;NatarajPencilmanufacturer;;pieces;;;;;
 
-;NatarajEraser3;NatarajEraser;NatarajErasermanufacturer;;pieces;;;;;
-;NatarajEraser4;NatarajEraser;NatarajErasermanufacturer;;pieces;;;;;
+;NatarajEraser3;NatarajErasers;NatarajErasermanufacturer;;pieces;;;;;
+;NatarajEraser4;NatarajErasers;NatarajErasermanufacturer;;pieces;;;;;
 
-;NatarajCutter5;NatarajCutter;NatarajCuttermanufacturer;;pieces;;;;;
-;NatarajCutter6;NatarajCutter;NatarajCuttermanufacturer;;pieces;;;;;
+;NatarajCutter5;NatarajCutters;NatarajCuttermanufacturer;;pieces;;;;;
+;NatarajCutter6;NatarajCutters;NatarajCuttermanufacturer;;pieces;;;;;
 
-;NatarajColourPencil7;NatarajColourPencil;NatarajColourPencilmanufacturer;;pieces;;;;;
-;NatarajColourPencil8;NatarajColourPencil;NatarajColourPencilmanufacturer;;pieces;;;;;
+;NatarajColourPencil7;NatarajColourPencils;NatarajColourPencilmanufacturer;;pieces;;;;;
+;NatarajColourPencil8;NatarajColourPencils;NatarajColourPencilmanufacturer;;pieces;;;;;
 
-;NatarajBallPen9;NatarajBallPen;NatarajBallPenmanufacturer;;pieces;;;;;
-;NatarajBallPen10;NatarajBallPen;NatarajBallPenmanufacturer;;pieces;;;;;
+;NatarajBallPen9;NatarajBallPens;NatarajBallPenmanufacturer;;pieces;;;;;
+;NatarajBallPen10;NatarajBallPens;NatarajBallPenmanufacturer;;pieces;;;;;
 
-;ApsaraPencil1;ApsaraPencil;ApsaraPencilmanufacturer;;pieces;;;;;
-;ApsaraPencil2;ApsaraPencil;ApsaraPencilmanufacturer;;pieces;;;;;
+;ApsaraPencil1;ApsaraPencils;ApsaraPencilmanufacturer;;pieces;;;;;
+;ApsaraPencil2;ApsaraPencils;ApsaraPencilmanufacturer;;pieces;;;;;
 
-;ApsaraEraser3;ApsaraEraser;ApsaraErasermanufacturer;;pieces;;;;;
-;ApsaraEraser4;ApsaraEraser;ApsaraErasermanufacturer;;pieces;;;;;
+;ApsaraEraser3;ApsaraErasers;ApsaraErasermanufacturer;;pieces;;;;;
+;ApsaraEraser4;ApsaraErasers;ApsaraErasermanufacturer;;pieces;;;;;
 
-;ApsaraChalk5;ApsaraChalk;ApsaraChalkmanufacturer;;pieces;;;;;
-;ApsaraChalk5;ApsaraChalk;ApsaraChalkmanufacturer;;pieces;;;;;
+;ApsaraChalk5;ApsaraChalks;ApsaraChalkmanufacturer;;pieces;;;;;
+;ApsaraChalk5;ApsaraChalks;ApsaraChalkmanufacturer;;pieces;;;;;
 
-;ApsaraColourstick7;ApsaraColourstick;ApsaraColourstickmanufacturer;;pieces;;;;;
-;ApsaraColourstick8;ApsaraColourstick;ApsaraColourstickmanufacturer;;pieces;;;;;
+;ApsaraColourstick7;ApsaraColoursticks;ApsaraColourstickmanufacturer;;pieces;;;;;
+;ApsaraColourstick8;ApsaraColoursticks;ApsaraColourstickmanufacturer;;pieces;;;;;
 
-;ApsaraPaint9;ApsaraPaint;ApsaraPaintmanufacturer;;pieces;;;;;
-;ApsaraPaint10;ApsaraPaint;ApsaraPaintmanufacturer;;pieces;;;;;
+;ApsaraPaint9;ApsaraPaints;ApsaraPaintmanufacturer;;pieces;;;;;
+;ApsaraPaint10;ApsaraPaints;ApsaraPaintmanufacturer;;pieces;;;;;
 
 # Insert Products
 INSERT_UPDATE Product;code[unique=true];$supercategories;manufacturerName;manufacturerAID;ean;variantType(code);unit(code)[default=pieces];$catalogVersion

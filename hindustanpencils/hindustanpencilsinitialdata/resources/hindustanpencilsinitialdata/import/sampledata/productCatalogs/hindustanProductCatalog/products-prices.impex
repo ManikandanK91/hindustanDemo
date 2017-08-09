@@ -24,7 +24,7 @@ $productCatalog=hindustanProductCatalog
 
 $catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default='$productCatalog:Staged']
 $prices=Europe1prices[translator=de.hybris.platform.europe1.jalo.impex.Europe1PricesTranslator]
-$taxGroup=Europe1PriceFactory_PTG(code)[default=in-vat-full]
+$taxGroup=Europe1PriceFactory_PTG(code)[default=eu-vat-full]
 
 # Set product approval status to Approved only for those products that have prices.
 $approved=approvalstatus(code)[default='approved']
