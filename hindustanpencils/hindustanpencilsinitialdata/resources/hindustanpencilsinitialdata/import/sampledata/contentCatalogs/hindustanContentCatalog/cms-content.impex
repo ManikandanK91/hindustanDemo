@@ -436,6 +436,24 @@
 	
 	
 	###### Homepage Start ######
+	#component for rotating image
+INSERT_UPDATE BannerComponent ;$contentCV[unique=true];uid[unique=true]    ;name                 ;&componentRef       ;urlLink
+                #              ;                          ;CarouselCyberBanner ;Carousel Cyber Banner;CarouselCyberBanner ;/Open-Catalogue/Cameras/Digital-Cameras/Digital-Compacts/Cyber-shot-W55/p/676442
+							   ;                       ;CarouselNatarajBanner       ;Carousel Nataraj Banner ;CarouselNatarajBanner;
+                              ;                       ;CarouselNatarajBanner2       ;Carousel Nataraj Banner 2 ;CarouselNatarajBanner2;
+                              ;                       ;CarouselNatarajBanner3       ;Carousel Nataraj Banner 3 ;CarouselNatarajBanner3;
+
+							;                        ;CarouselApsaraBanner        ;Carousel Apsara Banner ;CarouselApsaraBanner;
+                            ;                         ;CarouselApsaraBanner2       ;Carousel Apsara Banner 2 ;CarouselApsaraBanner2;
+                            ;                         ;CarouselApsaraBanner3       ;Carousel Apsara Banner 3 ;CarouselApsaraBanner3;
+
+
+							  
+INSERT_UPDATE RotatingImagesComponent;$contentCV[unique=true];uid[unique=true];name;banners(&componentRef);&componentRef
+#;;ElectronicsHomepageCarouselComponent;Electronics Homepage Carousel;CarouselCyberBanner,CarouselCamcorderBanner,CarouselFunBanner;ElectronicsHomepageCarouselComponent
+ ;;ApparelUKHomepageCarouselComponent;Apparel UK Homepage Carousel Component;CarouselNatarajBanner,CarouselNatarajBanner2,CarouselNatarajBanner3,CarouselApsaraBanner,CarouselApsaraBanner2,CarouselApsaraBanner3;ApparelUKHomepageCarouselComponent
+	
+	
 	## Based on landingLayout2Page.jsp ##
 	INSERT_UPDATE ContentSlotForPage;$contentCV[unique=true];uid[unique=true];position[unique=true];page(uid,$contentCV)[unique=true][default='homepage'];contentSlot(uid,$contentCV)[unique=true]
 	;;Section1-Homepage;Section1;;Section1Slot-Homepage
@@ -446,7 +464,7 @@
 	;;Section5-Homepage;Section5;;Section5Slot-Homepage
 	
 	INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active;cmsComponents(&componentRef)
-	;;Section1Slot-Homepage;Section1 Slot for Homepage;true;
+	;;Section1Slot-Homepage;Section1 Slot for Homepage;true;ApparelUKHomepageCarouselComponent
 	;;Section2ASlot-Homepage;Section2A Slot for Homepage;true;
 	;;Section2BSlot-Homepage;Section2B Slot for Homepage;true;
 	;;Section3Slot-Homepage;Section3 Slot for Homepage;true;
