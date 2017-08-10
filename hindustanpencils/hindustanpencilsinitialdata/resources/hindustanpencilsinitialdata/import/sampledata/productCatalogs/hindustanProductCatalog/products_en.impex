@@ -30,35 +30,36 @@ $lang=en
 
 # Update allProducts with localisations
 UPDATE Product;code[unique=true];$catalogVersion;name[lang=$lang];summary[lang=$lang];description[lang=$lang]
-;NatarajPencil1;;NatarajPencil1 Summary;NatarajPencil1 Description
-;NatarajPencil2;;NatarajPencil2 Summary;NatarajPencil2 Description
+;NatarajPencil1;;621 Pencils;<p>Box:10 X 10 pencils<br />36 boxes</p>;<p>Superior HB bonded lead<br />Smooth and clear writing</p>
+;NatarajPencil2;;Petals Pencils;<p>Box:10 X 10 pencils<br />36 boxes</p>;<p>Superior HB bonded lead<br />Thematic pencils with attractive colours and designs</p>
 
-;NatarajEraser3;;NatarajEraser3 Summary;NatarajEraser3 Description
-;NatarajEraser4;;NatarajEraser4 Summary;NatarajEraser4 Description
+;NatarajEraser3;;Jumbo Plasto;<p>Box:20 X 5 Erasers<br />18 boxes</p>;<p>Made up of soft high quality material<br />Erases graphite perfectly without damaging the paper</p>
+;NatarajEraser4;;Trio Eraser;<p>Box:20 X 5 Erasers<br />24 boxes</p>;<p>Comfortable triangle grip for better hold<br />Sharp corners for precise erasing</p>
 
-;NatarajCutter5;;NatarajCutter5 Summary;NatarajCutter5 Description
-;NatarajCutter6;;NatarajCutter6 Summary;NatarajCutter6 Description
+;NatarajCutter5;;Mini Cutter;<p>1 Pc<br />3200 sets</p>;<p>Made up of tough steel for precision cutting<br />With a lock device that stops blade from retracting</p>
+;NatarajCutter6;;Handy Cutter;<p>1 Pc<br />1200 sets</p>;<p>Made up of tough steel for precision cutting<br />With a lock device that stops blade from retracting</p>
 
-;NatarajColourPencil7;;NatarajColourPencil7 Summary;NatarajColourPencil7 Description
-;NatarajColourPencil8;;NatarajColourPencil8 Summary;NatarajColourPencil8 Description
+;NatarajColourPencil7;;10 Half Size;<p>1 Pc<br />700 sets</p>;<p>Brilliant colours that mix easily with each other>br />Strong lead resist breakage</P>
+;NatarajColourPencil8;;12 Half Size;<p>1 Pc<br />240 sets</p>;<p>Brilliant colours that mix easily with each other>br />Strong lead resist breakage</P>
 
-;NatarajBallPen9;;NatarajBallPen9 Summary;NatarajBallPen9 Description
-;NatarajBallPen10;;NatarajBallPen10 Summary;NatarajBallPen10 Description
+;NatarajBallPen9;;Nataraj Classic;<p>Box:20 pouches/ 5 packets<br />12 Boxes</p>;<p>Fine NSTC tip for break free and smooth writing<br />Non fading German ink<br />Available in Blue , Black , Red and Green ink</p>
+;NatarajBallPen10;;Nataraj Superx;<p>Box: 10 X 10 pouches<br />12 Boxes</p>;<p>Transparent body for ink visibility<br />Textured rubber grip for handling comfort<br />Available in Blue , Black , Red and Green ink</p>
 
-;ApsaraPencil1;;ApsaraPencil1;ApsaraPencil1 Summary;ApsaraPencil1 Description
-;ApsaraPencil2;;ApsaraPencil2;ApsaraPencil2 Summary;ApsaraPencil2 Description
+;ApsaraPencil1;;Platinum Pencils;<p>Box:10 X 10 pencils<br />36 boxes</p>;<p>Extra dark for dark writing impression <br />Dark leads needs less pressure when writing</p>
+;ApsaraPencil2;;Platinum RT Pencils;<p>Box:10 X 10 pencils<br />32 boxes</p>;<p>Extra dark for dark writing impression <br />Dark leads needs less pressure when writing</p>
                               
-;ApsaraEraser3;;ApsaraEraser3;ApsaraEraser3 Summary;ApsaraEraser3 Description
-;ApsaraEraser4;;ApsaraEraser4;ApsaraEraser4 Summary;ApsaraEraser4 Description
+;ApsaraEraser3;;Non Dust Regular;<p>Box:20 X 5 erasers<br />18 Boxes</p>;<p>Erases graphite gently without damaging paper<br />Ideal for students, artist, engineers and architects</p>
+;ApsaraEraser4;;RAL Mini;<p>Box:20 X 5 erasers<br />24 boxes</p>;<p>Vibrant and colourful for joyful erasing<br />Doesnt leave a trace of colour while erasing</p>
+
                
-;ApsaraChalk5;;ApsaraChalk5;ApsaraChalk5 Summary;ApsaraChalk5 Description
-;ApsaraChalk5;;ApsaraChalk5;ApsaraChalk5 Summary;ApsaraChalk5 Description
+;ApsaraChalk5;;Aps Chalk -Assorted;<p>Box:10 X 10 Chalks<br />12 Boxes</p>;<p>Hypo-allergenic calcium carbonate chalks<br />Lasts 4 times longer than ordinary chalks</p>
+;ApsaraChalk6;;Aps Chalk -White;<p>Box:10 X 10 Chalks<br />12 Boxes</p>;<p>Hypo-allergenic calcium carbonate chalks<br />Lasts 4 times longer than ordinary chalks</p>
                
-;ApsaraColourstick7;;ApsaraColourstick7;ApsaraColourstick7 Summary;ApsaraColourstick7 Description
-;ApsaraColourstick8;;ApsaraColourstick8;ApsaraColourstick8 Summary;ApsaraColourstick8 Description
+;ApsaraColourstick7;;24 Wax;<p>1 set<br />120 Sets</p>;<p>Smooth and non flaking in application<br />Extra long for longer usage</p>
+;ApsaraColourstick8;;Oil Pastels;<p>1 set<br />320 Sets</p>;<p>Rich and creamy strokes ensures excellent blending<br />Formulated by superior quality pigments</p>
                
-;ApsaraPaint9;;ApsaraPaint9;ApsaraPaint9 Summary;ApsaraPaint9 Description
-;ApsaraPaint10;;ApsaraPaint10;ApsaraPaint10 Summary;ApsaraPaint10 Description
+;ApsaraPaint9;;Poster Colours;<br>1 Set<br />80 Sets</p>;<p>Bright and intense shades<br />Quick drying</p>
+;ApsaraPaint10;;Water Colours;<br>1 Set<br />240 Sets</p>;<p>Excellent transparency<br />Mixes easily with water</p>
 
 
 UPDATE Product;code[unique=true];$catalogVersion;name[lang=$lang];description[lang=$lang];summary[lang=$lang]

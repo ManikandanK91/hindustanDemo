@@ -37,16 +37,16 @@ UPDATE BaseSite;uid[unique=true];solrFacetSearchConfiguration(name)
 
 # Define price range set
 INSERT_UPDATE SolrValueRangeSet;name[unique=true];qualifier;type;solrValueRanges(&rangeValueRefID)
-;powertoolsPriceRangeUSD;USD;double;rangeRefUSD1,rangeRefUSD2,rangeRefUSD3,rangeRefUSD4,rangeRefUSD5
+;powertools1PriceRangeUSD;INR;double;rangeRefUSD11,rangeRefUSD21,rangeRefUSD31,rangeRefUSD41,rangeRefUSD51
 ;powertoolsPriceRangeCAD;CAD;double;rangeRefCAD1,rangeRefCAD2,rangeRefCAD3,rangeRefCAD4,rangeRefCAD5
 
 # Define price ranges
 INSERT_UPDATE SolrValueRange;&rangeValueRefID;solrValueRangeSet(name)[unique=true];name[unique=true];from;to
-;rangeRefUSD1;powertoolsPriceRangeUSD;      ₹0-₹49.99;   0;  49.99
-;rangeRefUSD2;powertoolsPriceRangeUSD;    ₹50-₹199.99;  50; 199.99
-;rangeRefUSD3;powertoolsPriceRangeUSD;   ₹200-₹499.99; 200; 499.99
-;rangeRefUSD4;powertoolsPriceRangeUSD;   ₹500-₹999.99; 500; 999.99
-;rangeRefUSD5;powertoolsPriceRangeUSD;₹1,000-₹100,000;1000; 100000
+;rangeRefUSD11;powertools1PriceRangeUSD;      ₹0-₹49.99;   0;  49.99
+;rangeRefUSD21;powertools1PriceRangeUSD;    ₹50-₹199.99;  50; 199.99
+;rangeRefUSD31;powertools1PriceRangeUSD;   ₹200-₹499.99; 200; 499.99
+;rangeRefUSD41;powertools1PriceRangeUSD;   ₹500-₹999.99; 500; 999.99
+;rangeRefUSD51;powertools1PriceRangeUSD;₹1,000-₹100,000;1000; 100000
 
 ;rangeRefCAD1;powertoolsPriceRangeCAD;      C₹0-C₹49.99;   0;  49.99
 ;rangeRefCAD2;powertoolsPriceRangeCAD;    C₹50-C₹199.99;  50; 199.99

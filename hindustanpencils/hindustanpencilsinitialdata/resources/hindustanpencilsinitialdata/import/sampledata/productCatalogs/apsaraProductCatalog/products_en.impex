@@ -25,20 +25,21 @@ $lang=en
 
 # Update allProducts with localisations
 UPDATE Product;code[unique=true];$catalogVersion;name[lang=$lang];summary[lang=$lang];description[lang=$lang]
-;ApsaraPencil1;;ApsaraPencil1;ApsaraPencil1 Summary;ApsaraPencil1 Description
-;ApsaraPencil2;;ApsaraPencil2;ApsaraPencil2 Summary;ApsaraPencil2 Description
+;ApsaraPencil1;;Platinum Pencils;<p>Box:10 X 10 pencils<br />36 boxes</p>;<p>Extra dark for dark writing impression <br />Dark leads needs less pressure when writing</p>
+;ApsaraPencil2;;Platinum RT Pencils;<p>Box:10 X 10 pencils<br />32 boxes</p>;<p>Extra dark for dark writing impression <br />Dark leads needs less pressure when writing</p>
                               
-;ApsaraEraser3;;ApsaraEraser3;ApsaraEraser3 Summary;ApsaraEraser3 Description
-;ApsaraEraser4;;ApsaraEraser4;ApsaraEraser4 Summary;ApsaraEraser4 Description
+;ApsaraEraser3;;Non Dust Regular;<p>Box:20 X 5 erasers<br />18 Boxes</p>;<p>Erases graphite gently without damaging paper<br />Ideal for students, artist, engineers and architects</p>
+;ApsaraEraser4;;RAL Mini;<p>Box:20 X 5 erasers<br />24 boxes</p>;<p>Vibrant and colourful for joyful erasing<br />Doesnt leave a trace of colour while erasing</p>
+
                
-;ApsaraChalk5;;ApsaraChalk5;ApsaraChalk5 Summary;ApsaraChalk5 Description
-;ApsaraChalk6;;ApsaraChalk6;ApsaraChalk6 Summary;ApsaraChalk6 Description
+;ApsaraChalk5;;Aps Chalk -Assorted;<p>Box:10 X 10 Chalks<br />12 Boxes</p>;<p>Hypo-allergenic calcium carbonate chalks<br />Lasts 4 times longer than ordinary chalks</p>
+;ApsaraChalk6;;Aps Chalk -White;<p>Box:10 X 10 Chalks<br />12 Boxes</p>;<p>Hypo-allergenic calcium carbonate chalks<br />Lasts 4 times longer than ordinary chalks</p>
                
-;ApsaraColourstick7;;ApsaraColourstick7;ApsaraColourstick7 Summary;ApsaraColourstick7 Description
-;ApsaraColourstick8;;ApsaraColourstick8;ApsaraColourstick8 Summary;ApsaraColourstick8 Description
+;ApsaraColourstick7;;24 Wax;<p>1 set<br />120 Sets</p>;<p>Smooth and non flaking in application<br />Extra long for longer usage</p>
+;ApsaraColourstick8;;Oil Pastels;<p>1 set<br />320 Sets</p>;<p>Rich and creamy strokes ensures excellent blending<br />Formulated by superior quality pigments</p>
                
-;ApsaraPaint9;;ApsaraPaint9;ApsaraPaint9 Summary;ApsaraPaint9 Description
-;ApsaraPaint10;;ApsaraPaint10;ApsaraPaint10 Summary;ApsaraPaint10 Description
+;ApsaraPaint9;;Poster Colours;<br>1 Set<br />80 Sets</p>;<p>Bright and intense shades<br />Quick drying</p>
+;ApsaraPaint10;;Water Colours;<br>1 Set<br />240 Sets</p>;<p>Excellent transparency<br />Mixes easily with water</p>
 
 
 

@@ -19,20 +19,22 @@ $lang=en
 
 # Update allProducts with localisations
 UPDATE Product;code[unique=true];$catalogVersion;name[lang=$lang];summary[lang=$lang];description[lang=$lang]
-;NatarajPencil1;;NatarajPencil1 Summary;NatarajPencil1 Description
-;NatarajPencil2;;NatarajPencil2 Summary;NatarajPencil2 Description
+;NatarajPencil1;;621 Pencils;<p>Box:10 X 10 pencils<br />36 boxes</p>;<p>Superior HB bonded lead<br />Smooth and clear writing</p>
+;NatarajPencil2;;Petals Pencils;<p>Box:10 X 10 pencils<br />36 boxes</p>;<p>Superior HB bonded lead<br />Thematic pencils with attractive colours and designs</p>
 
-;NatarajEraser3;;NatarajEraser3 Summary;NatarajEraser3 Description
-;NatarajEraser4;;NatarajEraser4 Summary;NatarajEraser4 Description
+;NatarajEraser3;;Jumbo Plasto;<p>Box:20 X 5 Erasers<br />18 boxes</p>;<p>Made up of soft high quality material<br />Erases graphite perfectly without damaging the paper</p>
+;NatarajEraser4;;Trio Eraser;<p>Box:20 X 5 Erasers<br />24 boxes</p>;<p>Comfortable triangle grip for better hold<br />Sharp corners for precise erasing</p>
 
-;NatarajCutter5;;NatarajCutter5 Summary;NatarajCutter5 Description
-;NatarajCutter6;;NatarajCutter6 Summary;NatarajCutter6 Description
+;NatarajCutter5;;Mini Cutter;<p>1 Pc<br />3200 sets</p>;<p>Made up of tough steel for precision cutting<br />With a lock device that stops blade from retracting</p>
+;NatarajCutter6;;Handy Cutter;<p>1 Pc<br />1200 sets</p>;<p>Made up of tough steel for precision cutting<br />With a lock device that stops blade from retracting</p>
 
-;NatarajColourPencil7;;NatarajColourPencil7 Summary;NatarajColourPencil7 Description
-;NatarajColourPencil8;;NatarajColourPencil8 Summary;NatarajColourPencil8 Description
+;NatarajColourPencil7;;10 Half Size;<p>1 Pc<br />700 sets</p>;<p>Brilliant colours that mix easily with each other>br />Strong lead resist breakage</P>
+;NatarajColourPencil8;;12 Half Size;<p>1 Pc<br />240 sets</p>;<p>Brilliant colours that mix easily with each other>br />Strong lead resist breakage</P>
 
-;NatarajBallPen9;;NatarajBallPen9 Summary;NatarajBallPen9 Description
-;NatarajBallPen10;;NatarajBallPen10 Summary;NatarajBallPen10 Description
+;NatarajBallPen9;;Nataraj Classic;<p>Box:20 pouches/ 5 packets<br />12 Boxes</p>;<p>Fine NSTC tip for break free and smooth writing<br />Non fading German ink<br />Available in Blue , Black , Red and Green ink</p>
+;NatarajBallPen10;;Nataraj Superx;<p>Box: 10 X 10 pouches<br />12 Boxes</p>;<p>Transparent body for ink visibility<br />Textured rubber grip for handling comfort<br />Available in Blue , Black , Red and Green ink</p>
+
+
 
 
 

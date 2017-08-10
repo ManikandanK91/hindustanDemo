@@ -40,7 +40,7 @@ UPDATE BaseSite;uid[unique=true];solrFacetSearchConfiguration(name)
 
 # Define price range set
 INSERT_UPDATE SolrValueRangeSet;name[unique=true];qualifier;type;solrValueRanges(&rangeValueRefID)
-;apparelPriceRangeEUR;EUR;double;rangeRefEUR1,rangeRefEUR2,rangeRefEUR3,rangeRefEUR4,rangeRefEUR5,rangeRefEUR6,rangeRefEUR7,rangeRefEUR8,rangeRefEUR9,rangeRefEUR10,rangeRefEUR11,rangeRefEUR12,rangeRefEUR13
+;apparelPriceRangeEUR;INR;double;rangeRefEUR1,rangeRefEUR2,rangeRefEUR3,rangeRefEUR4,rangeRefEUR5,rangeRefEUR6,rangeRefEUR7,rangeRefEUR8,rangeRefEUR9,rangeRefEUR10,rangeRefEUR11,rangeRefEUR12,rangeRefEUR13
 
 # Define price ranges
 INSERT_UPDATE SolrValueRange;&rangeValueRefID;solrValueRangeSet(name)[unique=true];name[unique=true];from;to
