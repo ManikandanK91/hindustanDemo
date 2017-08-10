@@ -1548,6 +1548,23 @@ INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];@media[translator=d
   
  INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active;cmsComponents(&componentRef)
 ;;Section1Slot-Homepage;Section1 Slot for ApparelDEHomepage;true;ApparelUKHomepageCarouselComponent
+
+ # components in section3
+INSERT_UPDATE ProductCarouselComponent;$contentCV[unique=true];uid[unique=true];name;products(code,$productCV);scroll(code);popup;&componentRef
+
+;;ApsaraHomepageProductCarouselComponent;new products;ApsaraPencil1,ApsaraPencil2,ApsaraEraser3,ApsaraEraser4,ApsaraChalk5,ApsaraColourstick7,ApsaraPaint9;allVisible;true;ApsaraHomepageProductCarouselComponent
+
+ 
+## Home section 3
+INSERT_UPDATE ProductCarouselComponent;$contentCV[unique=true];uid[unique=true];&componentRef
+#;;ElectronicsHomepageProductCarouselComponent;ElectronicsHomepageProductCarouselComponent
+;;ApsaraHomepageProductCarouselComponent;ApsaraHomepageProductCarouselComponent
+
+INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];cmsComponents(&componentRef)
+#;;Section3Slot-Homepage;ElectronicsHomepageProductCarouselComponent,NewElectronicsHomepageProductCarouselComponent
+;;Section3Slot-Homepage;ApsaraHomepageProductCarouselComponent
+
+
  
  
 

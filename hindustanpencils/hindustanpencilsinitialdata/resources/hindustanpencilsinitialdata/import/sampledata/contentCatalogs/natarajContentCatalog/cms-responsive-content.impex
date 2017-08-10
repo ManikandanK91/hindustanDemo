@@ -1688,3 +1688,19 @@ INSERT_UPDATE RotatingImagesComponent;$contentCV[unique=true];uid[unique=true];n
  
 INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active;cmsComponents(&componentRef)
 ;;Section1Slot-Homepage;Section1 Slot for ApparelUKHomepage;true;ApparelUKHomepageCarouselComponent
+
+
+# components in section3
+INSERT_UPDATE ProductCarouselComponent;$contentCV[unique=true];uid[unique=true];name;products(code,$productCV)                ;scroll(code);popup;&componentRef
+;;NatarajHomepageProductCarouselComponent;new products;NatarajPencil1,NatarajEraser3,NatarajCutter5,NatarajColourPencil7,NatarajBallPen9;allVisible;true;NatarajHomepageProductCarouselComponent
+
+
+
+## Home section 3
+INSERT_UPDATE ProductCarouselComponent;$contentCV[unique=true];uid[unique=true];&componentRef
+#;;ElectronicsHomepageProductCarouselComponent;ElectronicsHomepageProductCarouselComponent
+;;NatarajHomepageProductCarouselComponent;NatarajHomepageProductCarouselComponent
+
+INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];cmsComponents(&componentRef)
+#;;Section3Slot-Homepage;ElectronicsHomepageProductCarouselComponent,NewElectronicsHomepageProductCarouselComponent
+;;Section3Slot-Homepage;NatarajHomepageProductCarouselComponent
