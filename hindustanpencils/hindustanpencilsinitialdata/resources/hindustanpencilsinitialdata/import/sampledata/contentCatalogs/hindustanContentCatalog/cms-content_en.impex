@@ -23,8 +23,15 @@ $siteResource=jar:com.hybris.hindustanpencils.initialdata.constants.Hindustanpen
 $lang=en
 
 # Site Logo Component
+#UPDATE SimpleBannerComponent;$contentCV[unique=true];uid[unique=true];$picture[lang=$lang]
+#;;SiteLogoComponent;/images/theme/logo_hybris_b2b_responsive.svg
+
+INSERT_UPDATE Media;$contentCV[unique=true];code[unique=true];realfilename;@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator];mime[default='image/jpeg'];folder(qualifier)[default='images'];altText
+;;/images/theme/logo-hybris1.png;apsara_logo.png.png;$siteResource/images/theme/apsara_logo.png;image/png;;"Apsara Pencils"
+
+# Site Logo Component
 UPDATE SimpleBannerComponent;$contentCV[unique=true];uid[unique=true];$picture[lang=$lang]
-;;SiteLogoComponent;/images/theme/logo_hybris_b2b_responsive.svg
+;;SiteLogoComponent;/images/theme/logo-hybris1.png
 
 # CMS Link Components
 UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];linkName[lang=$lang]
@@ -278,3 +285,17 @@ INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$contentCV[unique=tr
 
 INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];name;&componentRef;$mediaContainer
 ;;PowertoolstronicsErrorpageBannerComponent;Powertoolstronics Error Page Banner Component;PowertoolstronicsErrorpageBannerComponent;powertools-errorpage-pagenotfound-en
+
+# Language
+$lang=en
+
+# Site Logo Component
+#UPDATE SimpleBannerComponent;$contentCV[unique=true];uid[unique=true];$picture[lang=$lang]
+#;;SiteLogoComponent;/images/theme/logo_hybris_b2b_responsive.svg
+
+INSERT_UPDATE Media;$contentCV[unique=true];code[unique=true];realfilename;@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator];mime[default='image/jpeg'];folder(qualifier)[default='images'];altText
+;;/images/theme/logo-hybris1.png;apsara_logo.png.png;$siteResource/images/theme/cropped-Logo.jpg;image/jpeg;;"Apsara Pencils"
+
+# Site Logo Component
+UPDATE SimpleBannerComponent;$contentCV[unique=true];uid[unique=true];$picture[lang=$lang]
+;;SiteLogoComponent;/images/theme/logo-hybris1.png

@@ -13,7 +13,7 @@
 #
 
 $contentCatalog=hindustanContentCatalog
-$contentCV=catalogVersion(CatalogVersion.catalog(Catalog.id[default=$contentCatalog]),CatalogVersion.version[default=Staged])[default=$contentCatalog:Staged]
+$contentCV=catalogVersion(CatalogVersion.catalog(Catalog.id[default=$contentCatalog]),CatalogVersion.version[default=Online])[default=$contentCatalog:Online]
 
 # Language
 $lang=en
@@ -52,3 +52,5 @@ UPDATE ContentPage;$contentCV[unique=true];uid[unique=true];title[lang=$lang]
  ;;update-email;"Update Email"
  ;;update-profile;"Update Profile"
  ;;updatePassword;"Update Forgotten Password"
+ 
+ 

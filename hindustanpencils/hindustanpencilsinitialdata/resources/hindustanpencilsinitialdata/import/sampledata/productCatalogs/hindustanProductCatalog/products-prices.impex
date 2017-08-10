@@ -12,7 +12,7 @@
 #% impex.setLocale( Locale.GERMAN ); 
 
 $productCatalog=hindustanProductCatalog
-$catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default='$productCatalog:Staged']
+$catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Online'])[unique=true,default='$productCatalog:Online']
 $prices=Europe1prices[translator=de.hybris.platform.europe1.jalo.impex.Europe1PricesTranslator]
 $taxGroup=Europe1PriceFactory_PTG(code)[default=us-sales-tax-full]
 
@@ -22,9 +22,9 @@ $approved=approvalstatus(code)[default='approved']
 # Macros / Replacement Parameter definitions
 $productCatalog=hindustanProductCatalog
 
-$catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default='$productCatalog:Staged']
+$catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Online'])[unique=true,default='$productCatalog:Online']
 $prices=Europe1prices[translator=de.hybris.platform.europe1.jalo.impex.Europe1PricesTranslator]
-$taxGroup=Europe1PriceFactory_PTG(code)[default=eu-vat-full]
+$taxGroup=Europe1PriceFactory_PTG(code)[default=us-sales-tax-full]
 
 # Set product approval status to Approved only for those products that have prices.
 $approved=approvalstatus(code)[default='approved']

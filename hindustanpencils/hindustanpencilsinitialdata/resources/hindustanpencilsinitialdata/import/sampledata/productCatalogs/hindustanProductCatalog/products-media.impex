@@ -13,32 +13,18 @@
 # Macros / Replacement Parameter definitions
 $productCatalog=hindustanProductCatalog
 $catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog:Staged]
-$siteResource=jar:com.hybris.hindustanpencils.initialdata.constants.HindustanpencilsInitialDataConstants&/hindustanpencilsinitialdata/import/sampledata/productCatalogs/$productCatalog
+$siteResource=jar:com.hybris.hindustanpencils.initialdata.constants.HindustanpencilsInitialDataConstants&/hindustanpencilsinitialdata/import/sampledata/productCatalogs/$productCatalog/images
 $thumbnail=thumbnail(code, $catalogVersion)
 $picture=picture(code, $catalogVersion)
 $thumbnails=thumbnails(code, $catalogVersion)
 $detail=detail(code, $catalogVersion)
 $normal=normal(code, $catalogVersion)
-$others=others(code, $catalogVersion)
-$data_sheet=data_sheet(code, $catalogVersion)
-$medias=medias(code, $catalogVersion)
-$galleryImages=galleryImages(qualifier, $catalogVersion)
-
-# Macros / Replacement Parameter definitions
-$productCatalog=natarajProductCatalog
-
-$catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog]
 $media=@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator]
-$thumbnail=thumbnail(code, $catalogVersion)
-$picture=picture(code, $catalogVersion)
-$thumbnails=thumbnails(code, $catalogVersion)
-$detail=detail(code, $catalogVersion)
-$normal=normal(code, $catalogVersion)
 $others=others(code, $catalogVersion)
 $data_sheet=data_sheet(code, $catalogVersion)
 $medias=medias(code, $catalogVersion)
 $galleryImages=galleryImages(qualifier, $catalogVersion)
-$siteResource=jar:com.mandee.b2b.initialdata.setup.InitialDataSystemSetup&/mandeeb2binitialdata/import/sampledata/productCatalogs/$productCatalog/images
+
 
 INSERT_UPDATE MediaFolder;qualifier[unique=true];path[unique=true]
 ;images;images
@@ -46,62 +32,265 @@ INSERT_UPDATE MediaFolder;qualifier[unique=true];path[unique=true]
 # Create Media
 INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];$media;mime[default='image/jpeg'];$catalogVersion;folder(qualifier)
 
-
 ;1200Wx1200H;/1200Wx1200H/NatarajPencil1.jpg ;$siteResource/1200Wx1200H/NatarajPencil1.jpg;;;images
 ;1200Wx1200H;/1200Wx1200H/NatarajPencil2.jpg ;$siteResource/1200Wx1200H/NatarajPencil2.jpg;;;images
-;1200Wx1200H;/1200Wx1200H/NatarajPencil3.jpg ;$siteResource/1200Wx1200H/NatarajPencil3.jpg;;;images
-;1200Wx1200H;/1200Wx1200H/NatarajPencil4.jpg ;$siteResource/1200Wx1200H/NatarajPencil4.jpg;;;images
-;1200Wx1200H;/1200Wx1200H/NatarajPencil5.jpg ;$siteResource/1200Wx1200H/NatarajPencil5.jpg;;;images
-
 
 ;515Wx515H;/515Wx515H/NatarajPencil1.jpg;$siteResource/515Wx515H/NatarajPencil1.jpg;;;images
 ;515Wx515H;/515Wx515H/NatarajPencil2.jpg;$siteResource/515Wx515H/NatarajPencil2.jpg;;;images
-;515Wx515H;/515Wx515H/NatarajPencil3.jpg;$siteResource/515Wx515H/NatarajPencil3.jpg;;;images
-;515Wx515H;/515Wx515H/NatarajPencil4.jpg;$siteResource/515Wx515H/NatarajPencil4.jpg;;;images
-;515Wx515H;/515Wx515H/NatarajPencil5.jpg;$siteResource/515Wx515H/NatarajPencil5.jpg;;;images
 
 ;300Wx300H;/300Wx300H/NatarajPencil1.jpg;$siteResource/300Wx300H/NatarajPencil1.jpg;;;images
 ;300Wx300H;/300Wx300H/NatarajPencil2.jpg;$siteResource/300Wx300H/NatarajPencil2.jpg;;;images
-;300Wx300H;/300Wx300H/NatarajPencil3.jpg;$siteResource/300Wx300H/NatarajPencil3.jpg;;;images
-;300Wx300H;/300Wx300H/NatarajPencil4.jpg;$siteResource/300Wx300H/NatarajPencil4.jpg;;;images
-;300Wx300H;/300Wx300H/NatarajPencil5.jpg;$siteResource/300Wx300H/NatarajPencil5.jpg;;;images
 
 ;96Wx96H;/96Wx96H/NatarajPencil1.jpg;$siteResource/96Wx96H/NatarajPencil1.jpg;;;images
 ;96Wx96H;/96Wx96H/NatarajPencil2.jpg;$siteResource/96Wx96H/NatarajPencil2.jpg;;;images
-;96Wx96H;/96Wx96H/NatarajPencil3.jpg;$siteResource/96Wx96H/NatarajPencil3.jpg;;;images
-;96Wx96H;/96Wx96H/NatarajPencil4.jpg;$siteResource/96Wx96H/NatarajPencil4.jpg;;;images
-;96Wx96H;/96Wx96H/NatarajPencil5.jpg;$siteResource/96Wx96H/NatarajPencil5.jpg;;;images
-
 
 ;65Wx65H;/65Wx65H/NatarajPencil1.jpg;$siteResource/65Wx65H/NatarajPencil1.jpg;;;images
 ;65Wx65H;/65Wx65H/NatarajPencil2.jpg;$siteResource/65Wx65H/NatarajPencil2.jpg;;;images
-;65Wx65H;/65Wx65H/NatarajPencil3.jpg;$siteResource/65Wx65H/NatarajPencil3.jpg;;;images
-;65Wx65H;/65Wx65H/NatarajPencil4.jpg;$siteResource/65Wx65H/NatarajPencil4.jpg;;;images
-;65Wx65H;/65Wx65H/NatarajPencil5.jpg;$siteResource/65Wx65H/NatarajPencil5.jpg;;;images
 
 ;30Wx30H;/30Wx30H/NatarajPencil1.jpg;$siteResource/30Wx30H/NatarajPencil1.jpg;;;images
 ;30Wx30H;/30Wx30H/NatarajPencil2.jpg;$siteResource/30Wx30H/NatarajPencil2.jpg;;;images
-;30Wx30H;/30Wx30H/NatarajPencil3.jpg;$siteResource/30Wx30H/NatarajPencil3.jpg;;;images
-;30Wx30H;/30Wx30H/NatarajPencil4.jpg;$siteResource/30Wx30H/NatarajPencil4.jpg;;;images
-;30Wx30H;/30Wx30H/NatarajPencil5.jpg;$siteResource/30Wx30H/NatarajPencil5.jpg;;;images
+
+;1200Wx1200H;/1200Wx1200H/NatarajEraser3.jpg ;$siteResource/1200Wx1200H/NatarajEraser3.jpg;;;images
+;1200Wx1200H;/1200Wx1200H/NatarajEraser4.jpg ;$siteResource/1200Wx1200H/NatarajEraser4.jpg;;;images
+
+;515Wx515H;/515Wx515H/NatarajEraser3.jpg ;$siteResource/515Wx515H/NatarajEraser3.jpg;;;images
+;515Wx515H;/515Wx515H/NatarajEraser4.jpg ;$siteResource/515Wx515H/NatarajEraser4.jpg;;;images
+
+;300Wx300H;/300Wx300H/NatarajEraser3.jpg ;$siteResource/300Wx300H/NatarajEraser3.jpg;;;images
+;300Wx300H;/300Wx300H/NatarajEraser4.jpg ;$siteResource/300Wx300H/NatarajEraser4.jpg;;;images
+
+;96Wx96H;/96Wx96H/NatarajEraser3.jpg ;$siteResource/96Wx96H/NatarajEraser3.jpg;;;images
+;96Wx96H;/96Wx96H/NatarajEraser4.jpg ;$siteResource/96Wx96H/NatarajEraser4.jpg;;;images
+
+;65Wx65H;/65Wx65H/NatarajEraser3.jpg ;$siteResource/65Wx65H/NatarajEraser3.jpg;;;images
+;65Wx65H;/65Wx65H/NatarajEraser4.jpg ;$siteResource/65Wx65H/NatarajEraser4.jpg;;;images
+
+;30Wx30H;/30Wx30H/NatarajEraser3.jpg ;$siteResource/30Wx30H/NatarajEraser3.jpg;;;images
+;30Wx30H;/30Wx30H/NatarajEraser4.jpg ;$siteResource/30Wx30H/NatarajEraser4.jpg;;;images
+
+;515Wx515H;/515Wx515H/NatarajCutter5.jpg ;$siteResource/515Wx515H/NatarajCutter5.jpg;;;images
+;515Wx515H;/515Wx515H/NatarajCutter6.jpg ;$siteResource/515Wx515H/NatarajCutter6.jpg;;;images
+
+;300Wx300H;/300Wx300H/NatarajCutter5.jpg ;$siteResource/300Wx300H/NatarajCutter5.jpg;;;images
+;300Wx300H;/300Wx300H/NatarajCutter6.jpg ;$siteResource/300Wx300H/NatarajCutter6.jpg;;;images
+
+;96Wx96H;/96Wx96H/NatarajCutter5.jpg ;$siteResource/96Wx96H/NatarajCutter5.jpg;;;images
+;96Wx96H;/96Wx96H/NatarajCutter6.jpg ;$siteResource/96Wx96H/NatarajCutter6.jpg;;;images
+
+;65Wx65H;/65Wx65H/NatarajCutter5.jpg ;$siteResource/65Wx65H/NatarajCutter5.jpg;;;images
+;65Wx65H;/65Wx65H/NatarajCutter6.jpg ;$siteResource/65Wx65H/NatarajCutter6.jpg;;;images
+
+;30Wx30H;/30Wx30H/NatarajCutter5.jpg ;$siteResource/30Wx30H/NatarajCutter5.jpg;;;images
+;30Wx30H;/30Wx30H/NatarajCutter6.jpg ;$siteResource/30Wx30H/NatarajCutter6.jpg;;;images
+
+;1200Wx1200H;/1200Wx1200H/NatarajColourPencil7.jpg ;$siteResource/1200Wx1200H/NatarajColourPencil7.jpg;;;images
+;1200Wx1200H;/1200Wx1200H/NatarajColourPencil8.jpg ;$siteResource/1200Wx1200H/NatarajColourPencil8.jpg;;;images
+
+;515Wx515H;/515Wx515H/NatarajColourPencil7.jpg ;$siteResource/515Wx515H/NatarajColourPencil7.jpg;;;images
+;515Wx515H;/515Wx515H/NatarajColourPencil8.jpg ;$siteResource/515Wx515H/NatarajColourPencil8.jpg;;;images
+
+;300Wx300H;/300Wx300H/NatarajColourPencil7.jpg ;$siteResource/300Wx300H/NatarajColourPencil7.jpg;;;images
+;300Wx300H;/300Wx300H/NatarajColourPencil8.jpg ;$siteResource/300Wx300H/NatarajColourPencil8.jpg;;;images
+
+;96Wx96H;/96Wx96H/NatarajColourPencil7.jpg ;$siteResource/96Wx96H/NatarajColourPencil7.jpg;;;images
+;96Wx96H;/96Wx96H/NatarajColourPencil8.jpg ;$siteResource/96Wx96H/NatarajColourPencil8.jpg;;;images
+
+;65Wx65H;/65Wx65H/NatarajColourPencil7.jpg ;$siteResource/65Wx65H/NatarajColourPencil7.jpg;;;images
+;65Wx65H;/65Wx65H/NatarajColourPencil8.jpg ;$siteResource/65Wx65H/NatarajColourPencil8.jpg;;;images
+
+;30Wx30H;/30Wx30H/NatarajColourPencil7.jpg ;$siteResource/30Wx30H/NatarajColourPencil7.jpg;;;images
+;30Wx30H;/30Wx30H/NatarajColourPencil8.jpg ;$siteResource/30Wx30H/NatarajColourPencil8.jpg;;;images
+
+
+;1200Wx1200H;/1200Wx1200H/NatarajBallPen9.jpg ;$siteResource/1200Wx1200H/NatarajBallPen9.jpg;;;images
+;1200Wx1200H;/1200Wx1200H/NatarajBallPen10.jpg ;$siteResource/1200Wx1200H/NatarajBallPen10.jpg;;;images
+
+;515Wx515H;/515Wx515H/NatarajBallPen9.jpg ;$siteResource/515Wx515H/NatarajBallPen9.jpg;;;images
+;515Wx515H;/515Wx515H/NatarajBallPen10.jpg ;$siteResource/515Wx515H/NatarajBallPen10.jpg;;;images
+
+;300Wx300H;/300Wx300H/NatarajBallPen9.jpg ;$siteResource/300Wx300H/NatarajBallPen9.jpg;;;images
+;300Wx300H;/300Wx300H/NatarajBallPen10.jpg ;$siteResource/300Wx300H/NatarajBallPen10.jpg;;;images
+
+;96Wx96H;/96Wx96H/NatarajBallPen9.jpg ;$siteResource/96Wx96H/NatarajBallPen9.jpg;;;images
+;96Wx96H;/96Wx96H/NatarajBallPen10.jpg ;$siteResource/96Wx96H/NatarajBallPen10.jpg;;;images
+
+;65Wx65H;/65Wx65H/NatarajBallPen9.jpg ;$siteResource/65Wx65H/NatarajBallPen9.jpg;;;images
+;65Wx65H;/65Wx65H/NatarajBallPen10.jpg ;$siteResource/65Wx65H/NatarajBallPen10.jpg;;;images
+
+;30Wx30H;/30Wx30H/NatarajBallPen9.jpg ;$siteResource/30Wx30H/NatarajBallPen9.jpg;;;images
+;30Wx30H;/30Wx30H/NatarajBallPen10.jpg ;$siteResource/30Wx30H/NatarajBallPen10.jpg;;;images
+
+;1200Wx1200H;/1200Wx1200H/ApsaraPencil1.jpg ;$siteResource/1200Wx1200H/ApsaraPencil1.jpg;;;images
+;1200Wx1200H;/1200Wx1200H/ApsaraPencil2.jpg ;$siteResource/1200Wx1200H/ApsaraPencil2.jpg;;;images
+
+;515Wx515H;/515Wx515H/ApsaraPencil1.jpg;$siteResource/515Wx515H/ApsaraPencil1.jpg;;;images
+;515Wx515H;/515Wx515H/ApsaraPencil2.jpg;$siteResource/515Wx515H/ApsaraPencil2.jpg;;;images
+
+;300Wx300H;/300Wx300H/ApsaraPencil1.jpg;$siteResource/300Wx300H/ApsaraPencil1.jpg;;;images
+;300Wx300H;/300Wx300H/ApsaraPencil2.jpg;$siteResource/300Wx300H/ApsaraPencil2.jpg;;;images
+
+;96Wx96H;/96Wx96H/ApsaraPencil1.jpg;$siteResource/96Wx96H/ApsaraPencil1.jpg;;;images
+;96Wx96H;/96Wx96H/ApsaraPencil2.jpg;$siteResource/96Wx96H/ApsaraPencil2.jpg;;;images
+
+;65Wx65H;/65Wx65H/ApsaraPencil1.jpg;$siteResource/65Wx65H/ApsaraPencil1.jpg;;;images
+;65Wx65H;/65Wx65H/ApsaraPencil2.jpg;$siteResource/65Wx65H/ApsaraPencil2.jpg;;;images
+
+;30Wx30H;/30Wx30H/ApsaraPencil1.jpg;$siteResource/30Wx30H/ApsaraPencil1.jpg;;;images
+;30Wx30H;/30Wx30H/ApsaraPencil2.jpg;$siteResource/30Wx30H/ApsaraPencil2.jpg;;;images
+
+;1200Wx1200H;/1200Wx1200H/ApsaraEraser3.jpg ;$siteResource/1200Wx1200H/ApsaraEraser3.jpg;;;images
+;1200Wx1200H;/1200Wx1200H/ApsaraEraser4.jpg ;$siteResource/1200Wx1200H/ApsaraEraser4.jpg;;;images
+
+;515Wx515H;/515Wx515H/ApsaraEraser3.jpg ;$siteResource/515Wx515H/ApsaraEraser3.jpg;;;images
+;515Wx515H;/515Wx515H/ApsaraEraser4.jpg ;$siteResource/515Wx515H/ApsaraEraser4.jpg;;;images
+
+;300Wx300H;/300Wx300H/ApsaraEraser3.jpg ;$siteResource/300Wx300H/ApsaraEraser3.jpg;;;images
+;300Wx300H;/300Wx300H/ApsaraEraser4.jpg ;$siteResource/300Wx300H/ApsaraEraser4.jpg;;;images
+
+;96Wx96H;/96Wx96H/ApsaraEraser3.jpg ;$siteResource/96Wx96H/ApsaraEraser3.jpg;;;images
+;96Wx96H;/96Wx96H/ApsaraEraser4.jpg ;$siteResource/96Wx96H/ApsaraEraser4.jpg;;;images
+
+;65Wx65H;/65Wx65H/ApsaraEraser3.jpg ;$siteResource/65Wx65H/ApsaraEraser3.jpg;;;images
+;65Wx65H;/65Wx65H/ApsaraEraser4.jpg ;$siteResource/65Wx65H/ApsaraEraser4.jpg;;;images
+
+;30Wx30H;/30Wx30H/ApsaraEraser3.jpg ;$siteResource/30Wx30H/ApsaraEraser3.jpg;;;images
+;30Wx30H;/30Wx30H/ApsaraEraser4.jpg ;$siteResource/30Wx30H/ApsaraEraser4.jpg;;;images
+
+;1200Wx1200H;/1200Wx1200H/ApsaraChalk5.jpg ;$siteResource/1200Wx1200H/ApsaraChalk5.jpg;;;images
+;1200Wx1200H;/1200Wx1200H/ApsaraChalk6.jpg ;$siteResource/1200Wx1200H/ApsaraChalk6.jpg;;;images
+
+;515Wx515H;/515Wx515H/ApsaraChalk5.jpg ;$siteResource/515Wx515H/ApsaraChalk5.jpg;;;images
+;515Wx515H;/515Wx515H/ApsaraChalk6.jpg ;$siteResource/515Wx515H/ApsaraChalk6.jpg;;;images
+
+
+;300Wx300H;/300Wx300H/ApsaraChalk5.jpg ;$siteResource/300Wx300H/ApsaraChalk5.jpg;;;images
+;300Wx300H;/300Wx300H/ApsaraChalk6.jpg ;$siteResource/300Wx300H/ApsaraChalk6.jpg;;;images
+
+
+;96Wx96H;/96Wx96H/ApsaraChalk5.jpg ;$siteResource/96Wx96H/ApsaraChalk5.jpg;;;images
+;96Wx96H;/96Wx96H/ApsaraChalk6.jpg ;$siteResource/96Wx96H/ApsaraChalk6.jpg;;;images
+
+;65Wx65H;/65Wx65H/ApsaraChalk5.jpg ;$siteResource/65Wx65H/ApsaraChalk5.jpg;;;images
+;65Wx65H;/65Wx65H/ApsaraChalk6.jpg ;$siteResource/65Wx65H/ApsaraChalk6.jpg;;;images
+
+;30Wx30H;/30Wx30H/ApsaraChalk5.jpg ;$siteResource/30Wx30H/ApsaraChalk5.jpg;;;images
+;30Wx30H;/30Wx30H/ApsaraChalk6.jpg ;$siteResource/30Wx30H/ApsaraChalk6.jpg;;;images
+
+
+;1200Wx1200H;/1200Wx1200H/ApsaraColoursstick7.jpg ;$siteResource/1200Wx1200H/ApsaraColoursstick7.jpg;;;images
+;1200Wx1200H;/1200Wx1200H/ApsaraColoursstick8.jpg ;$siteResource/1200Wx1200H/ApsaraColoursstick8.jpg;;;images
+
+;515Wx515H;/515Wx515H/ApsaraColoursstick7.jpg ;$siteResource/515Wx515H/ApsaraColoursstick7.jpg;;;images
+;515Wx515H;/515Wx515H/ApsaraColoursstick8.jpg ;$siteResource/515Wx515H/ApsaraColoursstick8.jpg;;;images
+
+;300Wx300H;/300Wx300H/ApsaraColoursstick7.jpg ;$siteResource/300Wx300H/ApsaraColoursstick7.jpg;;;images
+;300Wx300H;/300Wx300H/ApsaraColoursstick8.jpg ;$siteResource/300Wx300H/ApsaraColoursstick8.jpg;;;images
+
+
+;96Wx96H;/96Wx96H/ApsaraColoursstick7.jpg ;$siteResource/96Wx96H/ApsaraColoursstick7.jpg;;;images
+;96Wx96H;/96Wx96H/ApsaraColoursstick8.jpg ;$siteResource/96Wx96H/ApsaraColoursstick8.jpg;;;images
+
+;65Wx65H;/65Wx65H/ApsaraColoursstick7.jpg ;$siteResource/65Wx65H/ApsaraColoursstick7.jpg;;;images
+;65Wx65H;/65Wx65H/ApsaraColoursstick8.jpg ;$siteResource/65Wx65H/ApsaraColoursstick8.jpg;;;images
+
+;30Wx30H;/30Wx30H/ApsaraColoursstick7.jpg ;$siteResource/30Wx30H/ApsaraColoursstick7.jpg;;;images
+;30Wx30H;/30Wx30H/ApsaraColoursstick8.jpg ;$siteResource/30Wx30H/ApsaraColoursstick8.jpg;;;images
+
+
+
+;1200Wx1200H;/1200Wx1200H/ApsaraPaint9.jpg ;$siteResource/1200Wx1200H/ApsaraPaint9.jpg;;;images
+;1200Wx1200H;/1200Wx1200H/ApsaraPaint10.jpg ;$siteResource/1200Wx1200H/ApsaraPaint10.jpg;;;images
+
+;515Wx515H;/515Wx515H/ApsaraPaint9.jpg ;$siteResource/515Wx515H/ApsaraPaint9.jpg;;;images
+;515Wx515H;/515Wx515H/ApsaraPaint10.jpg ;$siteResource/515Wx515H/ApsaraPaint10.jpg;;;images
+
+;300Wx300H;/300Wx300H/ApsaraPaint9.jpg ;$siteResource/300Wx300H/ApsaraPaint9.jpg;;;images
+;300Wx300H;/300Wx300H/ApsaraPaint10.jpg ;$siteResource/300Wx300H/ApsaraPaint10.jpg;;;images
+
+;96Wx96H;/96Wx96H/ApsaraPaint9.jpg ;$siteResource/96Wx96H/ApsaraPaint9.jpg;;;images
+;96Wx96H;/96Wx96H/ApsaraPaint10.jpg ;$siteResource/96Wx96H/ApsaraPaint10.jpg;;;images
+
+;65Wx65H;/65Wx65H/ApsaraPaint9.jpg ;$siteResource/65Wx65H/ApsaraPaint9.jpg;;;images
+;65Wx65H;/65Wx65H/ApsaraPaint10.jpg ;$siteResource/65Wx65H/ApsaraPaint10.jpg;;;images
+
+;30Wx30H;/30Wx30H/ApsaraPaint9.jpg ;$siteResource/30Wx30H/ApsaraPaint9.jpg;;;images
+;30Wx30H;/30Wx30H/ApsaraPaint10.jpg ;$siteResource/30Wx30H/ApsaraPaint10.jpg;;;images
+
+
 
 
 # Create Media Containers
 INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$catalogVersion
 ;NatarajPencil1_1;/1200Wx1200H/NatarajPencil1.jpg,/515Wx515H/NatarajPencil1.jpg,/300Wx300H/NatarajPencil1.jpg,/96Wx96H/NatarajPencil1.jpg,/65Wx65H/NatarajPencil1.jpg,/30Wx30H/NatarajPencil1.jpg
 ;NatarajPencil2_1;/1200Wx1200H/NatarajPencil2.jpg,/515Wx515H/NatarajPencil2.jpg,/300Wx300H/NatarajPencil2.jpg,/96Wx96H/NatarajPencil2.jpg,/65Wx65H/NatarajPencil2.jpg,/30Wx30H/NatarajPencil2.jpg
-;NatarajPencil3_1;/1200Wx1200H/NatarajPencil3.jpg,/515Wx515H/NatarajPencil3.jpg,/300Wx300H/NatarajPencil3.jpg,/96Wx96H/NatarajPencil3.jpg,/65Wx65H/NatarajPencil3.jpg,/30Wx30H/NatarajPencil3.jpg
-;NatarajPencil4_1;/1200Wx1200H/NatarajPencil4.jpg,/515Wx515H/NatarajPencil4.jpg,/300Wx300H/NatarajPencil4.jpg,/96Wx96H/NatarajPencil4.jpg,/65Wx65H/NatarajPencil4.jpg,/30Wx30H/NatarajPencil4.jpg
-;NatarajPencil5_1;/1200Wx1200H/NatarajPencil5.jpg,/515Wx515H/NatarajPencil5.jpg,/300Wx300H/NatarajPencil5.jpg,/96Wx96H/NatarajPencil5.jpg,/65Wx65H/NatarajPencil5.jpg,/30Wx30H/NatarajPencil5.jpg
+
+;NatarajEraser3_1;/1200Wx1200H/NatarajEraser3.jpg,/515Wx515H/NatarajEraser3.jpg,/300Wx300H/NatarajEraser3.jpg,/96Wx96H/NatarajEraser3.jpg,/65Wx65H/NatarajEraser3.jpg,/30Wx30H/NatarajEraser3.jpg
+;NatarajEraser4_1;/1200Wx1200H/NatarajEraser4.jpg,/515Wx515H/NatarajEraser4.jpg,/300Wx300H/NatarajEraser4.jpg,/96Wx96H/NatarajEraser4.jpg,/65Wx65H/NatarajEraser4.jpg,/30Wx30H/NatarajEraser4.jpg
+
+
+#;NatarajCutter5_1;/1200Wx1200H/NatarajCutter5.jpg,/515Wx515H/NatarajCutter5.jpg,/300Wx300H/NatarajCutter5.jpg,/96Wx96H/NatarajCutter5.jpg,/65Wx65H/NatarajCutter5.jpg,/30Wx30H/NatarajCutter5.jpg
+#;NatarajCutter6_1;/1200Wx1200H/NatarajCutter6.jpg,/515Wx515H/NatarajCutter6.jpg,/300Wx300H/NatarajCutter6.jpg,/96Wx96H/NatarajCutter6.jpg,/65Wx65H/NatarajCutter6.jpg,/30Wx30H/NatarajCutter6.jpg
+
+;NatarajColourPencil7_1;/1200Wx1200H/NatarajColourPencil7.jpg,/515Wx515H/NatarajColourPencil7.jpg,/300Wx300H/NatarajColourPencil7.jpg,/96Wx96H/NatarajColourPencil7.jpg,/65Wx65H/NatarajColourPencil7.jpg,/30Wx30H/NatarajColourPencil7.jpg
+;NatarajColourPencil8_1;/1200Wx1200H/NatarajColourPencil8.jpg,/515Wx515H/NatarajColourPencil8.jpg,/300Wx300H/NatarajColourPencil8.jpg,/96Wx96H/NatarajColourPencil8.jpg,/65Wx65H/NatarajColourPencil8.jpg,/30Wx30H/NatarajColourPencil8.jpg
+
+;NatarajBallPen9_1;/1200Wx1200H/NatarajBallPen9.jpg,/515Wx515H/NatarajBallPen9.jpg,/300Wx300H/NatarajBallPen9.jpg,/96Wx96H/NatarajBallPen9.jpg,/65Wx65H/NatarajBallPen9.jpg,/30Wx30H/NatarajBallPen9.jpg
+;NatarajBallPen10_1;/1200Wx1200H/NatarajBallPen10.jpg,/515Wx515H/NatarajBallPen10.jpg,/300Wx300H/NatarajBallPen10.jpg,/96Wx96H/NatarajBallPen10.jpg,/65Wx65H/NatarajBallPen10.jpg,/30Wx30H/NatarajBallPen10.jpg
+
+#ApsaraPencil
+;ApsaraPencil1_1;/1200Wx1200H/ApsaraPencil1.jpg,/515Wx515H/ApsaraPencil1.jpg,/300Wx300H/ApsaraPencil1.jpg,/96Wx96H/ApsaraPencil1.jpg,/65Wx65H/ApsaraPencil1.jpg,/30Wx30H/ApsaraPencil1.jpg
+;ApsaraPencil2_1;/1200Wx1200H/ApsaraPencil2.jpg,/515Wx515H/ApsaraPencil2.jpg,/300Wx300H/ApsaraPencil2.jpg,/96Wx96H/ApsaraPencil2.jpg,/65Wx65H/ApsaraPencil2.jpg,/30Wx30H/ApsaraPencil2.jpg
+
+#ApsaraEraser
+;ApsaraEraser3_1;/1200Wx1200H/ApsaraEraser3.jpg,/515Wx515H/ApsaraEraser3.jpg,/300Wx300H/ApsaraEraser3.jpg,/96Wx96H/ApsaraEraser3.jpg,/65Wx65H/ApsaraEraser3.jpg,/30Wx30H/ApsaraEraser3.jpg
+;ApsaraEraser4_1;/1200Wx1200H/ApsaraEraser4.jpg,/515Wx515H/ApsaraEraser4.jpg,/300Wx300H/ApsaraEraser4.jpg,/96Wx96H/ApsaraEraser4.jpg,/65Wx65H/ApsaraEraser4.jpg,/30Wx30H/ApsaraEraser4.jpg
+
+#ApsaraChalk
+;ApsaraChalk5_1;/1200Wx1200H/ApsaraChalk5.jpg,/515Wx515H/ApsaraChalk5.jpg,/300Wx300H/ApsaraChalk5.jpg,/96Wx96H/ApsaraChalk5.jpg,/65Wx65H/ApsaraChalk5.jpg,/30Wx30H/ApsaraChalk5.jpg
+;ApsaraChalk6_1;/1200Wx1200H/ApsaraChalk6.jpg,/515Wx515H/ApsaraChalk6.jpg,/300Wx300H/ApsaraChalk6.jpg,/96Wx96H/ApsaraChalk6.jpg,/65Wx65H/ApsaraChalk6.jpg,/30Wx30H/ApsaraChalk6.jpg
+
+#ApsaraColourstick
+;ApsaraColourstick7_1;/1200Wx1200H/ApsaraColoursstick7.jpg,/515Wx515H/ApsaraColoursstick7.jpg,/300Wx300H/ApsaraColoursstick7.jpg,/96Wx96H/ApsaraColoursstick7.jpg,/65Wx65H/ApsaraColoursstick7.jpg,/30Wx30H/ApsaraColoursstick7.jpg
+;ApsaraColourstick8_1;/1200Wx1200H/ApsaraColoursstick8.jpg,/515Wx515H/ApsaraColoursstick8.jpg,/300Wx300H/ApsaraColoursstick8.jpg,/96Wx96H/ApsaraColoursstick8.jpg,/65Wx65H/ApsaraColoursstick8.jpg,/30Wx30H/ApsaraColoursstick8.jpg
+
+#ApsaraPaint
+;ApsaraPaint9_1;/1200Wx1200H/ApsaraPaint9.jpg,/515Wx515H/ApsaraPaint9.jpg,/300Wx300H/ApsaraPaint9.jpg,/96Wx96H/ApsaraPaint9.jpg,/65Wx65H/ApsaraPaint9.jpg,/30Wx30H/ApsaraPaint9.jpg
+;ApsaraPaint10_1;/1200Wx1200H/ApsaraPaint10.jpg,/515Wx515H/ApsaraPaint10.jpg,/300Wx300H/ApsaraPaint10.jpg,/96Wx96H/ApsaraPaint10.jpg,/65Wx65H/ApsaraPaint10.jpg,/30Wx30H/ApsaraPaint10.jpg
+
 
 # Update Products with Media and Media Containers
-UPDATE Product;code[unique=true];$picture;$thumbnail;$others;$normal;$thumbnails;$galleryImages;$catalogVersion
+UPDATE Product  ;code[unique=true];$picture;$thumbnail;$others;$normal;$thumbnails;$galleryImages;$catalogVersion
 ;NatarajPencil1;/300Wx300H/NatarajPencil1.jpg;/96Wx96H/NatarajPencil1.jpg;/515Wx515H/NatarajPencil1.jpg,/300Wx300H/NatarajPencil1.jpg,/96Wx96H/NatarajPencil1.jpg,/65Wx65H/NatarajPencil1.jpg,/30Wx30H/NatarajPencil1.jpg;/300Wx300H/NatarajPencil1.jpg;/96Wx96H/NatarajPencil1.jpg;NatarajPencil1_1;
 ;NatarajPencil2;/300Wx300H/NatarajPencil2.jpg;/96Wx96H/NatarajPencil2.jpg;/515Wx515H/NatarajPencil2.jpg,/300Wx300H/NatarajPencil2.jpg,/96Wx96H/NatarajPencil2.jpg,/65Wx65H/NatarajPencil2.jpg,/30Wx30H/NatarajPencil2.jpg;/300Wx300H/NatarajPencil2.jpg;/96Wx96H/NatarajPencil2.jpg;NatarajPencil2_1;
-;NatarajPencil3;/300Wx300H/NatarajPencil3.jpg;/96Wx96H/NatarajPencil3.jpg;/515Wx515H/NatarajPencil3.jpg,/300Wx300H/NatarajPencil3.jpg,/96Wx96H/NatarajPencil3.jpg,/65Wx65H/NatarajPencil3.jpg,/30Wx30H/NatarajPencil3.jpg;/300Wx300H/NatarajPencil3.jpg;/96Wx96H/NatarajPencil3.jpg;NatarajPencil3_1;
-;NatarajPencil4;/300Wx300H/NatarajPencil4.jpg;/96Wx96H/NatarajPencil4.jpg;/515Wx515H/NatarajPencil4.jpg,/300Wx300H/NatarajPencil4.jpg,/96Wx96H/NatarajPencil4.jpg,/65Wx65H/NatarajPencil4.jpg,/30Wx30H/NatarajPencil4.jpg;/300Wx300H/NatarajPencil4.jpg;/96Wx96H/NatarajPencil4.jpg;NatarajPencil4_1;
-;NatarajPencil5;/300Wx300H/NatarajPencil5.jpg;/96Wx96H/NatarajPencil5.jpg;/515Wx515H/NatarajPencil5.jpg,/300Wx300H/NatarajPencil5.jpg,/96Wx96H/NatarajPencil5.jpg,/65Wx65H/NatarajPencil5.jpg,/30Wx30H/NatarajPencil5.jpg;/300Wx300H/NatarajPencil5.jpg;/96Wx96H/NatarajPencil5.jpg;NatarajPencil5_1;
 
-INSERT_UPDATE MediaFolder;qualifier[unique=true];path[unique=true]
-;images;images
+;NatarajEraser3;/300Wx300H/NatarajEraser3.jpg;/96Wx96H/NatarajEraser3.jpg;/515Wx515H/NatarajEraser3.jpg,/300Wx300H/NatarajEraser3.jpg,/96Wx96H/NatarajEraser3.jpg,/65Wx65H/NatarajEraser3.jpg,/30Wx30H/NatarajEraser3.jpg;/300Wx300H/NatarajEraser3.jpg;/96Wx96H/NatarajEraser3.jpg;NatarajEraser3_1;
+;NatarajEraser4;/300Wx300H/NatarajEraser4.jpg;/96Wx96H/NatarajEraser4.jpg;/515Wx515H/NatarajEraser4.jpg,/300Wx300H/NatarajEraser4.jpg,/96Wx96H/NatarajEraser4.jpg,/65Wx65H/NatarajEraser4.jpg,/30Wx30H/NatarajEraser4.jpg;/300Wx300H/NatarajEraser4.jpg;/96Wx96H/NatarajEraser4.jpg;NatarajEraser4_1;
+
+#;NatarajCutter5;/300Wx300H/NatarajCutter5.jpg;/96Wx96H/NatarajCutter5.jpg;/515Wx515H/NatarajCutter5.jpg,/300Wx300H/NatarajCutter5.jpg,/96Wx96H/NatarajCutter5.jpg,/65Wx65H/NatarajCutter5.jpg,/30Wx30H/NatarajCutter5.jpg;/300Wx300H/NatarajCutter5.jpg;/96Wx96H/NatarajCutter5.jpg;NatarajCutter5_1;
+#;NatarajCutter6;/300Wx300H/NatarajCutter6.jpg;/96Wx96H/NatarajCutter6.jpg;/515Wx515H/NatarajCutter6.jpg,/300Wx300H/NatarajCutter6.jpg,/96Wx96H/NatarajCutter6.jpg,/65Wx65H/NatarajCutter6.jpg,/30Wx30H/NatarajCutter6.jpg;/300Wx300H/NatarajCutter6.jpg;/96Wx96H/NatarajCutter6.jpg;NatarajCutter6_1;
+
+;NatarajColourPencil7;/300Wx300H/NatarajColourPencil7.jpg;/96Wx96H/NatarajColourPencil7.jpg;/515Wx515H/NatarajColourPencil7.jpg,/300Wx300H/NatarajColourPencil7.jpg,/96Wx96H/NatarajColourPencil7.jpg,/65Wx65H/NatarajColourPencil7.jpg,/30Wx30H/NatarajColourPencil7.jpg;/300Wx300H/NatarajColourPencil7.jpg;/96Wx96H/NatarajColourPencil7.jpg;NatarajColourPencil7_1;
+;NatarajColourPencil8;/300Wx300H/NatarajColourPencil8.jpg;/96Wx96H/NatarajColourPencil8.jpg;/515Wx515H/NatarajColourPencil8.jpg,/300Wx300H/NatarajColourPencil8.jpg,/96Wx96H/NatarajColourPencil8.jpg,/65Wx65H/NatarajColourPencil8.jpg,/30Wx30H/NatarajColourPencil8.jpg;/300Wx300H/NatarajColourPencil8.jpg;/96Wx96H/NatarajColourPencil8.jpg;NatarajColourPencil8_1;
+
+;NatarajBallPen9;/300Wx300H/NatarajBallPen9.jpg;/96Wx96H/NatarajBallPen9.jpg;/515Wx515H/NatarajBallPen9.jpg,/300Wx300H/NatarajBallPen9.jpg,/96Wx96H/NatarajBallPen9.jpg,/65Wx65H/NatarajBallPen9.jpg,/30Wx30H/NatarajBallPen9.jpg;/300Wx300H/NatarajBallPen9.jpg;/96Wx96H/NatarajBallPen9.jpg;NatarajBallPen9_1;
+;NatarajBallPen10;/300Wx300H/NatarajBallPen10.jpg;/96Wx96H/NatarajBallPen10.jpg;/515Wx515H/NatarajBallPen10.jpg,/300Wx300H/NatarajBallPen10.jpg,/96Wx96H/NatarajBallPen10.jpg,/65Wx65H/NatarajBallPen10.jpg,/30Wx30H/NatarajBallPen10.jpg;/300Wx300H/NatarajBallPen10.jpg;/96Wx96H/NatarajBallPen10.jpg;NatarajBallPen10_1;
+
+;ApsaraPencil1;/300Wx300H/ApsaraPencil1.jpg;/96Wx96H/ApsaraPencil1.jpg;/515Wx515H/ApsaraPencil1.jpg,/300Wx300H/ApsaraPencil1.jpg,/96Wx96H/ApsaraPencil1.jpg,/65Wx65H/ApsaraPencil1.jpg,/30Wx30H/ApsaraPencil1.jpg;/300Wx300H/ApsaraPencil1.jpg;/96Wx96H/ApsaraPencil1.jpg;ApsaraPencil1_1;
+;ApsaraPencil2;/300Wx300H/ApsaraPencil2.jpg;/96Wx96H/ApsaraPencil2.jpg;/515Wx515H/ApsaraPencil2.jpg,/300Wx300H/ApsaraPencil2.jpg,/96Wx96H/ApsaraPencil2.jpg,/65Wx65H/ApsaraPencil2.jpg,/30Wx30H/ApsaraPencil2.jpg;/300Wx300H/ApsaraPencil2.jpg;/96Wx96H/ApsaraPencil2.jpg;ApsaraPencil2_1;
+
+
+;ApsaraEraser3;/300Wx300H/ApsaraEraser3.jpg;/96Wx96H/ApsaraEraser3.jpg;/515Wx515H/ApsaraEraser3.jpg,/300Wx300H/ApsaraEraser3.jpg,/96Wx96H/ApsaraEraser3.jpg,/65Wx65H/ApsaraEraser3.jpg,/30Wx30H/ApsaraEraser3.jpg;/300Wx300H/ApsaraEraser3.jpg;/96Wx96H/ApsaraEraser3.jpg;ApsaraEraser3_1;
+;ApsaraEraser4;/300Wx300H/ApsaraEraser4.jpg;/96Wx96H/ApsaraEraser4.jpg;/515Wx515H/ApsaraEraser4.jpg,/300Wx300H/ApsaraEraser4.jpg,/96Wx96H/ApsaraEraser4.jpg,/65Wx65H/ApsaraEraser4.jpg,/30Wx30H/ApsaraEraser4.jpg;/300Wx300H/ApsaraEraser4.jpg;/96Wx96H/ApsaraEraser4.jpg;ApsaraEraser4_1;
+
+;ApsaraChalk5;/300Wx300H/ApsaraChalk5.jpg;/96Wx96H/ApsaraChalk5.jpg;/515Wx515H/ApsaraChalk5.jpg,/300Wx300H/ApsaraChalk5.jpg,/96Wx96H/ApsaraChalk5.jpg,/65Wx65H/ApsaraChalk5.jpg,/30Wx30H/ApsaraChalk5.jpg;/300Wx300H/ApsaraChalk5.jpg;/96Wx96H/ApsaraChalk5.jpg;ApsaraChalk5_1;
+#;ApsaraChalk6;/300Wx300H/ApsaraChalk6.jpg;/96Wx96H/ApsaraChalk6.jpg;/515Wx515H/ApsaraChalk6.jpg,/300Wx300H/ApsaraChalk6.jpg,/96Wx96H/ApsaraChalk6.jpg,/65Wx65H/ApsaraChalk6.jpg,/30Wx30H/ApsaraChalk6.jpg;/300Wx300H/ApsaraChalk6.jpg;/96Wx96H/ApsaraChalk6.jpg;ApsaraChalk6_1;
+
+
+#;ApsaraColoursstick7;/300Wx300H/ApsaraColoursstick7.jpg;/96Wx96H/ApsaraColoursstick7.jpg;/515Wx515H/ApsaraColoursstick7.jpg,/300Wx300H/ApsaraColoursstick7.jpg,/96Wx96H/ApsaraColoursstick7.jpg,/65Wx65H/ApsaraColoursstick7.jpg,/30Wx30H/ApsaraColoursstick7.jpg;/300Wx300H/ApsaraColoursstick7.jpg;/96Wx96H/ApsaraColoursstick7.jpg;ApsaraColourstick7_1;
+#;ApsaraColoursstick8;/300Wx300H/ApsaraColoursstick8.jpg;/96Wx96H/ApsaraColoursstick8.jpg;/515Wx515H/ApsaraColoursstick8.jpg,/300Wx300H/ApsaraColoursstick8.jpg,/96Wx96H/ApsaraColoursstick8.jpg,/65Wx65H/ApsaraColoursstick8.jpg,/30Wx30H/ApsaraColoursstick8.jpg;/300Wx300H/ApsaraColoursstick8.jpg;/96Wx96H/ApsaraColoursstick8.jpg;ApsaraColourstick8_1;
+
+
+;ApsaraPaint9;/300Wx300H/ApsaraPaint9.jpg;/96Wx96H/ApsaraPaint9.jpg;/515Wx515H/ApsaraPaint9.jpg,/300Wx300H/ApsaraPaint9.jpg,/96Wx96H/ApsaraPaint9.jpg,/65Wx65H/ApsaraPaint9.jpg,/30Wx30H/ApsaraPaint9.jpg;/300Wx300H/ApsaraPaint9.jpg;/96Wx96H/ApsaraPaint9.jpg;ApsaraPaint9_1;
+;ApsaraPaint10;/300Wx300H/ApsaraPaint10.jpg;/96Wx96H/ApsaraPaint10.jpg;/515Wx515H/ApsaraPaint10.jpg,/300Wx300H/ApsaraPaint10.jpg,/96Wx96H/ApsaraPaint10.jpg,/65Wx65H/ApsaraPaint10.jpg,/30Wx30H/ApsaraPaint10.jpg;/300Wx300H/ApsaraPaint10.jpg;/96Wx96H/ApsaraPaint10.jpg;
+#;ApsaraPaint10_1;ApsaraPaint10.jpg,/96Wx96H/ApsaraPaint10.jpg,/65Wx65H/ApsaraPaint10.jpg,/30Wx30H/ApsaraPaint10.jpg;/300Wx300H/ApsaraPaint10.jpg;/96Wx96H/ApsaraPaint10.jpg;ApsaraPaint10_1;
 
