@@ -12,10 +12,10 @@
 # Create the Responsive Apparel UK Store
 #
 $productCatalog=natarajProductCatalog
-$currencies=GBP
+$currencies=GBP,INR
 $net=false
 $storeUid=nataraj
-$defaultCurrency=GBP
+$defaultCurrency=INR
 $languages=en
 $defaultLanguage=en
 $unitedKingdom=GB,GG,IM,JE

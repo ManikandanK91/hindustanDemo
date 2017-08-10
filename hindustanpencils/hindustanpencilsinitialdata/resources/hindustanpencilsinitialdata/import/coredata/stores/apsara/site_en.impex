@@ -17,4 +17,4 @@ $lang=en
 
 # Create CMS Site
 UPDATE CMSSite;uid[unique=true];name[lang=$lang];locale[lang=$lang]
- ;apsara;"Apsara Site DE";en_GB
+ ;apsara;"Apsara Site";en_GB

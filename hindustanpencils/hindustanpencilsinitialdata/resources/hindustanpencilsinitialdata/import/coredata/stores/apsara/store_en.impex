@@ -17,4 +17,4 @@ $lang=en
 
 # Create Base Store
 UPDATE BaseStore;uid[unique=true];name[lang=$lang]
- ;apsara;"Apsara Store DE"
+ ;apsara;"Apsara Store"

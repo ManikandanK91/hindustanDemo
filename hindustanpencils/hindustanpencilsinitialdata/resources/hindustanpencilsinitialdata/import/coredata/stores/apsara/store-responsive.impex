@@ -12,12 +12,12 @@
 # Create the Responsive Apparel DE Store
 #
 $productCatalog=apsaraProductCatalog
-$currencies=EUR
+$currencies=INR
 $net=false
 $storeUid=apsara
 $paymentProvider=Mockup
 
-$defaultCurrency=EUR
+$defaultCurrency=INR
 $languages=en
 $defaultLanguage=en
 $europeNotUK=AD,AL,AT,BA,BE,BG,BY,CH,CY,CZ,DE,DK,EE,ES,FI,FO,FR,GI,GL,GR,HR,HU,IE,IS,IT,LI,LT,LU,LV,MC,MD,ME,MK,MT,NL,NO,PL,PT,RO,RS,RU,SE,SI,SK,SM,TR,UA,VA

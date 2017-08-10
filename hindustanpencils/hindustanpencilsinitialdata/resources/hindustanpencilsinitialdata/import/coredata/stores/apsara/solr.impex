@@ -19,7 +19,7 @@ $searchIndexNamePrefix=apsara
 $solrIndexedType=apsaraProductType
 $indexBaseSite=apsara
 $indexLanguages=en
-$indexCurrencies=EUR
+$indexCurrencies=EUR,INR
 
 # Import config properties into impex macros
 UPDATE GenericItem[processor=de.hybris.platform.commerceservices.impex.impl.ConfigPropertyImportProcessor];pk[unique=true]
@@ -44,19 +44,19 @@ INSERT_UPDATE SolrValueRangeSet;name[unique=true];qualifier;type;solrValueRanges
 
 # Define price ranges
 INSERT_UPDATE SolrValueRange;&rangeValueRefID;solrValueRangeSet(name)[unique=true];name[unique=true];from;to
-;rangeRefEUR1 ;apparelPriceRangeEUR;    €0-€19.99;   0; 19.99
-;rangeRefEUR2 ;apparelPriceRangeEUR;   €20-€49.99;  20; 49.99
-;rangeRefEUR3 ;apparelPriceRangeEUR;   €50-€99.99;  50; 99.99
-;rangeRefEUR4 ;apparelPriceRangeEUR; €100-€199.99; 100;199.99
-;rangeRefEUR5 ;apparelPriceRangeEUR; €200-€299.99; 200;299.99
-;rangeRefEUR6 ;apparelPriceRangeEUR; €300-€399.99; 300;399.99
-;rangeRefEUR7 ;apparelPriceRangeEUR; €400-€499.99; 400;499.99
-;rangeRefEUR8 ;apparelPriceRangeEUR; €500-€599.99; 500;599.99
-;rangeRefEUR9 ;apparelPriceRangeEUR; €600-€699.99; 600;699.99
-;rangeRefEUR10;apparelPriceRangeEUR; €700-€799.99; 700;799.99
-;rangeRefEUR11;apparelPriceRangeEUR; €800-€899.99; 800;899.99
-;rangeRefEUR12;apparelPriceRangeEUR; €900-€999.99; 900;999.99
-;rangeRefEUR13;apparelPriceRangeEUR;€1,000-€100,000;1000;100000
+;rangeRefEUR1 ;apparelPriceRangeEUR;    ₹0-₹19.99;   0; 19.99
+;rangeRefEUR2 ;apparelPriceRangeEUR;   ₹20-₹49.99;  20; 49.99
+;rangeRefEUR3 ;apparelPriceRangeEUR;   ₹50-₹99.99;  50; 99.99
+;rangeRefEUR4 ;apparelPriceRangeEUR; ₹100-₹199.99; 100;199.99
+;rangeRefEUR5 ;apparelPriceRangeEUR; ₹200-₹299.99; 200;299.99
+;rangeRefEUR6 ;apparelPriceRangeEUR; ₹300-₹399.99; 300;399.99
+;rangeRefEUR7 ;apparelPriceRangeEUR; ₹400-₹499.99; 400;499.99
+;rangeRefEUR8 ;apparelPriceRangeEUR; ₹500-₹599.99; 500;599.99
+;rangeRefEUR9 ;apparelPriceRangeEUR; ₹600-₹699.99; 600;699.99
+;rangeRefEUR10;apparelPriceRangeEUR; ₹700-₹799.99; 700;799.99
+;rangeRefEUR11;apparelPriceRangeEUR; ₹800-₹899.99; 800;899.99
+;rangeRefEUR12;apparelPriceRangeEUR; ₹900-₹999.99; 900;999.99
+;rangeRefEUR13;apparelPriceRangeEUR;₹1,000-₹100,000;1000;100000
 
 # Non-facet properties
 INSERT_UPDATE SolrIndexedProperty;solrIndexedType(identifier)[unique=true];name[unique=true];type(code);sortableType(code);currency[default=false];localized[default=false];multiValue[default=false];useForSpellchecking[default=false];useForAutocomplete[default=false];fieldValueProvider;valueProviderParameters[map-delimiter=|];ftsPhraseQuery[default=false];ftsPhraseQueryBoost;ftsQuery[default=false];ftsQueryBoost;ftsFuzzyQuery[default=false];ftsFuzzyQueryBoost;ftsWildcardQuery[default=false];ftsWildcardQueryType(code)[default=POSTFIX];ftsWildcardQueryBoost;ftsWildcardQueryMinTermLength

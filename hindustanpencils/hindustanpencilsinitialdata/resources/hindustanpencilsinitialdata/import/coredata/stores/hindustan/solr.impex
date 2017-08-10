@@ -19,7 +19,7 @@ $searchIndexNamePrefix=hindustan
 $solrIndexedType=hindustanProductType
 $indexBaseSite=hindustan
 $indexLanguages=ja,en,de,zh
-$indexCurrencies=USD,CAD
+$indexCurrencies=USD,CAD,INR
 
 #
 # Setup the indexed types, their properties, and the update queries
@@ -42,17 +42,17 @@ INSERT_UPDATE SolrValueRangeSet;name[unique=true];qualifier;type;solrValueRanges
 
 # Define price ranges
 INSERT_UPDATE SolrValueRange;&rangeValueRefID;solrValueRangeSet(name)[unique=true];name[unique=true];from;to
-;rangeRefUSD1;powertoolsPriceRangeUSD;      $0-$49.99;   0;  49.99
-;rangeRefUSD2;powertoolsPriceRangeUSD;    $50-$199.99;  50; 199.99
-;rangeRefUSD3;powertoolsPriceRangeUSD;   $200-$499.99; 200; 499.99
-;rangeRefUSD4;powertoolsPriceRangeUSD;   $500-$999.99; 500; 999.99
-;rangeRefUSD5;powertoolsPriceRangeUSD;$1,000-$100,000;1000; 100000
+;rangeRefUSD1;powertoolsPriceRangeUSD;      ₹0-₹49.99;   0;  49.99
+;rangeRefUSD2;powertoolsPriceRangeUSD;    ₹50-₹199.99;  50; 199.99
+;rangeRefUSD3;powertoolsPriceRangeUSD;   ₹200-₹499.99; 200; 499.99
+;rangeRefUSD4;powertoolsPriceRangeUSD;   ₹500-₹999.99; 500; 999.99
+;rangeRefUSD5;powertoolsPriceRangeUSD;₹1,000-₹100,000;1000; 100000
 
-;rangeRefCAD1;powertoolsPriceRangeCAD;      C$0-C$49.99;   0;  49.99
-;rangeRefCAD2;powertoolsPriceRangeCAD;    C$50-C$199.99;  50; 199.99
-;rangeRefCAD3;powertoolsPriceRangeCAD;   C$200-C$499.99; 200; 499.99
-;rangeRefCAD4;powertoolsPriceRangeCAD;   C$500-C$999.99; 500; 999.99
-;rangeRefCAD5;powertoolsPriceRangeCAD;C$1,000-C$100,000;1000; 100000
+;rangeRefCAD1;powertoolsPriceRangeCAD;      C₹0-C₹49.99;   0;  49.99
+;rangeRefCAD2;powertoolsPriceRangeCAD;    C₹50-C₹199.99;  50; 199.99
+;rangeRefCAD3;powertoolsPriceRangeCAD;   C₹200-C₹499.99; 200; 499.99
+;rangeRefCAD4;powertoolsPriceRangeCAD;   C₹500-C₹999.99; 500; 999.99
+;rangeRefCAD5;powertoolsPriceRangeCAD;C₹1,000-C₹100,000;1000; 100000
 
 # Non-facet properties
 INSERT_UPDATE SolrIndexedProperty;solrIndexedType(identifier)[unique=true];name[unique=true];type(code);sortableType(code);currency[default=false];localized[default=false];multiValue[default=false];useForSpellchecking[default=false];useForAutocomplete[default=false];fieldValueProvider;valueProviderParameter;ftsPhraseQuery[default=false];ftsPhraseQueryBoost;ftsQuery[default=false];ftsQueryBoost;ftsFuzzyQuery[default=false];ftsFuzzyQueryBoost;ftsWildcardQuery[default=false];ftsWildcardQueryType(code)[default=POSTFIX];ftsWildcardQueryBoost;ftsWildcardQueryMinTermLength

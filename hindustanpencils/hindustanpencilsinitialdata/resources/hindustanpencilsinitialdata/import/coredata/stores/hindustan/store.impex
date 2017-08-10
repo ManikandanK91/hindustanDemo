@@ -14,10 +14,10 @@
 
 $productCatalog=hindustanProductCatalog
 $classificationCatalog=HindustanClassification
-$currencies=USD
+$currencies=USD,INR
 $net=true
 $storeUid=hindustan
-$defaultCurrency=USD
+$defaultCurrency=INR
 $languages=ja,en,de,zh
 $defaultLanguage=en
 $unitedKingdom=GB,GG,IM,JE
