@@ -12,7 +12,7 @@
 
 # Macros / Replacement Parameter definitions
 $productCatalog=hindustanProductCatalog
-$productCatalogName=Powertools Product Catalog
+$productCatalogName=HIndustan Product Catalog
 $catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog:Staged]
 $supercategories=supercategories(code, $catalogVersion)
 $baseProduct=baseProduct(code,$catalogVersion)

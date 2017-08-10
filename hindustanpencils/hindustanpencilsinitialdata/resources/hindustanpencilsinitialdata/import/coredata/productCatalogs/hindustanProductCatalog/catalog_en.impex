@@ -20,5 +20,5 @@ $productCatalog=hindustanProductCatalog
 $classificationCatalog=hindustanClassification
 
 UPDATE Catalog;id[unique=true];name[lang=$lang]
-;$classificationCatalog;"hindustan Classification";
+#;$classificationCatalog;"hindustan Classification";
 ;$productCatalog;"Hindustan Product Catalog";

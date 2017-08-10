@@ -13,6 +13,7 @@
 $contentCatalog=hindustanContentCatalog
 $contentCV=catalogVersion(CatalogVersion.catalog(Catalog.id[default=$contentCatalog]),CatalogVersion.version[default=Staged])[default=$contentCatalog:Staged]
 $picture=media(code, $contentCV);
+$siteResource=jar:de.hybris.platform.powertoolsstore.constants.PowertoolsStoreConstants&/powertoolsstore/import/sampledata/contentCatalogs/$contentCatalog
 $medias=medias(code, $contentCV);
 $mediaContainer=media(qualifier, $contentCV)[lang=$lang];
 $siteResource=jar:com.hybris.hindustanpencils.initialdata.constants.HindustanpencilsInitialDataConstants&/hindustanpencilsinitialdata/import/sampledata/contentCatalogs/$contentCatalog
@@ -22,17 +23,15 @@ $siteResource=jar:com.hybris.hindustanpencils.initialdata.constants.Hindustanpen
 $lang=en
 
 # Site Logo Component
-UPDATE SimpleBannerComponent;$contentCV[unique=true];uid[unique=true];$picture[lang=$lang]
-;;SiteLogoComponent;/images/theme/logo_hybris_b2b_responsive.svg
-
+#UPDATE SimpleBannerComponent;$contentCV[unique=true];uid[unique=true];$picture[lang=$lang]
+#;;SiteLogoComponent;/images/theme/logo_hybris_b2b_responsive.svg
 
 INSERT_UPDATE Media;$contentCV[unique=true];code[unique=true];realfilename;@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator];mime[default='image/jpeg'];folder(qualifier)[default='images'];altText
-;;/images/theme/logo-hybris.png;logo-hybris.png;$siteResource/images/theme/cropped-Logo.png;image/png;;"Apsara Pencils"
+;;/images/theme/logo-hybris1.png;apsara_logo.png.png;$siteResource/images/theme/apsara_logo.png;image/png;;"Apsara Pencils"
 
 # Site Logo Component
 UPDATE SimpleBannerComponent;$contentCV[unique=true];uid[unique=true];$picture[lang=$lang]
-;;SiteLogoComponent;/images/theme/logo-hybris.png
-
+;;SiteLogoComponent;/images/theme/logo-hybris1.png
 
 # CMS Link Components
 UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];linkName[lang=$lang]
@@ -287,27 +286,16 @@ INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$contentCV[unique=tr
 INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];name;&componentRef;$mediaContainer
 ;;PowertoolstronicsErrorpageBannerComponent;Powertoolstronics Error Page Banner Component;PowertoolstronicsErrorpageBannerComponent;powertools-errorpage-pagenotfound-en
 
+# Language
+$lang=en
 
-#Rotating Banner
-UPDATE BannerComponent;$contentCV[unique=true];uid[unique=true];headline[lang=$lang];$picture[lang=$lang];content[lang=$lang]
-#;;CarouselCamcorderBanner;New - Ignite your passion for film with the latest HD camcorder...;Elec_468x418_HomeCarouselCamcorder_EN_01.jpg;""
-  ;;CarouselNatarajBanner;New Pencil;resizedNatarajBallPen1.jpg;""
- ;;CarouselNatarajBanner2;New Pencil2;resizedpencil1.jpg;""
- ;;CarouselNatarajBanner3;New Pencil3;resizedNatrajErasers.jpg;""
- ;;CarouselApsaraBanner;New Pencil;ResizedApsaraErasers.jpg;""
- ;;CarouselApsaraBanner2;New Pencil2;ResizedApsaraScales.jpg;""
- ;;CarouselApsaraBanner3;New Pencil3;ResizedApsaraPencils.jpg;""
+# Site Logo Component
+#UPDATE SimpleBannerComponent;$contentCV[unique=true];uid[unique=true];$picture[lang=$lang]
+#;;SiteLogoComponent;/images/theme/logo_hybris_b2b_responsive.svg
 
- 
-INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];realfilename;altText;mime[default='image/jpeg'];$contentCV[unique=true];folder(qualifier)[default=images];
-#;widescreen;ResizedApsaraErasers.jpg;$siteResource/images/banners/homepage/responsive/ResizedApsaraErasers.jpg;ResizedApsaraErasers.jpg;"Save Big on Select Streetwear";
+INSERT_UPDATE Media;$contentCV[unique=true];code[unique=true];realfilename;@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator];mime[default='image/jpeg'];folder(qualifier)[default='images'];altText
+;;/images/theme/logo-hybris1.png;apsara_logo.png.png;$siteResource/images/theme/cropped-Logo.jpg;image/jpeg;;"Apsara Pencils"
 
-;widescreen;resizedNatarajBallPen1.jpg;$siteResource/images/banners/homepage/responsive/resizedNatarajBallPen1.jpg;resizedNatarajBallPen1.jpg;"Save Big on Select Streetwear";
-;widescreen;resizedpencil1.jpg;$siteResource/images/banners/homepage/responsive/resizedpencil1.jpg;resizedpencil1.jpg;"Save Big on Select Streetwear";
-;widescreen;resizedNatrajErasers.jpg;$siteResource/images/banners/homepage/responsive/resizedNatrajErasers.jpg;resizedNatrajErasers.jpg;"Save Big on Select Streetwear";
-
-
-;widescreen;ResizedApsaraErasers.jpg;$siteResource/images/banners/homepage/responsive/ResizedApsaraErasers.jpg;ResizedApsaraErasers.jpg;"Save Big on Select Streetwear";
-;widescreen;ResizedApsaraScales.jpg;$siteResource/images/banners/homepage/responsive/ResizedApsaraScales.jpg;ResizedApsaraScales.jpg;"Save Big on Select Streetwear";
-;widescreen;ResizedApsaraPencils.jpg;$siteResource/images/banners/homepage/responsive/ResizedApsaraPencils.jpg;ResizedApsaraPencils.jpg;"Save Big on Select Streetwear";
-
+# Site Logo Component
+UPDATE SimpleBannerComponent;$contentCV[unique=true];uid[unique=true];$picture[lang=$lang]
+;;SiteLogoComponent;/images/theme/logo-hybris1.png

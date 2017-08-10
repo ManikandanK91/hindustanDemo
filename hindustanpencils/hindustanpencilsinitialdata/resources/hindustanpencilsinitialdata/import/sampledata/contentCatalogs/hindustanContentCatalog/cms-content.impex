@@ -1122,3 +1122,169 @@ INSERT_UPDATE RotatingImagesComponent;$contentCV[unique=true];uid[unique=true];n
 	INSERT_UPDATE ContentSlotForPage;$contentCV[unique=true];uid[unique=true];position[unique=true];page(uid,$contentCV)[unique=true][default='notFound'];contentSlot(uid,$contentCV)[unique=true]
 	;;MiddleContent-Errorpage;MiddleContent;;MiddleContent-Errorpage
 	######## End of Responsive Error Page #######
+	
+	
+#######hindustan############
+###### Navigation Start ######
+## navigation is in tree structure ##
+## level 0 ##
+INSERT_UPDATE CMSNavigationNode;uid[unique=true];$contentCV[unique=true];name;children(uid,$contentCV)[mode=append]
+;root;;root;
+
+##- level 1. SiteRoot -##
+INSERT_UPDATE CMSNavigationNode;uid[unique=true];$contentCV[unique=true];name;parent(uid, $contentCV);links(&componentRef);&nodeRef
+;SiteRootNode;;SiteRootNode;root;;SiteRootNode
+
+##-- level 2. children of SiteRoot --##
+INSERT_UPDATE CMSNavigationNode;uid[unique=true];$contentCV[unique=true];name;parent(uid, $contentCV);links(&componentRef);&nodeRef
+;hindustanNavNode;;hindustan Site;SiteRootNode;;hindustanNavNode
+
+##--- level 3. children of hindustanNavNode ---##
+INSERT_UPDATE CMSNavigationNode;uid[unique=true];$contentCV[unique=true];name;parent(uid, $contentCV);links(&componentRef);&nodeRef
+;hindustanCategoryNavNode;;Categories;hindustanNavNode;;hindustanCategoryNavNode
+
+#############hindustan navigation bar begin #################
+INSERT_UPDATE CMSNavigationNode;uid[unique=true];$contentCV[unique=true];name;parent(uid, $contentCV);links(&linkRef);&nodeRef
+;NatarajNavNode;;hindustan Nataraj Category;hindustanCategoryNavNode;;NatarajNavNode   
+;ApsaraNavNode;;hindustan Apsara Category;hindustanCategoryNavNode;;ApsaraNavNode  
+
+## links of the above navigation nodes ##
+INSERT_UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];name;url;&linkRef;&componentRef;target(code)[default='sameWindow'];category(code,$productCV)
+;;NatarajCategoryLink;Nataraj  Category Link;#;NatarajCategoryLink;NatarajCategoryLink;;NatarajPencils    
+;;ApsarajCategoryLink;Apsara  Category Link;#;ApsarajCategoryLink;ApsarajCategoryLink;;ApsaraPencils    
+
+## entries of the above navigation nodes ##
+INSERT_UPDATE CMSNavigationEntry;uid[unique=true];$contentCV[unique=true];name;navigationNode(&nodeRef);item(CMSLinkComponent.uid,CMSLinkComponent.$contentCV);
+;NatarajNavNodeEntry;;Nataraj  NavNode Entry;NatarajNavNode;NatarajCategoryLink                            
+;ApsaraNavNodeEntry;;Apsara  NavNode Entry;ApsaraNavNode;ApsarajCategoryLink                             
+  
+###childrens of NatarajNavNode ###########
+INSERT_UPDATE CMSNavigationNode;uid[unique=true];$contentCV[unique=true];name;parent(uid, $contentCV);links(&linkRef);&nodeRef
+;NatarajPencilsNavNode;;Nataraj Pencils Category;NatarajNavNode;;NatarajPencilsNavNode   
+;NatarajErasersNavNode;;Nataraj Erasers Category;NatarajNavNode;;NatarajErasersNavNode    
+;NatarajCuttersNavNode;;Nataraj Cutters Category;NatarajNavNode;;NatarajCuttersNavNode     
+;NatarajColourPencilsNavNode;;Nataraj Colour Pencils Category;NatarajNavNode;;NatarajColourPencilsNavNode
+;NatarajBallPensNavNode;;Nataraj Ball Pens Category;NatarajNavNode;;NatarajBallPensNavNode  
+
+## links of the above navigation nodes ##
+INSERT_UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];name;url;&linkRef;&componentRef;target(code)[default='sameWindow'];category(code,$productCV)
+;;NatarajPencilsCategoryLink;Nataraj Pencils Category Link;#;NatarajPencilsCategoryLink;NatarajPencilsCategoryLink;;NatarajPencils    
+;;NatarajErasersCategoryLink;Nataraj Erasers Category Link;#;NatarajErasersCategoryLink;NatarajErasersCategoryLink;;NatarajErasers    
+;;NatarajCuttersCategoryLink;Nataraj Cutters Category Link;#;NatarajCuttersCategoryLink;NatarajCuttersCategoryLink;;NatarajCutters    
+;;NatarajColourPencilsCategoryLink;Nataraj Colour Pencils Category Link;#;NatarajColourPencilsCategoryLink;NatarajColourPencilsCategoryLink;;NatarajColourPencils
+;;NatarajBallPensCategoryLink;Nataraj Ball Pens Category Link;#;NatarajBallPensCategoryLink;NatarajBallPensCategoryLink;;NatarajBallPens  
+
+## entries of the above navigation nodes ##
+INSERT_UPDATE CMSNavigationEntry;uid[unique=true];$contentCV[unique=true];name;navigationNode(&nodeRef);item(CMSLinkComponent.uid,CMSLinkComponent.$contentCV);
+;NatarajPencilsNavNodeEntry;;Nataraj Pencils NavNode Entry;NatarajPencilsNavNode;NatarajPencilsCategoryLink                            
+;NatarajErasersNavNodeEntry;;Nataraj Erasers NavNode Entry;NatarajErasersNavNode;NatarajErasersCategoryLink                             
+;NatarajCuttersNavNodeEntry;;Nataraj Cutters NavNode Entry;NatarajCuttersNavNode;NatarajCuttersCategoryLink                            
+;NatarajColourPencilsNavNodeEntry;;Nataraj Colour Pencils NavNode Entry;NatarajColourPencilsNavNode;NatarajColourPencilsCategoryLink
+;NatarajBallPensNavNodeEntry;;Nataraj Ball Pens NavNode Entry;NatarajBallPensNavNode;NatarajBallPensCategoryLink   
+
+#####childrens of ApsaraNavNode ######
+INSERT_UPDATE CMSNavigationNode;uid[unique=true];$contentCV[unique=true];name;parent(uid, $contentCV);links(&linkRef);&nodeRef
+;ApsaraPencilsNavNode;;Apsara Pencils Category;ApsaraNavNode;;ApsaraPencilsNavNode   
+;ApsaraErasersNavNode;;Apsara Erasers Category;ApsaraNavNode;;ApsaraErasersNavNode    
+;ApsaraChalksNavNode;;Apsara Cutters Category;ApsaraNavNode;;ApsaraChalksNavNode     
+;ApsaraColoursticksNavNode;;Apsara Colour sticks Category;ApsaraNavNode;;ApsaraColoursticksNavNode
+;ApsaraPaintsNavNode;;Apsara Paints Category;ApsaraNavNode;;ApsaraPaintsNavNode  
+
+## links of the above navigation nodes ##
+INSERT_UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];name;url;&linkRef;&componentRef;target(code)[default='sameWindow'];category(code,$productCV)
+;;ApsarajPencilsCategoryLink;Apsara Pencils Category Link;#;ApsarajPencilsCategoryLink;ApsarajPencilsCategoryLink;;ApsaraPencils    
+;;ApsarajErasersCategoryLink;Apsara Erasers Category Link;#;ApsarajErasersCategoryLink;ApsarajErasersCategoryLink;;ApsaraErasers    
+;;ApsaraChalksCategoryLink;Apsara Chalks Category Link;#;ApsaraChalksCategoryLink;ApsaraChalksCategoryLink;;ApsaraChalks    
+;;ApsaraColoursticksCategoryLink;Apsara Colour sticks Category Link;#;ApsaraColoursticksCategoryLink;ApsaraColoursticksCategoryLink;;ApsaraColoursticks
+;;ApsaraPaintsCategoryLink;Apsara Paints Category Link;#;ApsaraPaintsCategoryLink;ApsaraPaintsCategoryLink;;ApsaraPaints  
+
+## entries of the above navigation nodes ##
+INSERT_UPDATE CMSNavigationEntry;uid[unique=true];$contentCV[unique=true];name;navigationNode(&nodeRef);item(CMSLinkComponent.uid,CMSLinkComponent.$contentCV);
+;ApsaraPencilsNavNodeEntry;;Apsara Pencils NavNode Entry;ApsaraPencilsNavNode;ApsarajPencilsCategoryLink                            
+;ApsaraErasersNavNodeEntry;;Apsara Erasers NavNode Entry;ApsaraErasersNavNode;ApsarajErasersCategoryLink                             
+;ApsaraChalksNavNodeEntry;;Apsara Chalks NavNode Entry;ApsaraChalksNavNode;ApsaraChalksCategoryLink                            
+;ApsaraColourPencilsNavNodeEntry;;Apsara Colour sticks NavNode Entry;ApsaraColoursticksNavNode;ApsaraColoursticksCategoryLink
+;ApsaraBallPensNavNodeEntry;;Apsara Paints NavNode Entry;ApsaraPaintsNavNode;ApsaraPaintsCategoryLink   
+
+## NavigationBar slot: ApparelDECategoryNavComponent and BredcrumbComponent 
+INSERT_UPDATE CategoryNavigationComponent;$contentCV[unique=true];uid[unique=true];name;styleClass;&componentRef;navigationNode(&nodeRef);wrapAfter
+#;;ApparelDECategoryNavComponent;Apparel-DE Category Navigation Component;;ApparelDECategoryNavComponent;ApparelDECategoryNavNode;10
+;;apsaraCategoryNavComponent;Apparel-DE Category Navigation Component;;apsaraCategoryNavComponent;hindustanCategoryNavNode;10
+
+INSERT_UPDATE BreadcrumbComponent;$contentCV[unique=true];uid[unique=true];name;&componentRef
+;;breadcrumbComponent;Breadcrumb CMS Component;breadcrumbComponent
+
+INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];cmsComponents(uid, $contentCV)
+#;;NavigationBarSlot;ApparelDECategoryNavComponent,breadcrumbComponent
+;;NavigationBarSlot;apsaraCategoryNavComponent,breadcrumbComponent
+
+
+# CMS Link Components
+UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];linkName[lang=en]
+ ##hindustan###
+;;NatarajCategoryLink;"Nataraj"
+;;ApsarajCategoryLink;"Apsara"
+;;NatarajPencilsCategoryLink;"Nataraj Pencils"
+;;NatarajErasersCategoryLink;"Nataraj Erasers"
+;;NatarajCuttersCategoryLink;"Nataraj Cutters"
+;;NatarajColourPencilsCategoryLink;"Nataraj Colour Pencils"
+;;NatarajBallPensCategoryLink;"Nataraj Ball Pens"
+;;ApsarajPencilsCategoryLink;"Apsara Pencils"
+;;ApsarajErasersCategoryLink;"Apsara Erasers"
+;;ApsaraChalksCategoryLink;"Apsara Chalks"
+;;ApsaraColoursticksCategoryLink;"Apsara Colour sticks"
+;;ApsaraPaintsCategoryLink;"Apsara Paints"
+ 
+ INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active;cmsComponents(&componentRef)
+;;Section1Slot-Homepage;Section1 Slot for ApparelDEHomepage;true;ApparelUKHomepageCarouselComponent
+;;Section2CSlot-Homepage;Section2C Slot for ApparelDEHomepage;true;
+;;Section3Slot-Homepage;Section3 Slot for ApparelDEHomepage;true;
+;;Section4Slot-Homepage;Section4 Slot for ApparelDEHomepage;true;
+;;Section5Slot-Homepage;Section5 Slot for ApparelDEHomepage;true;
+
+
+#component for rotating image
+INSERT_UPDATE BannerComponent ;$contentCV[unique=true];uid[unique=true]    ;name                 ;&componentRef       ;urlLink
+                #              ;                          ;CarouselCyberBanner ;Carousel Cyber Banner;CarouselCyberBanner ;/Open-Catalogue/Cameras/Digital-Cameras/Digital-Compacts/Cyber-shot-W55/p/676442
+							   ;                       ;CarouselNatarajBanner       ;Carousel Nataraj Banner ;CarouselNatarajBanner;
+                              ;                       ;CarouselNatarajBanner2       ;Carousel Nataraj Banner 2 ;CarouselNatarajBanner2;
+                              ;                       ;CarouselNatarajBanner3       ;Carousel Nataraj Banner 3 ;CarouselNatarajBanner3;
+
+							;                        ;CarouselApsaraBanner        ;Carousel Apsara Banner ;CarouselApsaraBanner;
+                            ;                         ;CarouselApsaraBanner2       ;Carousel Apsara Banner 2 ;CarouselApsaraBanner2;
+                            ;                         ;CarouselApsaraBanner3       ;Carousel Apsara Banner 3 ;CarouselApsaraBanner3;
+
+
+							  
+INSERT_UPDATE RotatingImagesComponent;$contentCV[unique=true];uid[unique=true];name;banners(&componentRef);&componentRef
+#;;ElectronicsHomepageCarouselComponent;Electronics Homepage Carousel;CarouselCyberBanner,CarouselCamcorderBanner,CarouselFunBanner;ElectronicsHomepageCarouselComponent
+ ;;ApparelUKHomepageCarouselComponent;Apparel UK Homepage Carousel Component;CarouselNatarajBanner,CarouselNatarajBanner2,CarouselNatarajBanner3,CarouselApsaraBanner,CarouselApsaraBanner2,CarouselApsaraBanner3;ApparelUKHomepageCarouselComponent
+
+ 
+ $lang=en
+
+
+#Rotating Banner
+UPDATE BannerComponent;$contentCV[unique=true];uid[unique=true];headline[lang=$lang];$picture[lang=$lang];content[lang=$lang]
+#;;CarouselCamcorderBanner;New - Ignite your passion for film with the latest HD camcorder...;Elec_468x418_HomeCarouselCamcorder_EN_01.jpg;""
+  ;;CarouselNatarajBanner;New Pencil;resizedNatarajBallPen1.jpg;""
+ ;;CarouselNatarajBanner2;New Pencil2;resizedpencil1.jpg;""
+ ;;CarouselNatarajBanner3;New Pencil3;resizedNatrajErasers.jpg;""
+ ;;CarouselApsaraBanner;New Pencil;ResizedApsaraErasers.jpg;""
+ ;;CarouselApsaraBanner2;New Pencil2;ResizedApsaraScales.jpg;""
+ ;;CarouselApsaraBanner3;New Pencil3;ResizedApsaraPencils.jpg;""
+
+ 
+INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];realfilename;altText;mime[default='image/jpeg'];$contentCV[unique=true];folder(qualifier)[default=images];
+#;widescreen;ResizedApsaraErasers.jpg;$siteResource/images/banners/homepage/responsive/ResizedApsaraErasers.jpg;ResizedApsaraErasers.jpg;"Save Big on Select Streetwear";
+
+;widescreen;resizedNatarajBallPen1.jpg;$siteResource/images/banners/homepage/responsive/resizedNatarajBallPen1.jpg;resizedNatarajBallPen1.jpg;"Save Big on Select Streetwear";
+;widescreen;resizedpencil1.jpg;$siteResource/images/banners/homepage/responsive/resizedpencil1.jpg;resizedpencil1.jpg;"Save Big on Select Streetwear";
+;widescreen;resizedNatrajErasers.jpg;$siteResource/images/banners/homepage/responsive/resizedNatrajErasers.jpg;resizedNatrajErasers.jpg;"Save Big on Select Streetwear";
+
+
+;widescreen;ResizedApsaraErasers.jpg;$siteResource/images/banners/homepage/responsive/ResizedApsaraErasers.jpg;ResizedApsaraErasers.jpg;"Save Big on Select Streetwear";
+;widescreen;ResizedApsaraScales.jpg;$siteResource/images/banners/homepage/responsive/ResizedApsaraScales.jpg;ResizedApsaraScales.jpg;"Save Big on Select Streetwear";
+;widescreen;ResizedApsaraPencils.jpg;$siteResource/images/banners/homepage/responsive/ResizedApsaraPencils.jpg;ResizedApsaraPencils.jpg;"Save Big on Select Streetwear";
+ 
+ 

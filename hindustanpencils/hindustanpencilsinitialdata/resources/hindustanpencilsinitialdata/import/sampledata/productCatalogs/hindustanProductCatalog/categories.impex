@@ -17,7 +17,7 @@ $catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[defa
 $supercategories=source(code, $catalogVersion)[unique=true]
 $categories=target(code, $catalogVersion)[unique=true]
 
-$lang=de
+$lang=en
 
 
 # Macros / Replacement Parameter definitions
