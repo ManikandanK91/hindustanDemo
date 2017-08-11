@@ -26,8 +26,9 @@ $lang=en
 #UPDATE SimpleBannerComponent;$contentCV[unique=true];uid[unique=true];$picture[lang=$lang]
 #;;SiteLogoComponent;/images/theme/logo_hybris_b2b_responsive.svg
 
+# Media
 INSERT_UPDATE Media;$contentCV[unique=true];code[unique=true];realfilename;@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator];mime[default='image/jpeg'];folder(qualifier)[default='images'];altText
-;;/images/theme/logo-hybris1.png;apsara_logo.png.png;$siteResource/images/theme/apsara_logo.png;image/png;;"Apsara Pencils"
+;;/images/theme/logo-hybris1.png;cropped-Logo.jpg;$siteResource/images/theme/cropped-Logo.jpg;image/png;;"Hindustan Pencils"
 
 # Site Logo Component
 UPDATE SimpleBannerComponent;$contentCV[unique=true];uid[unique=true];$picture[lang=$lang]

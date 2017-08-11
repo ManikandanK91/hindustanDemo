@@ -18786,3 +18786,108 @@ select[multiple].input-sm {
     padding-right: 0;
   }
 }
+.account-section .item-wrapper .framed .item-label,
+.account-section .item-wrapper .framed .item-value {
+  display: inline-block;
+}
+.account-section .item-wrapper .framed .item-label {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: none;
+  padding-left: 10px;
+  width: 48%;
+}
+.account-section .item-wrapper .framed .item-value {
+  font-weight: 600;
+  text-align: right;
+  padding-right: 10px;
+  width: 50%;
+}
+.account-section .item-wrapper .framed .item-group.total {
+  margin-top: 10px;
+  border-top: 1px solid #d3d3d3;
+}
+.account-section .item-wrapper .framed .item-group.total .item-label,
+.account-section .item-wrapper .framed .item-group.total .item-value {
+  padding-top: 20px;
+}
+.account-section .item-wrapper .framed .item-group.total .item-label {
+  font-weight: 400;
+}
+.account-section .account-summary-filter {
+  padding-right: 30px;
+  padding-left: 30px;
+}
+@media (max-width: 640px) {
+  .account-section .account-summary-filter {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+.account-section .section-headline {
+  font-size: 20px;
+  line-height: 30px;
+  padding: 20px 30px;
+  border-bottom: 1px solid #cccccc;
+  margin-bottom: 30px;
+}
+@media (max-width: 640px) {
+  .account-section .section-headline {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+.account-section .account-summary-detail {
+  padding-left: 0;
+  padding-right: 0;
+}
+.account-section .date-input {
+  position: relative;
+}
+.account-section .date-input > .glyphicon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  margin-top: -7px;
+  cursor: pointer;
+}
+.account-section #search {
+  margin-top: 8px;
+}
+.account-section .download-lnk {
+  font-weight: 600;
+}
+@media (min-width: 1024px) {
+  .account-section .item-wrapper .framed {
+    border: 1px solid #d3d3d3;
+    padding: 15px 20px 10px;
+  }
+}
+@media (max-width: 1023px) {
+  .account-section .item-wrapper .framed {
+    display: block;
+    border-top: 3px solid #d3d3d3;
+    margin: 20px -20px 0;
+    padding: 30px 10px 0;
+  }
+}
+@media (max-width: 639px) {
+  .account-section .section-headline,
+  .account-section .account-summary-table {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  .account-section .section-headline {
+    padding-left: 20px;
+  }
+  .account-section .account-summary-filter {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .account-section .accountSummaryUnitBackBtn {
+    margin-top: 30px;
+  }
+  .account-section .cancel-panel {
+    padding-right: 10px;
+  }
+}

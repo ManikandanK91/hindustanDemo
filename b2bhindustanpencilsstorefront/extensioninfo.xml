@@ -11,14 +11,18 @@
 --><extensioninfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="extensioninfo.xsd">
 
 	<extension abstractclassprefix="Generated" classprefix="B2bhindustanpencilsstorefront" name="b2bhindustanpencilsstorefront" usemaven="false">		
-        <requires-extension name="commerceorgaddon"/>
+        <requires-extension name="assistedservicestorefront"/>
+<requires-extension name="commerceorgaddon"/>
+<requires-extension name="accountsummaryaddon"/>
 <requires-extension name="b2bacceleratoraddon"/>
+
+
 <requires-extension name="consignmenttrackingaddon"/>
 <requires-extension name="orderselfserviceaddon"/>
 <requires-extension name="ordermanagementaddon"/>
 <requires-extension name="promotionenginesamplesaddon"/>
 <requires-extension name="customerticketingaddon"/>
-<requires-extension name="assistedservicestorefront"/>
+
 <requires-extension name="acceleratorstorefrontcommons"/>
 		<requires-extension name="hindustanpencilsfacades"/>
 

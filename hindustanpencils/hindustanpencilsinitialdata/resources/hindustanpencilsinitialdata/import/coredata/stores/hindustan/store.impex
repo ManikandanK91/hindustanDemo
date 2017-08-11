@@ -14,7 +14,7 @@
 
 $productCatalog=hindustanProductCatalog
 $classificationCatalog=HindustanClassification
-$currencies=USD,INR
+$currencies=INR
 $net=true
 $storeUid=hindustan
 $defaultCurrency=INR
