@@ -256,7 +256,7 @@
 	
 	## navigation bar slot ##
 	INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];cmsComponents(uid, $contentCV)
-	;;NavigationBarSlot;PowertoolsCategoryNavComponent,breadcrumbComponent
+#	;;NavigationBarSlot;PowertoolsCategoryNavComponent,breadcrumbComponent
 	
 	INSERT_UPDATE BreadcrumbComponent;$contentCV[unique=true];uid[unique=true];name;&componentRef
 	;;breadcrumbComponent;Breadcrumb CMS Component;breadcrumbComponent

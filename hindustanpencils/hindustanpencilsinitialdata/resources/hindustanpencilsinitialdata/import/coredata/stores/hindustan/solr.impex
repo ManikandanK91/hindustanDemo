@@ -38,7 +38,6 @@ UPDATE BaseSite;uid[unique=true];solrFacetSearchConfiguration(name)
 # Define price range set
 INSERT_UPDATE SolrValueRangeSet;name[unique=true];qualifier;type;solrValueRanges(&rangeValueRefID)
 ;powertools1PriceRangeUSD;INR;double;rangeRefUSD11,rangeRefUSD21,rangeRefUSD31,rangeRefUSD41,rangeRefUSD51
-;powertoolsPriceRangeCAD;CAD;double;rangeRefCAD1,rangeRefCAD2,rangeRefCAD3,rangeRefCAD4,rangeRefCAD5
 
 # Define price ranges
 INSERT_UPDATE SolrValueRange;&rangeValueRefID;solrValueRangeSet(name)[unique=true];name[unique=true];from;to
@@ -48,11 +47,7 @@ INSERT_UPDATE SolrValueRange;&rangeValueRefID;solrValueRangeSet(name)[unique=tru
 ;rangeRefUSD41;powertools1PriceRangeUSD;   ₹500-₹999.99; 500; 999.99
 ;rangeRefUSD51;powertools1PriceRangeUSD;₹1,000-₹100,000;1000; 100000
 
-;rangeRefCAD1;powertoolsPriceRangeCAD;      C₹0-C₹49.99;   0;  49.99
-;rangeRefCAD2;powertoolsPriceRangeCAD;    C₹50-C₹199.99;  50; 199.99
-;rangeRefCAD3;powertoolsPriceRangeCAD;   C₹200-C₹499.99; 200; 499.99
-;rangeRefCAD4;powertoolsPriceRangeCAD;   C₹500-C₹999.99; 500; 999.99
-;rangeRefCAD5;powertoolsPriceRangeCAD;C₹1,000-C₹100,000;1000; 100000
+
 
 # Non-facet properties
 INSERT_UPDATE SolrIndexedProperty;solrIndexedType(identifier)[unique=true];name[unique=true];type(code);sortableType(code);currency[default=false];localized[default=false];multiValue[default=false];useForSpellchecking[default=false];useForAutocomplete[default=false];fieldValueProvider;valueProviderParameter;ftsPhraseQuery[default=false];ftsPhraseQueryBoost;ftsQuery[default=false];ftsQueryBoost;ftsFuzzyQuery[default=false];ftsFuzzyQueryBoost;ftsWildcardQuery[default=false];ftsWildcardQueryType(code)[default=POSTFIX];ftsWildcardQueryBoost;ftsWildcardQueryMinTermLength
@@ -103,7 +98,7 @@ INSERT_UPDATE SolrIndexedProperty;solrIndexedType(identifier)[unique=true];name[
 
 # Other facet properties
 INSERT_UPDATE SolrIndexedProperty;solrIndexedType(identifier)[unique=true];name[unique=true];type(code);sortableType(code);currency[default=false];localized[default=false];multiValue[default=false];facet[default=true];facetType(code);facetSort(code);priority;visible;useForSpellchecking[default=false];useForAutocomplete[default=false];fieldValueProvider;facetDisplayNameProvider;customFacetSortProvider;topValuesProvider;rangeSets(name)
-;$solrIndexedType; price        	;double ;	 ;true ;     ;     ;     ;MultiSelectOr ;Alpha ; 4000;true;     ;     ;volumeAwareProductPriceValueProvider;;;defaultTopValuesProvider;powertoolsPriceRangeUSD,powertoolsPriceRangeCAD
+;$solrIndexedType; price        	;double ;	 ;true ;     ;     ;     ;MultiSelectOr ;Alpha ; 4000;true;     ;     ;volumeAwareProductPriceValueProvider;;;defaultTopValuesProvider;powertoolsPriceRangeUSD
 ;$solrIndexedType; allPromotions	;string ;	 ;     ;     ;true ;     ;MultiSelectOr ;Alpha ; 0   ;false;     ;     ;promotionCodeValueProvider	;promotionFacetDisplayNameProvider;
 ;$solrIndexedType; availableInStores;string	;	 ;     ;     ;true ;     ;MultiSelectOr ;Custom;10000;true;     ;     ;productStoreStockValueProvider;electronicsPointOfServiceFacetDisplayNameProvider;distanceAttributeSortProvider
 

@@ -44,39 +44,6 @@ $taxGroup=Europe1PriceFactory_PTG(code)[default=in-vat-full]
 
 
 
-# Insert Products
-INSERT_UPDATE Product;code[unique=true];$supercategories;manufacturerName;manufacturerAID;unit(code);ean;variantType(code);$catalogVersion;$approved
-;NatarajPencils1;NatarajPencils;NatarajPencilsmanufacturer;;pieces;;;;;
-;NatarajPencils2;NatarajPencils;NatarajPencilsmanufacturer;;pieces;;;;;
-
-;NatarajErasers3;NatarajErasers;NatarajErasersmanufacturer;;pieces;;;;;
-;NatarajErasers4;NatarajErasers;NatarajErasersmanufacturer;;pieces;;;;;
-
-;NatarajCutters5;NatarajCutters;NatarajCuttersmanufacturer;;pieces;;;;;
-;NatarajCutters6;NatarajCutters;NatarajCuttersmanufacturer;;pieces;;;;;
-
-;NatarajColourPencils7;NatarajColourPencils;NatarajColourPencilsmanufacturer;;pieces;;;;;
-;NatarajColourPencils8;NatarajColourPencils;NatarajColourPencilsmanufacturer;;pieces;;;;;
-
-;NatarajBallPens9;NatarajBallPens;NatarajBallPensmanufacturer;;pieces;;;;;
-;NatarajBallPens10;NatarajBallPens;NatarajBallPensmanufacturer;;pieces;;;;;
-
-;ApsaraPencils1;ApsaraPencils;ApsaraPencilsmanufacturer;;pieces;;;;;
-;ApsaraPencils2;ApsaraPencils;ApsaraPencilsmanufacturer;;pieces;;;;;
-
-;ApsaraErasers3;ApsaraErasers;ApsaraErasersmanufacturer;;pieces;;;;;
-;ApsaraErasers4;ApsaraErasers;ApsaraErasersmanufacturer;;pieces;;;;;
-
-;ApsaraErasers5;ApsaraErasers;ApsaraErasersmanufacturer;;pieces;;;;;
-;ApsaraErasers5;ApsaraErasers;ApsaraErasersmanufacturer;;pieces;;;;;
-
-;ApsaraErasers7;ApsaraErasers;ApsaraErasersmanufacturer;;pieces;;;;;
-;ApsaraErasers8;ApsaraErasers;ApsaraErasersmanufacturer;;pieces;;;;;
-
-;ApsaraPaints9;ApsaraPaints;ApsaraPaintsmanufacturer;;pieces;;;;;
-;ApsaraPaints10;ApsaraPaints;ApsaraPaintsmanufacturer;;pieces;;;;;
-
-
 
 # Insert Products
 INSERT_UPDATE Product;code[unique=true];$supercategories;manufacturerName;manufacturerAID;unit(code);ean;variantType(code);$catalogVersion;$approved
@@ -102,7 +69,8 @@ INSERT_UPDATE Product;code[unique=true];$supercategories;manufacturerName;manufa
 ;ApsaraEraser4;ApsaraErasers;ApsaraErasermanufacturer;;pieces;;;;;
 
 ;ApsaraChalk5;ApsaraChalks;ApsaraChalkmanufacturer;;pieces;;;;;
-;ApsaraChalk5;ApsaraChalks;ApsaraChalkmanufacturer;;pieces;;;;;
+;ApsaraChalk6;ApsaraChalks;ApsaraChalkmanufacturer;;pieces;;;;;
+
 
 ;ApsaraColourstick7;ApsaraColoursticks;ApsaraColourstickmanufacturer;;pieces;;;;;
 ;ApsaraColourstick8;ApsaraColoursticks;ApsaraColourstickmanufacturer;;pieces;;;;;
