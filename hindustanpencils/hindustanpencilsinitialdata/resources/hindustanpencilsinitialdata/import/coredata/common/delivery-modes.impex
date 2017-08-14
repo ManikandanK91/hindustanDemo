@@ -16,7 +16,7 @@
 # Currencies
 $ukCurrency=GBP
 $jpCurrency=JPY
-$usCurrency=USD
+$usCurrency=INR
 $europeCurrency=INR
 
 # Delivery Zones

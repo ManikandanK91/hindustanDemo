@@ -468,7 +468,7 @@ INSERT_UPDATE RotatingImagesComponent;$contentCV[unique=true];uid[unique=true];n
 	;;Section2ASlot-Homepage;Section2A Slot for Homepage;true;
 	;;Section2BSlot-Homepage;Section2B Slot for Homepage;true;
 	;;Section3Slot-Homepage;Section3 Slot for Homepage;true;
-	;;Section4Slot-Homepage;Section4 Slot for Homepage;true;
+	;;Section4Slot-Homepage;Section4 Slot for Homepage;true;PowertoolsHompage25%BannerComponent,PowertoolsHompage30dayBannerComponent,PowertoolsHompage6pmBannerComponent,PowertoolsHompage24/7BannerComponent
 	
 	## slot 2C and 5: nothing to display ##
 	INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];cmsComponents(&componentRef)
@@ -1240,7 +1240,7 @@ UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];linkName[lang=e
 ;;Section2CSlot-Homepage;Section2C Slot for ApparelDEHomepage;true;
 ;;Section3Slot-Homepage;Section3 Slot for ApparelDEHomepage;true;
 ;;Section4Slot-Homepage;Section4 Slot for ApparelDEHomepage;true;
-;;Section5Slot-Homepage;Section5 Slot for ApparelDEHomepage;true;
+;;Section5Slot-Homepage;Section5 Slot for ApparelDEHomepage;true;PowertoolsHompage25%BannerComponent,PowertoolsHompage30dayBannerComponent,PowertoolsHompage6pmBannerComponent,PowertoolsHompage24/7BannerComponent
 
 
 #component for rotating image
