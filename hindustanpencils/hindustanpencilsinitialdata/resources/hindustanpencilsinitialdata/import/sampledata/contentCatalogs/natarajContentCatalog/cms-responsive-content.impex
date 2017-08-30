@@ -178,9 +178,11 @@ INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active;c
 ;;SearchResultsGridSlot;Search Result Grid Slot for Search List;true;SearchResultsGrid;;;
 
 ## Components in SideContentSlot and TopContentSlot
-#INSERT_UPDATE SimpleBannerComponent;$contentCV[unique=true];uid[unique=true];name;&componentRef;urlLink;;;
-#;;FacebookOffersBanner;Facebook Offers Banner;FacebookOffersBanner;http://www.facebook.com/hybrissoftware;;;
-#;;MobileAppBanner;Mobile App Banner;MobileAppBanner;http://www.hybris.com/hybris/en/e-commerce-software/mobile-commerce-software.html;;;
+INSERT_UPDATE SimpleBannerComponent;$contentCV[unique=true];uid[unique=true];name;&componentRef;urlLink;;;
+;;FacebookOffersBanner;Facebook Offers Banner;FacebookOffersBanner;http://www.facebook.com/hybrissoftware;;;
+;;MobileAppBanner;Mobile App Banner;MobileAppBanner;http://www.hybris.com/hybris/en/e-commerce-software/mobile-commerce-software.html;;;
+;;FacebookOffersBanner1;Facebook Offers Banner;FacebookOffersBanner1;http://www.facebook.com/hybrissoftware;;;
+;;MobileAppBanner1;Mobile App Banner;MobileAppBanner1;http://www.hybris.com/hybris/en/e-commerce-software/mobile-commerce-software.html;;;
 
 #INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];cmsComponents(uid,$contentCV)
 #;;SideContentSlot;MobileAppBanner
@@ -201,7 +203,7 @@ INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active;c
 ;;Section1Slot-Homepage;Section1 Slot for ApparelUKHomepage;true;ApparelUKHomepageCarouselComponent
 ;;Section2ASlot-Homepage;Section2A Slot for ApparelUKHomepage;true;
 ;;Section2BSlot-Homepage;Section2B Slot for ApparelUKHomepage;true;
-;;Section2CSlot-Homepage;Section2C Slot for ApparelUKHomepage;true;
+;;Section2CSlot-Homepage;Section2C Slot for ApparelUKHomepage;true;FacebookOffersBanner,MobileAppBanner
 ;;Section3Slot-Homepage;Section3 Slot for ApparelUKHomepage;true;
 ;;Section4Slot-Homepage;Section4 Slot for ApparelUKHomepage;true;
 ;;Section5Slot-Homepage;Section5 Slot for ApparelUKHomepage;true;
@@ -1692,7 +1694,7 @@ INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active;c
 
 # components in section3
 INSERT_UPDATE ProductCarouselComponent;$contentCV[unique=true];uid[unique=true];name;products(code,$productCV)                ;scroll(code);popup;&componentRef
-;;NatarajHomepageProductCarouselComponent;new products;NatarajPencil1,NatarajEraser3,NatarajCutter5,NatarajColourPencil7,NatarajBallPen9;allVisible;true;NatarajHomepageProductCarouselComponent
+;;NatarajHomepageProductCarouselComponent;new products;NatarajPencil1,NatarajEraser3,NatarajColourPencil7,NatarajBallPen9,NatarajPencil1,NatarajEraser3,NatarajColourPencil7;allVisible;true;NatarajHomepageProductCarouselComponent
 
 
 
@@ -1703,4 +1705,6 @@ INSERT_UPDATE ProductCarouselComponent;$contentCV[unique=true];uid[unique=true];
 
 INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];cmsComponents(&componentRef)
 #;;Section3Slot-Homepage;ElectronicsHomepageProductCarouselComponent,NewElectronicsHomepageProductCarouselComponent
-;;Section3Slot-Homepage;NatarajHomepageProductCarouselComponent
+;;Section2CSlot-Homepage;NatarajHomepageProductCarouselComponent
+;;Section3Slot-Homepage;
+;;Section4Slot-Homepage;Section2C Slot for ApparelUKHomepage;true;FacebookOffersBanner,MobileAppBanner,FacebookOffersBanner1,MobileAppBanner1

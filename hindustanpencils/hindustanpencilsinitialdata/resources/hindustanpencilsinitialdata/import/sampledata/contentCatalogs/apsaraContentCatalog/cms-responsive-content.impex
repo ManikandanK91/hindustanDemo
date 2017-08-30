@@ -1567,4 +1567,34 @@ INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];cmsComponents
 
  
  
+INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active;cmsComponents(&componentRef)
+;;Section1Slot-Homepage;Section1 Slot for ApparelDEHomepage;true;ApparelUKHomepageCarouselComponent
+;;Section2ASlot-Homepage;Section2 Slot for ApparelDEHomepage;true;SomeBannerComponent,SomeBannerComponent2
+;;Section2BSlot-Homepage;Section2 Slot for ApparelDEHomepage;true;SomeBannerComponent3
+;;Section2CSlot-Homepage;Section2 Slot for ApparelDEHomepage;true; 
+
+
+# Generic Banners (banners are not localizable so we must create a separate banner per language)
+INSERT_UPDATE Media;$contentCV[unique=true];code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator];mime[default='image/jpeg'];folder(qualifier)[default='images'];altText
+;;Generic_148x300_MobileApp_EN_01.jpg;$siteResource/images/banners/site/Generic_148x300_MobileApp_EN_01.jpg;;;"Always up to date! Download our mobile app"
+;;Generic_788x120_FacebookOffers_EN_01.jpg;$siteResource/images/banners/site/Generic_788x120_FacebookOffers_EN_01.jpg;;;"Up to 30% off! Sign up on facebook for exclusive offers"
+;;Generic_148x300_MobileApp_EN_011.jpg;$siteResource/images/banners/site/Generic_148x300_MobileApp_EN_011.jpg;;;"Always up to date! Download our mobile app"
+;;Generic_788x120_FacebookOffers_EN_011.jpg;$siteResource/images/banners/site/Generic_788x120_FacebookOffers_EN_011.jpg;;;"Up to 30% off! Sign up on facebook for exclusive offers"
+
+INSERT_UPDATE SimpleBannerComponent;$contentCV[unique=true];uid[unique=true];name;&componentRef;urlLink;;;
+;;FacebookOffersBanner;Facebook Offers Banner;FacebookOffersBanner;http://www.facebook.com/hybrissoftware;;;
+;;MobileAppBanner;Mobile App Banner;MobileAppBanner;http://www.hybris.com/hybris/en/e-commerce-software/mobile-commerce-software.html;;;
+;;FacebookOffersBanner1;Facebook Offers Banner;FacebookOffersBanner1;http://www.facebook.com/hybrissoftware;;;
+;;MobileAppBanner1;Mobile App Banner;MobileAppBanner1;http://www.hybris.com/hybris/en/e-commerce-software/mobile-commerce-software.html;;;
+
+UPDATE SimpleBannerComponent;$contentCV[unique=true];uid[unique=true];$picture[lang=$lang]
+;;FacebookOffersBanner;Generic_788x120_FacebookOffers_EN_01.jpg
+;;MobileAppBanner;Generic_148x300_MobileApp_EN_01.jpg
+;;FacebookOffersBanner1;Generic_788x120_FacebookOffers_EN_011.jpg
+;;MobileAppBanner1;Generic_148x300_MobileApp_EN_011.jpg
+
+INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];cmsComponents(&componentRef)
+
+;;Section4Slot-Homepage;FacebookOffersBanner,MobileAppBanner,FacebookOffersBanner1,MobileAppBanner1
+
 

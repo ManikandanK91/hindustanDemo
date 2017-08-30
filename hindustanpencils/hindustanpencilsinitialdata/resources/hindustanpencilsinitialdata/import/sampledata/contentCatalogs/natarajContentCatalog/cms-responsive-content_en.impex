@@ -510,7 +510,18 @@ UPDATE CMSNavigationNode;$contentCV[unique=true];uid[unique=true];title[lang=en]
 ;;adidasOriginalsNavNode;""
 ;;droidNavNode;""
 
+# Generic Banners (banners are not localizable so we must create a separate banner per language)
+INSERT_UPDATE Media;$contentCV[unique=true];code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator];mime[default='image/jpeg'];folder(qualifier)[default='images'];altText
+;;Generic_148x300_MobileApp_EN_01.jpg;$siteResource/images/banners/site/Generic_148x300_MobileApp_EN_01.jpg;;;"Always up to date! Download our mobile app"
+;;Generic_788x120_FacebookOffers_EN_01.jpg;$siteResource/images/banners/site/Generic_788x120_FacebookOffers_EN_01.jpg;;;"Up to 30% off! Sign up on facebook for exclusive offers"
+;;Generic_148x300_MobileApp_EN_011.jpg;$siteResource/images/banners/site/Generic_148x300_MobileApp_EN_011.jpg;;;"Always up to date! Download our mobile app"
+;;Generic_788x120_FacebookOffers_EN_011.jpg;$siteResource/images/banners/site/Generic_788x120_FacebookOffers_EN_011.jpg;;;"Up to 30% off! Sign up on facebook for exclusive offers"
 
+UPDATE SimpleBannerComponent;$contentCV[unique=true];uid[unique=true];$picture[lang=$lang]
+;;FacebookOffersBanner;Generic_788x120_FacebookOffers_EN_01.jpg
+;;MobileAppBanner;Generic_148x300_MobileApp_EN_01.jpg
+;;FacebookOffersBanner1;Generic_788x120_FacebookOffers_EN_011.jpg
+;;MobileAppBanner1;Generic_148x300_MobileApp_EN_011.jpg
 
 # Apparel Navigation nodes and links
 UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];linkName[lang=en]

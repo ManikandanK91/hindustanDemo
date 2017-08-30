@@ -16726,6 +16726,9 @@ select[multiple].input-sm {
   color: #000000;
   border: 5px solid #dedede;
 }
+.stripTransmitter{
+	display:none;
+}
 .stripTransmitter {
   overflow: auto;
   padding: 0 15px ;

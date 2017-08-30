@@ -1239,8 +1239,8 @@ UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];linkName[lang=e
 ;;Section1Slot-Homepage;Section1 Slot for ApparelDEHomepage;true;ApparelUKHomepageCarouselComponent
 ;;Section2CSlot-Homepage;Section2C Slot for ApparelDEHomepage;true;
 ;;Section3Slot-Homepage;Section3 Slot for ApparelDEHomepage;true;
-;;Section4Slot-Homepage;Section4 Slot for ApparelDEHomepage;true;
-;;Section5Slot-Homepage;Section5 Slot for ApparelDEHomepage;true;PowertoolsHompage25%BannerComponent,PowertoolsHompage30dayBannerComponent,PowertoolsHompage6pmBannerComponent,PowertoolsHompage24/7BannerComponent
+;;Section5Slot-Homepage;Section4 Slot for ApparelDEHomepage;true;
+;;Section4Slot-Homepage;Section5 Slot for ApparelDEHomepage;true;PowertoolsHompage25%BannerComponent,PowertoolsHompage30dayBannerComponent,PowertoolsHompage6pmBannerComponent,PowertoolsHompage24/7BannerComponent
 
 
 #component for rotating image

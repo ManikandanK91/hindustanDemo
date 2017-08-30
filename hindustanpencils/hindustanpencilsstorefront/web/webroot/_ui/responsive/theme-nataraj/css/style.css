@@ -2552,10 +2552,10 @@ output {
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 .form-control:focus {
-  border-color: #5adfd9;
+  border-color: #ed1c24;
   outline: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(90, 223, 217, 0.6);
-  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(90, 223, 217, 0.6);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(237, 28, 36, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(237, 28, 36, 0.6);
 }
 .form-control::-moz-placeholder {
   color: #999999;
@@ -9644,8 +9644,8 @@ fieldset[disabled] .btn-default.active {
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
   color: #ffffff;
-  background-color: #5adfd9;
-  border-color: #5adfd9;
+  background-color: #ed1c24;
+  border-color: #ed1c24;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -16542,7 +16542,7 @@ label {
   font-size: 13px;
 }
 .form-control:focus {
-  border-color: #5adfd9;
+  border-color: #ed1c24;
   outline: 0;
   box-shadow: none;
 }
@@ -16726,6 +16726,11 @@ select[multiple].input-sm {
   color: #000000;
   border: 5px solid #dedede;
 }
+
+.stripTransmitter{
+	display:none;
+}
+
 .stripTransmitter {
   overflow: auto;
   padding: 0 15px ;

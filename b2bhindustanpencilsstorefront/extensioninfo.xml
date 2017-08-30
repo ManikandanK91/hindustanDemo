@@ -17,6 +17,10 @@
 <requires-extension name="b2bacceleratoraddon"/>
 
 
+
+
+
+
 <requires-extension name="consignmenttrackingaddon"/>
 <requires-extension name="orderselfserviceaddon"/>
 <requires-extension name="ordermanagementaddon"/>
